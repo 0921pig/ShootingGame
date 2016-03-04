@@ -11,18 +11,51 @@
     <Filter Include="01.Manager\DeviceMgr">
       <UniqueIdentifier>{d9703eb2-e6f9-4435-92ec-f97fb5aabf6a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="00.MainHeader">
+    <Filter Include="00.Header">
       <UniqueIdentifier>{a118a0dd-139a-4775-81bb-95cdd6be699a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00.Header\Base">
+      <UniqueIdentifier>{d021c073-5463-4f2f-8e26-5763635af777}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="90.ExecutionFile">
+      <UniqueIdentifier>{ab8fae48-0eab-4650-92ca-b57887e08f28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00.Header\Base\Base_header">
+      <UniqueIdentifier>{de5d7998-d861-4487-aee3-e8edca86eb91}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp">
       <Filter>01.Manager\DeviceMgr</Filter>
     </ClCompile>
+    <ClCompile Include="Execution.cpp">
+      <Filter>90.ExecutionFile</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DeviceMgr.h">
       <Filter>01.Manager\DeviceMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Execution.h">
+      <Filter>90.ExecutionFile</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>00.Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Base.h">
+      <Filter>00.Header\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="constant.h">
+      <Filter>00.Header\Base\Base_header</Filter>
+    </ClInclude>
+    <ClInclude Include="enum.h">
+      <Filter>00.Header\Base\Base_header</Filter>
+    </ClInclude>
+    <ClInclude Include="macro.h">
+      <Filter>00.Header\Base\Base_header</Filter>
+    </ClInclude>
+    <ClInclude Include="struct.h">
+      <Filter>00.Header\Base\Base_header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

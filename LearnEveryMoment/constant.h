@@ -1,4 +1,4 @@
 #pragma once
 
-const int WINSIZEX = 1280;
-const int WINSIZEY = 960;
+const int WINSIZEX = 800;
+const int WINSIZEY = 1000;
