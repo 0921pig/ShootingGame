@@ -39,9 +39,6 @@
     <ClInclude Include="Execution.h">
       <Filter>90.ExecutionFile</Filter>
     </ClInclude>
-    <ClInclude Include="stdafx.h">
-      <Filter>00.Header</Filter>
-    </ClInclude>
     <ClInclude Include="Base.h">
       <Filter>00.Header\Base</Filter>
     </ClInclude>
@@ -56,6 +53,9 @@
     </ClInclude>
     <ClInclude Include="struct.h">
       <Filter>00.Header\Base\Base_header</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>00.Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
