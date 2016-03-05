@@ -23,6 +23,18 @@
     <Filter Include="00.Header\Base\Base_header">
       <UniqueIdentifier>{de5d7998-d861-4487-aee3-e8edca86eb91}</UniqueIdentifier>
     </Filter>
+    <Filter Include="80.MainGame">
+      <UniqueIdentifier>{8757ada1-b9dd-4af8-bf81-b1c152ff459e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="10.Scene">
+      <UniqueIdentifier>{551b3cd2-74ed-46de-ba89-d0ea7e6f76b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="10.Scene\Lobby">
+      <UniqueIdentifier>{a0957643-f862-4438-ae3c-1e6a1fb51755}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="10.Scene\Stage">
+      <UniqueIdentifier>{877fedc0-b48b-40bf-a7a4-9f05b760a00c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp">
@@ -30,6 +42,18 @@
     </ClCompile>
     <ClCompile Include="Execution.cpp">
       <Filter>90.ExecutionFile</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame.cpp">
+      <Filter>80.MainGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>10.Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Lobby.cpp">
+      <Filter>10.Scene\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage.cpp">
+      <Filter>10.Scene\Stage</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -56,6 +80,21 @@
     </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>00.Header</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame.h">
+      <Filter>80.MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Include.h">
+      <Filter>00.Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>10.Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Lobby.h">
+      <Filter>10.Scene\Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h">
+      <Filter>10.Scene\Stage</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
