@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #define DECLARE_SINGLETON(type)public:          \
 	static type** GetInstance()					\

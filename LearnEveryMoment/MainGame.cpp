@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "MainGame.h"
 
 CMainGame::CMainGame()
@@ -15,9 +15,9 @@ CMainGame::~CMainGame()
 
 HRESULT CMainGame::Initialize()
 {
-	/* Device Mgr ÃÊ±âÈ­ */
+	/* Device Mgr ì´ˆê¸°í™” */
 	if (FAILED(GET_SINGLE(CDeviceMgr)->InitDevice(WINMODE_WIN)))
-		ERR_MSG(g_hWnd, L"InitDevice ½ÇÆÐ");
+		ERR_MSG(g_hWnd, L"InitDevice ì‹¤íŒ¨");
 
 
 

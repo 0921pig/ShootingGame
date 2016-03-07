@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "Include.h"
 
 class CDeviceMgr
@@ -6,10 +6,10 @@ class CDeviceMgr
 	DECLARE_SINGLETON(CDeviceMgr);
 
 private:
-	//ÀåÄ¡ÀÇ ¼º´ÉÀ» Á¶»çÇÑ´Ù. m_pDevice »ý¼ºÇØÁØ´Ù.
+	//ìž¥ì¹˜ì˜ ì„±ëŠ¥ì„ ì¡°ì‚¬í•œë‹¤. m_pDevice ìƒì„±í•´ì¤€ë‹¤.
 	LPDIRECT3D9			m_p3D;
 
-	//ÀåÄ¡¸¦ ´ëÇ¥ÇÏ´Â °´Ã¼
+	//ìž¥ì¹˜ë¥¼ ëŒ€í‘œí•˜ëŠ” ê°ì²´
 	LPDIRECT3DDEVICE9			m_pDevice;
 	LPD3DXSPRITE				m_pSprite;
 	LPD3DXFONT					m_pFont;

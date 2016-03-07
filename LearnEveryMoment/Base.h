@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "constant.h"
 #include "struct.h"

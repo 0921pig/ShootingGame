@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "DeviceMgr.h"
 
 CDeviceMgr::CDeviceMgr()
@@ -34,13 +34,13 @@ HRESULT CDeviceMgr::InitDevice(WINMODE Mode)
 {
 	m_p3D = Direct3DCreate9(D3D_SDK_VERSION);
 
-	//ÀåÄ¡ÀÇ ¼º´ÉÀ» Á¶»çÇÑ´Ù
+	//ì¥ì¹˜ì˜ ì„±ëŠ¥ì„ ì¡°ì‚¬í•œë‹¤
 	D3DCAPS9		devicecaps;
 	ZeroMemory(&devicecaps, sizeof(D3DCAPS9));
 
 	if (FAILED(m_p3D->GetDeviceCaps(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, &devicecaps)))
 	{
-		ERR_MSG(g_hWnd, L"ÀåÄ¡ Á¤º¸ ¾ò¾î¿À±â ½ÇÆĞ (Device.cpp)");
+		ERR_MSG(g_hWnd, L"ì¥ì¹˜ ì •ë³´ ì–»ì–´ì˜¤ê¸° ì‹¤íŒ¨ (Device.cpp)");
 	}
 
 	DWORD BehaviorFlag = 0;
@@ -76,7 +76,7 @@ HRESULT CDeviceMgr::InitDevice(WINMODE Mode)
 
 	if (FAILED(m_p3D->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, g_hWnd, BehaviorFlag, &d3dpp, &m_pDevice)))
 	{
-		ERR_MSG(g_hWnd, L"D3D ÀåÄ¡ »ı¼º ½ÇÆĞ");
+		ERR_MSG(g_hWnd, L"D3D ì¥ì¹˜ ìƒì„± ì‹¤íŒ¨");
 		return E_FAIL;
 	}
 
@@ -87,7 +87,7 @@ HRESULT CDeviceMgr::InitDevice(WINMODE Mode)
 
 	if (FAILED(D3DXCreateLine(m_pDevice, &m_pLine)))
 	{
-		ERR_MSG(g_hWnd, L"¶óÀÎ »ı¼º ½ÇÆĞ");
+		ERR_MSG(g_hWnd, L"ë¼ì¸ ìƒì„± ì‹¤íŒ¨");
 		return E_FAIL;
 	}
 

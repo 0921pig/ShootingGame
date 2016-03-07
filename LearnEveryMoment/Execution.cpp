@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "Execution.h"
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT, WPARAM wParam, LPARAM lParam);
@@ -24,18 +24,18 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpCmdLine,
 	} 
 	
 	g_hWnd = CreateWindow(WndClass.lpszClassName, L"Window Caption", WS_OVERLAPPEDWINDOW, -WINSIZEX, 10, WINSIZEX, WINSIZEY, NULL, NULL, hInstance, NULL); 
-	if (!g_hWnd) // À©µµ¿ì ÇÚµé Àß »ı¼ºµÇ¾ú´ÂÁö Ã¼Å©
+	if (!g_hWnd) // ìœˆë„ìš° í•¸ë“¤ ì˜ ìƒì„±ë˜ì—ˆëŠ”ì§€ ì²´í¬
 		return FALSE;
 
 	ShowWindow(g_hWnd, nShowCmd);
 	UpdateWindow(g_hWnd);
 	
 	
-	MSG msg; //While¹®¿¡¼­ »ç¿ëÇÒ ¸Ş¼¼Áö
+	MSG msg; //Whileë¬¸ì—ì„œ ì‚¬ìš©í•  ë©”ì„¸ì§€
 	msg.message = WM_NULL;
-	CMainGame MainGame; // »ı¼ºÀÚ¿¡¼­ Initialize() ½ÇÇà
+	CMainGame MainGame; // ìƒì„±ìì—ì„œ Initialize() ì‹¤í–‰
 
-	/* ¸Ş¼¼Áö Ã³¸® ·çÆ¾ */
+	/* ë©”ì„¸ì§€ ì²˜ë¦¬ ë£¨í‹´ */
 	while (msg.message != WM_QUIT)
 	{
 		if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))

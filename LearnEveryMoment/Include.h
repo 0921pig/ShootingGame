@@ -1,12 +1,12 @@
-#pragma once
+ï»¿#pragma once
 
-/* ±âº» Çì´õ */
+/* ê¸°ë³¸ í—¤ë” */
 #include "Base.h"
 
-/* ¸Å´ÏÀú Çì´õ */
+/* ë§¤ë‹ˆì € í—¤ë” */
 #include "DeviceMgr.h"
 
-/* ±¸Á¶ */
+/* êµ¬ì¡° */
 #include "MainGame.h"
 
 #include "Lobby.h"
