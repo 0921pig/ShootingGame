@@ -29,10 +29,13 @@
     <Filter Include="10.Scene">
       <UniqueIdentifier>{551b3cd2-74ed-46de-ba89-d0ea7e6f76b4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="10.Scene\Lobby">
+    <Filter Include="10.Scene\tools">
+      <UniqueIdentifier>{bb9bee36-1492-4181-8c2a-88278f9ae568}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="10.Scene\_Lobby">
       <UniqueIdentifier>{a0957643-f862-4438-ae3c-1e6a1fb51755}</UniqueIdentifier>
     </Filter>
-    <Filter Include="10.Scene\Stage">
+    <Filter Include="10.Scene\_Stage">
       <UniqueIdentifier>{877fedc0-b48b-40bf-a7a4-9f05b760a00c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -50,10 +53,10 @@
       <Filter>10.Scene</Filter>
     </ClCompile>
     <ClCompile Include="Lobby.cpp">
-      <Filter>10.Scene\Lobby</Filter>
+      <Filter>10.Scene\_Lobby</Filter>
     </ClCompile>
     <ClCompile Include="Stage.cpp">
-      <Filter>10.Scene\Stage</Filter>
+      <Filter>10.Scene\_Stage</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -91,10 +94,10 @@
       <Filter>10.Scene</Filter>
     </ClInclude>
     <ClInclude Include="Lobby.h">
-      <Filter>10.Scene\Lobby</Filter>
+      <Filter>10.Scene\_Lobby</Filter>
     </ClInclude>
     <ClInclude Include="Stage.h">
-      <Filter>10.Scene\Stage</Filter>
+      <Filter>10.Scene\_Stage</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
