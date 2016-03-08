@@ -8,7 +8,7 @@ enum WINMODE
 	WINMODE_WIN
 };
 
-enum SceneNo : int
+enum SceneNo
 {
 	SceneNo_None,
 	SceneNo_Lobby,

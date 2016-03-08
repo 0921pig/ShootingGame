@@ -27,10 +27,23 @@ void CManageScene::changeScene(SceneReturn message)
 	{
 	case SceneReturn_None:
 		break;
+
 	case SceneReturn_NextStage:
-		m_SceneInfo.NextScene = (SceneNo)(m_SceneInfo.CurrentScene + 1);
+	{
+		SceneNo nextScene;
+
+		switch (m_SceneInfo.GetCurrentScene())
+		{
+		case SceneNo_Lobby: nextScene = SceneNo_Stage1; break;
+		case SceneNo_Stage1: nextScene = SceneNo_End; break;
+		}
+
+		m_SceneInfo.SetNextScene(nextScene);
 		break;
+	}
+
 	case SceneReturn_GameOver:
+		m_SceneInfo.SetNextScene(SceneNo_End);
 		break;
 	}
 }

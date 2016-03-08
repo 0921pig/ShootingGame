@@ -41,6 +41,9 @@
     <Filter Include="10.Scene\tools\ManageScene">
       <UniqueIdentifier>{e5ee6224-0f8b-468f-bcd3-260fd3d18003}</UniqueIdentifier>
     </Filter>
+    <Filter Include="10.Scene\tools\ManageScene\Info_ManageScene">
+      <UniqueIdentifier>{446ca421-8108-46f0-b79a-0287698c2451}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp">
@@ -63,6 +66,9 @@
     </ClCompile>
     <ClCompile Include="ManageScene.cpp">
       <Filter>10.Scene\tools\ManageScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Info_ManageScene.cpp">
+      <Filter>10.Scene\tools\ManageScene\Info_ManageScene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -110,6 +116,9 @@
     </ClInclude>
     <ClInclude Include="function.h">
       <Filter>00.Header\Base\Base_header</Filter>
+    </ClInclude>
+    <ClInclude Include="Info_ManageScene.h">
+      <Filter>10.Scene\tools\ManageScene\Info_ManageScene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

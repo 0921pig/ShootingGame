@@ -1,25 +1,12 @@
 ﻿#pragma once
 #include "Scene.h"
-
-typedef struct Info_Scene
-{
-	SceneNo CurrentScene;
-	SceneNo NextScene;
-
-	Info_Scene()
-		:NextScene(SceneNo_None),
-		CurrentScene(SceneNo_None)
-	{
-	}
-}INFO_Scene;
+#include "Info_ManageScene.h"
 
 class CManageScene
 {
 private:
 	CScene* m_Scene;
-	INFO_Scene m_SceneInfo;
-
-	bool isSceneChangeExist;
+	CInfo_ManageScene m_SceneInfo;
 
 public:
 	void initiaize();

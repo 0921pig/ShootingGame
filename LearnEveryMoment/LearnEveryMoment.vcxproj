@@ -158,6 +158,7 @@
     <ClInclude Include="Execution.h" />
     <ClInclude Include="function.h" />
     <ClInclude Include="Include.h" />
+    <ClInclude Include="Info_ManageScene.h" />
     <ClInclude Include="Lobby.h" />
     <ClInclude Include="macro.h" />
     <ClInclude Include="MainGame.h" />
@@ -170,6 +171,7 @@
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp" />
     <ClCompile Include="Execution.cpp" />
+    <ClCompile Include="Info_ManageScene.cpp" />
     <ClCompile Include="Lobby.cpp" />
     <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="ManageScene.cpp" />
