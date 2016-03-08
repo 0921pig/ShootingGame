@@ -8,7 +8,7 @@ class CScene
 public:
 	virtual void Initialize()PURE;
 	virtual SceneReturn Progress()PURE;
-	virtual void KeyCheck()PURE;
+	virtual void KeyProcess()PURE;
 	virtual void Render()PURE;
 	virtual void Release();
 

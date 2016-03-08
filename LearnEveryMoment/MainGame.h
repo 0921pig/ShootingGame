@@ -10,7 +10,7 @@ private:
 public:
 	HRESULT Initialize();
 	void StartPhase();
-	void KeyCheck();
+	void KeyProcess();
 	void Progress();
 	void Render();
 	void Release();

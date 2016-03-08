@@ -17,7 +17,7 @@ void CStage::Initialize()
 {
 }
 
-void CStage::KeyCheck()
+void CStage::KeyProcess()
 {
 }
 

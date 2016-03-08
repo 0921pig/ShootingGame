@@ -22,3 +22,4 @@
 #define GET_SINGLE(type) (*type::GetInstance())
 #define DESTROY_SINGLE(type) (*type::GetInstance())->DestroyInstance()
 #define ERR_MSG(hWnd,sz) MessageBox(hWnd,sz,L"System Err",MB_OK)
+#define WhatKeyState(key) GET_SINGLE(CKeyMgr)->GetKeyState(key)

@@ -23,17 +23,24 @@ HRESULT CMainGame::Initialize()
 
 void CMainGame::StartPhase()
 {
+	/* 
+	순서 
+	
+	1. 가장 먼저 Scene 변경.
+	2. 키 체크
+	*/
+
 	m_ManageScene.execute_changeScene(); // Scene변경이 예약되어있다면 이곳에서 Scene해제와 새로운 Scene할당을 처리
-	KeyCheck();
+	GET_SINGLE(CKeyMgr)->ProcessingSequence();
+	KeyProcess();
 }
 
-void CMainGame::KeyCheck()
+void CMainGame::KeyProcess()
 {
 	/* MainGame의 키체크는 아래에서 */
-	//bla bla bla
 
 	/* Scene의 키체크는 아래에서*/
-	m_ManageScene.KeyCheck();
+	m_ManageScene.KeyProcess();
 }
 
 void CMainGame::Release()

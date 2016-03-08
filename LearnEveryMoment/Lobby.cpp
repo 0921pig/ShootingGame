@@ -16,7 +16,7 @@ void CLobby::Initialize()
 {
 }
 
-void CLobby::KeyCheck()
+void CLobby::KeyProcess()
 {
 }
 

@@ -44,6 +44,9 @@
     <Filter Include="10.Scene\tools\ManageScene\Info_ManageScene">
       <UniqueIdentifier>{446ca421-8108-46f0-b79a-0287698c2451}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01.Manager\KeyMgr">
+      <UniqueIdentifier>{28a61235-54c8-4cdc-b89d-0f0efdf860c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp">
@@ -69,6 +72,9 @@
     </ClCompile>
     <ClCompile Include="Info_ManageScene.cpp">
       <Filter>10.Scene\tools\ManageScene\Info_ManageScene</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyMgr.cpp">
+      <Filter>01.Manager\KeyMgr</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -114,11 +120,17 @@
     <ClInclude Include="ManageScene.h">
       <Filter>10.Scene\tools\ManageScene</Filter>
     </ClInclude>
-    <ClInclude Include="function.h">
-      <Filter>00.Header\Base\Base_header</Filter>
-    </ClInclude>
     <ClInclude Include="Info_ManageScene.h">
       <Filter>10.Scene\tools\ManageScene\Info_ManageScene</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyMgr.h">
+      <Filter>01.Manager\KeyMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="readme.h">
+      <Filter>00.Header</Filter>
+    </ClInclude>
+    <ClInclude Include="function.h">
+      <Filter>00.Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

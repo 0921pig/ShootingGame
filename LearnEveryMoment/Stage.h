@@ -6,7 +6,7 @@ class CStage : public CScene
 public:
 	virtual void Initialize();
 	virtual SceneReturn Progress();
-	virtual void KeyCheck();
+	virtual void KeyProcess();
 	virtual void Render();
 	virtual void Release();
 

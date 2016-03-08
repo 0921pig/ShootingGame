@@ -11,7 +11,7 @@ private:
 public:
 	void initiaize();
 
-	void KeyCheck();
+	void KeyProcess();
 	void Progress();
 	void Render();
 	void Release();

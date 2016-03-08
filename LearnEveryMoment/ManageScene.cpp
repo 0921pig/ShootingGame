@@ -19,9 +19,9 @@ void CManageScene::initiaize()
 	m_Scene = new CLobby();
 }
 
-void CManageScene::KeyCheck()
+void CManageScene::KeyProcess()
 {
-	m_Scene->KeyCheck();
+	m_Scene->KeyProcess();
 }
 
 void CManageScene::Progress()
