@@ -1,25 +1,25 @@
 ﻿#pragma once
 #include "stdafx.h"
 
-enum SceneCode;
+enum SceneReturn;
 
 class CScene
 {
 public:
-	virtual HRESULT Initialize()PURE;
-	virtual SceneCode Progress()PURE;
+	virtual void Initialize()PURE;
+	virtual SceneReturn Progress()PURE;
 	virtual void KeyCheck()PURE;
 	virtual void Render()PURE;
-	virtual void Release()PURE;
+	virtual void Release();
 
 public:
 	CScene();
 	virtual ~CScene();
 };
 
-enum SceneCode
+enum SceneReturn
 {
-	SceneCode_None,
-	SceneCode_NextStage,
-	SceneCode_GameOver
+	SceneReturn_None,
+	SceneReturn_NextStage,
+	SceneReturn_GameOver
 };

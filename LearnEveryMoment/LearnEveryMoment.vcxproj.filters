@@ -38,6 +38,9 @@
     <Filter Include="10.Scene\_Stage">
       <UniqueIdentifier>{877fedc0-b48b-40bf-a7a4-9f05b760a00c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="10.Scene\tools\ManageScene">
+      <UniqueIdentifier>{e5ee6224-0f8b-468f-bcd3-260fd3d18003}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp">
@@ -57,6 +60,9 @@
     </ClCompile>
     <ClCompile Include="Stage.cpp">
       <Filter>10.Scene\_Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="ManageScene.cpp">
+      <Filter>10.Scene\tools\ManageScene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -98,6 +104,12 @@
     </ClInclude>
     <ClInclude Include="Stage.h">
       <Filter>10.Scene\_Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="ManageScene.h">
+      <Filter>10.Scene\tools\ManageScene</Filter>
+    </ClInclude>
+    <ClInclude Include="function.h">
+      <Filter>00.Header\Base\Base_header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

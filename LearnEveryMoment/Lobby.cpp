@@ -4,24 +4,25 @@
 
 CLobby::CLobby()
 {
+	Initialize();
 }
 
 CLobby::~CLobby()
 {
+	Release();
 }
 
-HRESULT CLobby::Initialize()
+void CLobby::Initialize()
 {
-	return E_NOTIMPL;
 }
 
 void CLobby::KeyCheck()
 {
 }
 
-SceneCode CLobby::Progress()
+SceneReturn CLobby::Progress()
 {
-	return SceneCode();
+	return SceneReturn();
 }
 
 void CLobby::Render()

@@ -2,28 +2,27 @@
 #include "stdafx.h"
 #include "Stage.h"
 
-
 CStage::CStage()
 {
+	Initialize();
 }
-
 
 CStage::~CStage()
 {
+	Release();
 }
 
-HRESULT CStage::Initialize()
+void CStage::Initialize()
 {
-	return E_NOTIMPL;
 }
 
 void CStage::KeyCheck()
 {
 }
 
-SceneCode CStage::Progress()
+SceneReturn CStage::Progress()
 {
-	return SceneCode();
+	return SceneReturn();
 }
 
 void CStage::Render()

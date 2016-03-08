@@ -4,8 +4,8 @@
 class CStage : public CScene
 {
 public:
-	virtual HRESULT Initialize();
-	virtual SceneCode Progress();
+	virtual void Initialize();
+	virtual SceneReturn Progress();
 	virtual void KeyCheck();
 	virtual void Render();
 	virtual void Release();

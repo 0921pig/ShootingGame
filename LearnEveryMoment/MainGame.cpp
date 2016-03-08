@@ -24,6 +24,10 @@ HRESULT CMainGame::Initialize()
 	return S_OK;
 }
 
+void CMainGame::KeyCheck()
+{
+}
+
 void CMainGame::Release()
 {
 	DESTROY_SINGLE(CDeviceMgr);

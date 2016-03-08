@@ -9,6 +9,7 @@ private:
 
 public:
 	HRESULT Initialize();
+	void KeyCheck();
 	void Progress();
 	void Render();
 	void Release();
