@@ -6,9 +6,3 @@ enum WINMODE
 	WINMODE_WIN
 };
 
-enum SceneCode
-{
-	SceneCode_None,
-	SceneCode_NextStage,
-	SceneCode_GameOver
-};
