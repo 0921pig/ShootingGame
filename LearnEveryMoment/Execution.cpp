@@ -45,6 +45,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpCmdLine,
 		}
 		else
 		{
+			MainGame.StartPhase();
 			MainGame.Progress();
 			MainGame.Render();
 		}

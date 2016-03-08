@@ -11,7 +11,7 @@ public:
 	virtual void Release();
 
 public:
-	CStage();
+	CStage(SceneNo WhatStage);
 	virtual ~CStage();
 };
 

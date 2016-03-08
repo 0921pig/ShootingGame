@@ -1,8 +1,9 @@
 ﻿#pragma once
 #include "stdafx.h"
+#include "Base.h"
 #include "Stage.h"
 
-CStage::CStage()
+CStage::CStage(SceneNo WhatStage)
 {
 	Initialize();
 }

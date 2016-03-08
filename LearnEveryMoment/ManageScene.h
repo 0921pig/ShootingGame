@@ -10,7 +10,14 @@ private:
 
 public:
 	void initiaize();
-	void changeScene(SceneReturn message);
+
+	void KeyCheck();
+	void Progress();
+	void Render();
+	void Release();
+
+	void reserve_changeScene(SceneReturn message);
+	void execute_changeScene();
 
 public:
 	CManageScene();
