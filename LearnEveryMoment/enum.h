@@ -15,3 +15,11 @@ enum SceneNo
 	SceneNo_Stage1,
 	SceneNo_End
 };
+
+enum SortID
+{
+	SortID_None = -1,
+	SortID_Back,
+	SortID_End,
+	SortID_MaxSize,
+};

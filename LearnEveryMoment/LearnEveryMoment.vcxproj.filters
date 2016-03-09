@@ -74,6 +74,9 @@
     <Filter Include="97.DesignPattern\ProtoType\Object\Lobby\LobbyObjProto">
       <UniqueIdentifier>{702f0961-7185-4240-aa23-3be46a7ff1f4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01.Manager\SortMgr">
+      <UniqueIdentifier>{20f222da-706b-43fd-9899-618debcc6fc4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp">
@@ -120,6 +123,9 @@
     </ClCompile>
     <ClCompile Include="ObjMgr.cpp">
       <Filter>01.Manager\ObjMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="SortMgr.cpp">
+      <Filter>01.Manager\SortMgr</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -194,6 +200,9 @@
     </ClInclude>
     <ClInclude Include="ObjMgr.h">
       <Filter>01.Manager\ObjMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="SortMgr.h">
+      <Filter>01.Manager\SortMgr</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
