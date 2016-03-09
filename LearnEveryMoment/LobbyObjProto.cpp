@@ -1,3 +1,5 @@
+#pragma once
+#include "stdafx.h"
 #include "LobbyObjProto.h"
 #include "Include.h"
 

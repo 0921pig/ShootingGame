@@ -118,6 +118,9 @@
     <ClCompile Include="LobbyObjProto.cpp">
       <Filter>97.DesignPattern\ProtoType\Object\Lobby\LobbyObjProto</Filter>
     </ClCompile>
+    <ClCompile Include="ObjMgr.cpp">
+      <Filter>01.Manager\ObjMgr</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DeviceMgr.h">
@@ -188,6 +191,9 @@
     </ClInclude>
     <ClInclude Include="LobbyObjProto.h">
       <Filter>97.DesignPattern\ProtoType\Object\Lobby\LobbyObjProto</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjMgr.h">
+      <Filter>01.Manager\ObjMgr</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

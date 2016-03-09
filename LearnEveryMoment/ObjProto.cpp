@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "ObjProto.h"
-
+#include "Include.h"
 
 CObjProto::CObjProto()
 {

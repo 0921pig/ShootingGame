@@ -16,5 +16,6 @@
 // STL 헤더
 #include <map>
 #include <vector>
+#include <list>
 
 using namespace std;

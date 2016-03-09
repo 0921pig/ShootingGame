@@ -167,6 +167,7 @@
     <ClInclude Include="MainGame.h" />
     <ClInclude Include="ManageScene.h" />
     <ClInclude Include="Obj.h" />
+    <ClInclude Include="ObjMgr.h" />
     <ClInclude Include="ObjProto.h" />
     <ClInclude Include="ProtoType.h" />
     <ClInclude Include="readme.h" />
@@ -186,6 +187,7 @@
     <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="ManageScene.cpp" />
     <ClCompile Include="Obj.cpp" />
+    <ClCompile Include="ObjMgr.cpp" />
     <ClCompile Include="ObjProto.cpp" />
     <ClCompile Include="ProtoType.cpp" />
     <ClCompile Include="Scene.cpp" />
