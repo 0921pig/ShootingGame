@@ -47,6 +47,33 @@
     <Filter Include="01.Manager\KeyMgr">
       <UniqueIdentifier>{28a61235-54c8-4cdc-b89d-0f0efdf860c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01.Manager\ObjMgr">
+      <UniqueIdentifier>{c66c50bc-cb00-4d7b-9ee4-6812c49b9523}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj">
+      <UniqueIdentifier>{ad10ce69-e9ae-4128-ae9e-35d8e4a21148}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Info_Obj">
+      <UniqueIdentifier>{1fc45d7f-f63e-4ed6-8865-6c5ece8684a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.DesignPattern">
+      <UniqueIdentifier>{b546ef50-ad98-4737-8f92-abe38ebb2275}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.DesignPattern\ProtoType">
+      <UniqueIdentifier>{76e181b7-4c7a-43e5-a88d-394bbd733132}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.DesignPattern\ProtoType\Object">
+      <UniqueIdentifier>{ba272783-0e6a-443a-9a0e-0d1840738560}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.DesignPattern\ProtoType\Object\Lobby">
+      <UniqueIdentifier>{09e7beba-8eb1-4949-9df0-385153c49787}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.DesignPattern\ProtoType\Object\Stage">
+      <UniqueIdentifier>{2d08accc-01ac-414c-b6cc-0753a2a1557f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.DesignPattern\ProtoType\Object\Lobby\LobbyObjProto">
+      <UniqueIdentifier>{702f0961-7185-4240-aa23-3be46a7ff1f4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp">
@@ -75,6 +102,21 @@
     </ClCompile>
     <ClCompile Include="KeyMgr.cpp">
       <Filter>01.Manager\KeyMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Obj.cpp">
+      <Filter>20. Obj</Filter>
+    </ClCompile>
+    <ClCompile Include="Info_Obj.cpp">
+      <Filter>20. Obj\Info_Obj</Filter>
+    </ClCompile>
+    <ClCompile Include="ProtoType.cpp">
+      <Filter>97.DesignPattern\ProtoType</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjProto.cpp">
+      <Filter>97.DesignPattern\ProtoType\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="LobbyObjProto.cpp">
+      <Filter>97.DesignPattern\ProtoType\Object\Lobby\LobbyObjProto</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +173,21 @@
     </ClInclude>
     <ClInclude Include="function.h">
       <Filter>00.Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Obj.h">
+      <Filter>20. Obj</Filter>
+    </ClInclude>
+    <ClInclude Include="Info_Obj.h">
+      <Filter>20. Obj\Info_Obj</Filter>
+    </ClInclude>
+    <ClInclude Include="ProtoType.h">
+      <Filter>97.DesignPattern\ProtoType</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjProto.h">
+      <Filter>97.DesignPattern\ProtoType\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="LobbyObjProto.h">
+      <Filter>97.DesignPattern\ProtoType\Object\Lobby\LobbyObjProto</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -14,5 +14,7 @@
 #include "Lobby.h"
 #include "Stage.h"
 
+#include "Obj.h"
+
 /* tools */
 #include "ManageScene.h"

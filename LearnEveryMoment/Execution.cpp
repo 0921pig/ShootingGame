@@ -3,6 +3,7 @@
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT, WPARAM wParam, LPARAM lParam);
 
+
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpCmdLine, int nShowCmd)
 {
 	WNDCLASS WndClass;
@@ -22,8 +23,16 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpCmdLine,
 		if (!RegisterClass(&WndClass))
 			return 0;
 	} 
-	
+
+//#define NoteBookPC
+
+#ifdef NoteBookPC
 	g_hWnd = CreateWindow(WndClass.lpszClassName, L"Window Caption", WS_OVERLAPPEDWINDOW, 1920 -WINSIZEX, 10, WINSIZEX, WINSIZEY, NULL, NULL, hInstance, NULL); 
+#else
+	g_hWnd = CreateWindow(WndClass.lpszClassName, L"Window Caption", WS_OVERLAPPEDWINDOW, - WINSIZEX, 10, WINSIZEX, WINSIZEY, NULL, NULL, hInstance, NULL);
+#endif
+
+
 	if (!g_hWnd) // 윈도우 핸들 잘 생성되었는지 체크
 		return FALSE;
 
@@ -33,7 +42,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpCmdLine,
 	
 	MSG msg; //While문에서 사용할 메세지
 	msg.message = WM_NULL;
-	CMainGame MainGame; // 생성자에서 Initialize() 실행
+	CMainGame MainGame; // 생성자에서 자동으로 Initialize() 실행
 
 	/* 메세지 처리 루틴 */
 	while (msg.message != WM_QUIT)

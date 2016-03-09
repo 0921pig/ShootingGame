@@ -159,11 +159,16 @@
     <ClInclude Include="function.h" />
     <ClInclude Include="Include.h" />
     <ClInclude Include="Info_ManageScene.h" />
+    <ClInclude Include="Info_Obj.h" />
     <ClInclude Include="KeyMgr.h" />
     <ClInclude Include="Lobby.h" />
+    <ClInclude Include="LobbyObjProto.h" />
     <ClInclude Include="macro.h" />
     <ClInclude Include="MainGame.h" />
     <ClInclude Include="ManageScene.h" />
+    <ClInclude Include="Obj.h" />
+    <ClInclude Include="ObjProto.h" />
+    <ClInclude Include="ProtoType.h" />
     <ClInclude Include="readme.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Stage.h" />
@@ -174,10 +179,15 @@
     <ClCompile Include="DeviceMgr.cpp" />
     <ClCompile Include="Execution.cpp" />
     <ClCompile Include="Info_ManageScene.cpp" />
+    <ClCompile Include="Info_Obj.cpp" />
     <ClCompile Include="KeyMgr.cpp" />
     <ClCompile Include="Lobby.cpp" />
+    <ClCompile Include="LobbyObjProto.cpp" />
     <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="ManageScene.cpp" />
+    <ClCompile Include="Obj.cpp" />
+    <ClCompile Include="ObjProto.cpp" />
+    <ClCompile Include="ProtoType.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Stage.cpp" />
   </ItemGroup>
