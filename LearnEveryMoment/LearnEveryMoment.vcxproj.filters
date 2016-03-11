@@ -77,6 +77,15 @@
     <Filter Include="01.Manager\SortMgr">
       <UniqueIdentifier>{20f222da-706b-43fd-9899-618debcc6fc4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="30. DataClass">
+      <UniqueIdentifier>{4aafb530-3512-4a13-8e30-ff1f2d578c85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="30. DataClass\Data_Move">
+      <UniqueIdentifier>{cfdd7710-3f76-4cb2-9b5e-d7585820f582}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="30. DataClass\Data_Fire">
+      <UniqueIdentifier>{113fddf0-b20c-4b74-ae6f-7899d281b6dd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp">
@@ -126,6 +135,12 @@
     </ClCompile>
     <ClCompile Include="SortMgr.cpp">
       <Filter>01.Manager\SortMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Data_Move.cpp">
+      <Filter>30. DataClass\Data_Move</Filter>
+    </ClCompile>
+    <ClCompile Include="Data_Fire.cpp">
+      <Filter>30. DataClass\Data_Fire</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -203,6 +218,12 @@
     </ClInclude>
     <ClInclude Include="SortMgr.h">
       <Filter>01.Manager\SortMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Data_Move.h">
+      <Filter>30. DataClass\Data_Move</Filter>
+    </ClInclude>
+    <ClInclude Include="Data_Fire.h">
+      <Filter>30. DataClass\Data_Fire</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

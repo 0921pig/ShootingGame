@@ -153,6 +153,8 @@
   <ItemGroup>
     <ClInclude Include="Base.h" />
     <ClInclude Include="constant.h" />
+    <ClInclude Include="Data_Fire.h" />
+    <ClInclude Include="Data_Move.h" />
     <ClInclude Include="DeviceMgr.h" />
     <ClInclude Include="enum.h" />
     <ClInclude Include="Execution.h" />
@@ -178,6 +180,8 @@
     <ClInclude Include="struct.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Data_Fire.cpp" />
+    <ClCompile Include="Data_Move.cpp" />
     <ClCompile Include="DeviceMgr.cpp" />
     <ClCompile Include="Execution.cpp" />
     <ClCompile Include="Info_ManageScene.cpp" />
