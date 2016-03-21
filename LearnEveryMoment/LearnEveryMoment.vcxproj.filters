@@ -86,6 +86,12 @@
     <Filter Include="30. DataClass\Data_Fire">
       <UniqueIdentifier>{113fddf0-b20c-4b74-ae6f-7899d281b6dd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="20. Obj\Objects">
+      <UniqueIdentifier>{70dc5ce3-cd42-4fe0-ac99-49d20f71b3e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Background">
+      <UniqueIdentifier>{d5b464a6-4df6-4fca-82f6-e8d663f4ed11}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp">
@@ -141,6 +147,9 @@
     </ClCompile>
     <ClCompile Include="Data_Fire.cpp">
       <Filter>30. DataClass\Data_Fire</Filter>
+    </ClCompile>
+    <ClCompile Include="Background.cpp">
+      <Filter>20. Obj\Objects\Background</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -224,6 +233,9 @@
     </ClInclude>
     <ClInclude Include="Data_Fire.h">
       <Filter>30. DataClass\Data_Fire</Filter>
+    </ClInclude>
+    <ClInclude Include="Background.h">
+      <Filter>20. Obj\Objects\Background</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

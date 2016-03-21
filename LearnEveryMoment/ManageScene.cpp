@@ -28,6 +28,8 @@ void CManageScene::KeyProcess()
 void CManageScene::Progress()
 {
 	/* Progress 실행 결과 Scene 변경에 관련된 메세지를 받아서 변경을 예약한다. */
+	
+	
 	SceneReturn returnMsg = m_Scene->Progress();
 	reserve_changeScene(returnMsg);
 }

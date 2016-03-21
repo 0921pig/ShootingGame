@@ -24,7 +24,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpCmdLine,
 			return 0;
 	} 
 
-//#define NoteBookPC
+#define NoteBookPC
 
 #ifdef NoteBookPC
 	g_hWnd = CreateWindow(WndClass.lpszClassName, L"Window Caption", WS_OVERLAPPEDWINDOW, 1920 -WINSIZEX, 10, WINSIZEX, WINSIZEY, NULL, NULL, hInstance, NULL); 
