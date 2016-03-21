@@ -23,3 +23,9 @@ enum SortID
 	SortID_End,
 	SortID_MaxSize,
 };
+
+enum TEXTYPE
+{
+	TEXTYPE_SINGLE,
+	TEXTYPE_MULTI
+};

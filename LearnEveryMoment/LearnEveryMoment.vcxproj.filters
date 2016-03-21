@@ -92,6 +92,18 @@
     <Filter Include="20. Obj\Objects\Background">
       <UniqueIdentifier>{d5b464a6-4df6-4fca-82f6-e8d663f4ed11}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01.Manager\TextureMgr">
+      <UniqueIdentifier>{10304838-3bcb-41fe-8f1f-f166c8042dc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Manager\TextureMgr\Texture">
+      <UniqueIdentifier>{4d49ddd9-ba8f-44e6-b8e8-ee468325527d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Manager\TextureMgr\Texture\Multi">
+      <UniqueIdentifier>{59b9b8a5-b8aa-44e1-8f64-0a949efe72d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Manager\TextureMgr\Texture\Single">
+      <UniqueIdentifier>{613b0f35-09c3-4e6e-b2e2-d9619880b3d9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp">
@@ -150,6 +162,18 @@
     </ClCompile>
     <ClCompile Include="Background.cpp">
       <Filter>20. Obj\Objects\Background</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureMgr.cpp">
+      <Filter>01.Manager\TextureMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiTexture.cpp">
+      <Filter>01.Manager\TextureMgr\Texture\Multi</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>01.Manager\TextureMgr\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleTexture.cpp">
+      <Filter>01.Manager\TextureMgr\Texture\Single</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -236,6 +260,18 @@
     </ClInclude>
     <ClInclude Include="Background.h">
       <Filter>20. Obj\Objects\Background</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureMgr.h">
+      <Filter>01.Manager\TextureMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiTexture.h">
+      <Filter>01.Manager\TextureMgr\Texture\Multi</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>01.Manager\TextureMgr\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleTexture.h">
+      <Filter>01.Manager\TextureMgr\Texture\Single</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

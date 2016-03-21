@@ -169,16 +169,20 @@
     <ClInclude Include="macro.h" />
     <ClInclude Include="MainGame.h" />
     <ClInclude Include="ManageScene.h" />
+    <ClInclude Include="MultiTexture.h" />
     <ClInclude Include="Obj.h" />
     <ClInclude Include="ObjMgr.h" />
     <ClInclude Include="ObjProto.h" />
     <ClInclude Include="ProtoType.h" />
     <ClInclude Include="readme.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="SingleTexture.h" />
     <ClInclude Include="SortMgr.h" />
     <ClInclude Include="Stage.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="struct.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="TextureMgr.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Background.cpp" />
@@ -193,13 +197,17 @@
     <ClCompile Include="LobbyObjProto.cpp" />
     <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="ManageScene.cpp" />
+    <ClCompile Include="MultiTexture.cpp" />
     <ClCompile Include="Obj.cpp" />
     <ClCompile Include="ObjMgr.cpp" />
     <ClCompile Include="ObjProto.cpp" />
     <ClCompile Include="ProtoType.cpp" />
     <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SingleTexture.cpp" />
     <ClCompile Include="SortMgr.cpp" />
     <ClCompile Include="Stage.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TextureMgr.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
