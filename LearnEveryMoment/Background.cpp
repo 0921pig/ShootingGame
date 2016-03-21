@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Background.h"
+#include "Include.h"
 
 
 CBackground::CBackground(SceneNo SceneNum)
@@ -16,12 +17,20 @@ void CBackground::Initialize()
 {
 	// 여기서 배경 이미지 Load
 	// 방법은 Texture Manager를 등록해서 이미지를 Texture로 등록하면 됨.
+	
+	setSortID(SortID_Back);
+
+	setObjKey(L"Background");
+
 	switch (m_SceneNo)
 	{
 	case SceneNo_None: break;
-	case SceneNo_Lobby:break;
-	case SceneNo_Stage1:break;
+	case SceneNo_Lobby: setObjName(L"Lobby"); break;
+	case SceneNo_Stage1: setObjName(L"State_01");  break;
 	}
+
+	setTextrueKey(L"Background_Image");
+	setStateKey(L"Normal");
 }
 
 void CBackground::Progress()
@@ -31,7 +40,11 @@ void CBackground::Progress()
 
 void CBackground::Render()
 {
-	// 여기서 이미지 한 장을 출력한다
+	const TEXINFO* pTexInfo = GET_SINGLE(CTextureMgr)->GetTexture( getObjkey(), getStatekey(), 0 ); // iCnt를 어떻게 해결해야하지
+	if (pTexInfo == NULL) return;
+	
+	GET_SINGLE(CDeviceMgr)->GetSprite()->SetTransform(&(getObjInfo()->getMatWorld()));
+	GET_SINGLE(CDeviceMgr)->GetSprite()->Draw(pTexInfo->pTexure, NULL, &( getObjInfo()->getCenter() ), NULL, D3DCOLOR_ARGB(255, 255, 255, 255));
 }
 
 void CBackground::Release()
@@ -40,6 +53,5 @@ void CBackground::Release()
 
 CObj * CBackground::Clone()
 {
-	// 여기는 어떻게 한다? 지난번 프로젝트를 참고해서 해결한다.
-	return nullptr;
+	return new CBackground(*this);
 }

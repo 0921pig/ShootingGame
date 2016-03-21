@@ -12,8 +12,7 @@ CMultiTexture::~CMultiTexture(void)
 	Release();
 }
 
-HRESULT CMultiTexture::InsertTexture( const TCHAR* pFileName
-	,const TCHAR* pStateKey,const int& iCnt )
+HRESULT CMultiTexture::InsertTexture( const TCHAR* pFileName, const TCHAR* pStateKey, const int& iCnt )
 {
 
 	TCHAR   szPath[128] = L"";
@@ -47,8 +46,7 @@ HRESULT CMultiTexture::InsertTexture( const TCHAR* pFileName
 	return S_OK;
 }
 
-const TEXINFO* CMultiTexture::GetTexture(const TCHAR* pStateKey 
-	,const int& iCnt )
+const TEXINFO* CMultiTexture::GetTexture(const TCHAR* pStateKey, const int& iCnt )
 {
 	map<const TCHAR*,vector<TEXINFO*>>::iterator iter 
 		= m_MapTexture.find(pStateKey);
