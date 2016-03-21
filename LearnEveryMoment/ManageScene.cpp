@@ -17,6 +17,7 @@ CManageScene::~CManageScene()
 void CManageScene::initiaize()
 {
 	m_Scene = new CLobby();
+	m_SceneInfo.SetCurrentScene(SceneNo_Lobby);
 }
 
 void CManageScene::KeyProcess()
@@ -52,12 +53,12 @@ void CManageScene::reserve_changeScene(SceneReturn message)
 
 	case SceneReturn_NextStage:
 	{
-		SceneNo nextScene;
+		SceneNo nextScene = SceneNo_None;
 
 		switch (m_SceneInfo.GetCurrentScene())
 		{
-		case SceneNo_Lobby: nextScene = SceneNo_Stage1; break;
-		case SceneNo_Stage1: nextScene = SceneNo_End; break;
+		case SceneNo_Lobby:		nextScene = SceneNo_Stage1; break;
+		case SceneNo_Stage1:	nextScene = SceneNo_End;	break;
 		}
 
 		m_SceneInfo.SetNextScene(nextScene);

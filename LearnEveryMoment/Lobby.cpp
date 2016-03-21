@@ -22,6 +22,7 @@ void CLobby::KeyProcess()
 
 SceneReturn CLobby::Progress()
 {
+	//return SceneReturn_NextStage;
 	return SceneReturn();
 }
 
