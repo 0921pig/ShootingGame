@@ -13,11 +13,11 @@ CObjMgr::~CObjMgr()
 	Release();
 }
 
-HRESULT CObjMgr::AddObject(CProtoType* pProto, const TCHAR* pObjKey)
+HRESULT CObjMgr::AddObject(CProtoType* pProto, const TCHAR* pObjType)
 {
-	map<const TCHAR*, list<CObj*>>::iterator iter = m_MapObject.find(pObjKey);
+	map<const TCHAR*, list<CObj*>>::iterator iter = m_MapObject.find(pObjType);
 
-	CObj*  pProtoInst = ((CObjProto*)pProto)->GetProto(pObjKey);
+	CObj*  pProtoInst = ((CObjProto*)pProto)->GetProto(pObjType);
 	if (pProtoInst == NULL)	return E_FAIL;
 
 	CObj* pObject = pProtoInst->Clone();
@@ -25,15 +25,15 @@ HRESULT CObjMgr::AddObject(CProtoType* pProto, const TCHAR* pObjKey)
 
 	if (iter == m_MapObject.end())
 	{
-		//pObjKey 리스트가 없으면, 새로 리스트를 만듦.
+		//pObjType 리스트가 없으면, 새로 리스트를 만듦.
 		list<CObj*> Objlist;
 		Objlist.push_back(pObject);
 
-		m_MapObject.insert(make_pair(pObjKey, Objlist));
+		m_MapObject.insert(make_pair(pObjType, Objlist));
 	}
 	else
 	{
-		//pObjKey 리스트가 있다면 거기에 추가.
+		//pObjType 리스트가 있다면 거기에 추가.
 		iter->second.push_back(pObject);
 	}
 
@@ -79,7 +79,7 @@ HRESULT CObjMgr::DeleteObject(CObj* pObj)
 
 	if (iter == m_MapObject.end())
 	{
-		//pObjKey 리스트가 없으면, 종료. 이지만 그럴리가 있나
+		//pObjType 리스트가 없으면, 종료. 이지만 그럴리가 있나
 		ERR_MSG(g_hWnd, L"이게 가능한 경우냐 ? Delete Object");
 	}
 	else

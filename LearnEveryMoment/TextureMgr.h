@@ -6,20 +6,19 @@ class CTextureMgr
 {
 public:
 	DECLARE_SINGLETON(CTextureMgr);
+
 private:
-	//Texture
-	map<const TCHAR*,CTexture*>  m_MapTexture;
+	map<const TCHAR*, map<const TCHAR*, map<const TCHAR*, CTexture*>>>  m_MapTexture;
+
 public:
-	const TEXINFO* GetTexture(const TCHAR* pObjKey
-		,const TCHAR* pStateKey =NULL
-		,const int& iCnt =0
-		);
+	const TEXINFO* GetTexture(const TCHAR* pObjType, const TCHAR* pObjName, const TCHAR* pTextureName, const TCHAR* pStateKey = L"Normal", 
+		const int& iCnt = 0);
+
 public:
-	HRESULT InsertTexture(const TCHAR* pFileName , const TCHAR* pObjKey, 
-						  TEXTYPE  TypeID
-						  ,const TCHAR* pStateKey =NULL
-						  ,const int& iCnt =0);
+	HRESULT InsertTexture(const TCHAR* pFileName, const TCHAR* pObjType, const TCHAR* pObjName, const TCHAR* pTextureName,
+		const TCHAR* pStateKey = L"Normal", const int& iCnt = 0);
 	void Release();
+
 public:
 	CTextureMgr(void);
 	~CTextureMgr(void);

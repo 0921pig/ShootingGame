@@ -22,8 +22,6 @@
 
 // 텍스쳐
 #include "Texture.h"
-
-#include "SingleTexture.h"
 #include "MultiTexture.h"
 
 /* tools */

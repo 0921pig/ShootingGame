@@ -8,7 +8,7 @@ private:
 	CInfo_Obj m_Info;
 	SortID	m_SortID;
 
-	TCHAR*	m_pObjKey;
+	TCHAR*	m_pObjType;
 	TCHAR*	m_pObjName;
 	TCHAR*	m_pTextureKey;
 	TCHAR*	m_pStateKey;
@@ -16,7 +16,7 @@ private:
 public:
 	CInfo_Obj*	 getObjInfo() { return &m_Info; }
 	SortID		 getSortID() { return m_SortID; }
-	const TCHAR* getObjkey() { return m_pObjKey; }
+	const TCHAR* getObjkey() { return m_pObjType; }
 	const TCHAR* getObjName() { return m_pObjName; }
 	const TCHAR* getTexturekey() { return m_pTextureKey; }
 	const TCHAR* getStatekey() { return m_pStateKey; }
@@ -26,6 +26,9 @@ public:
 	void setObjName(TCHAR* inputName);
 	void setTextrueKey(TCHAR* inputName);
 	void setStateKey(TCHAR* inputStateKey);
+
+	void drawTexture(CInfo_Obj inputInfo, RefPos option_RF, int iCnt, 
+		TCHAR* in_pObjType, TCHAR* in_pObjName, TCHAR* in_pTextureName = NULL, TCHAR* in_pStateKey = NULL);
 
 public:
 	virtual void Initialize()PURE;

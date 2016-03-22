@@ -13,9 +13,9 @@ CObjProto::~CObjProto()
 
 
 
-CObj* CObjProto::GetProto(const TCHAR* pObjKey)
+CObj* CObjProto::GetProto(const TCHAR* pObjType)
 {
-	map<const TCHAR*, CObj*>::iterator iter = m_MapProto.find(pObjKey);
+	map<const TCHAR*, CObj*>::iterator iter = m_MapProto.find(pObjType);
 
 	if (iter == m_MapProto.end())
 	{

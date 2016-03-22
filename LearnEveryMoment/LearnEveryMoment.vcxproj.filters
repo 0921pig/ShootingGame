@@ -44,9 +44,6 @@
     <Filter Include="10.Scene\tools\ManageScene\Info_ManageScene">
       <UniqueIdentifier>{446ca421-8108-46f0-b79a-0287698c2451}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01.Manager\KeyMgr">
-      <UniqueIdentifier>{28a61235-54c8-4cdc-b89d-0f0efdf860c5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="01.Manager\ObjMgr">
       <UniqueIdentifier>{c66c50bc-cb00-4d7b-9ee4-6812c49b9523}</UniqueIdentifier>
     </Filter>
@@ -101,8 +98,8 @@
     <Filter Include="01.Manager\TextureMgr\Texture\Multi">
       <UniqueIdentifier>{59b9b8a5-b8aa-44e1-8f64-0a949efe72d5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01.Manager\TextureMgr\Texture\Single">
-      <UniqueIdentifier>{613b0f35-09c3-4e6e-b2e2-d9619880b3d9}</UniqueIdentifier>
+    <Filter Include="01.Manager\KeyMgr">
+      <UniqueIdentifier>{28a61235-54c8-4cdc-b89d-0f0efdf860c5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -171,9 +168,6 @@
     </ClCompile>
     <ClCompile Include="Texture.cpp">
       <Filter>01.Manager\TextureMgr\Texture</Filter>
-    </ClCompile>
-    <ClCompile Include="SingleTexture.cpp">
-      <Filter>01.Manager\TextureMgr\Texture\Single</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -269,9 +263,6 @@
     </ClInclude>
     <ClInclude Include="Texture.h">
       <Filter>01.Manager\TextureMgr\Texture</Filter>
-    </ClInclude>
-    <ClInclude Include="SingleTexture.h">
-      <Filter>01.Manager\TextureMgr\Texture\Single</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

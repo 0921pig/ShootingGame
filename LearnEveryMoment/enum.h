@@ -24,8 +24,8 @@ enum SortID
 	SortID_MaxSize,
 };
 
-enum TEXTYPE
+enum RefPos
 {
-	TEXTYPE_SINGLE,
-	TEXTYPE_MULTI
+	RefPos_LeftTop,
+	RefPos_Center,
 };

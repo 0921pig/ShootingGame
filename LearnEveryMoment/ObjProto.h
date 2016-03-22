@@ -8,7 +8,7 @@ protected:
 	map<const TCHAR*, CObj*>	m_MapProto;
 
 public:
-	CObj* GetProto(const TCHAR* pObjKey);
+	CObj* GetProto(const TCHAR* pObjType);
 
 public:
 	virtual HRESULT InitProtoInstance()PURE;

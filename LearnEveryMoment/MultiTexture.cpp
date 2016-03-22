@@ -40,6 +40,7 @@ HRESULT CMultiTexture::InsertTexture( const TCHAR* pFileName, const TCHAR* pStat
 
 		vecTexture.push_back(m_pTexInfo);
 	}
+
 	m_MapTexture.insert(make_pair(pStateKey,vecTexture));
 
 

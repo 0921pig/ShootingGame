@@ -11,7 +11,7 @@ private:
 	list<CObj*>	m_DeleteList;
 
 public:
-	HRESULT AddObject(CProtoType* pProto, const TCHAR* pObjKey);
+	HRESULT AddObject(CProtoType* pProto, const TCHAR* pObjType);
 	HRESULT DeleteObject(CObj* pObj);
 	
 	void Progress();
