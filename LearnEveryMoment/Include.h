@@ -10,6 +10,7 @@
 #include "KeyMgr.h"
 #include "TextureMgr.h"
 #include "SortMgr.h"
+#include "ObjMgr.h"
 
 /* 구조 */
 #include "MainGame.h"

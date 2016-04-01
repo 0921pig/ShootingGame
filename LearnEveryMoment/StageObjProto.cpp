@@ -1,3 +1,4 @@
+#pragma once
 #include "stdafx.h"
 #include "StageObjProto.h"
 #include "Include.h"
@@ -13,7 +14,7 @@ CStageObjProto::~CStageObjProto()
 {
 }
 
-HRESULT CLobbyObjProto::InitProtoInstance()
+HRESULT CStageObjProto::InitProtoInstance()
 {
 	//m_MapProto.insert(make_pair(L"Background", new CBackground(SceneNo_Lobby)));
 

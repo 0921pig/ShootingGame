@@ -6,7 +6,7 @@ enum SceneReturn;
 
 class CScene
 {
-protected:
+private:
 	CObjProto* m_ObjProto;
 
 public:
@@ -18,6 +18,14 @@ public:
 
 	virtual void LoadTexture()PURE;
 	virtual void CreateBaseObjects()PURE;
+
+public:
+	CObjProto* getObjProto() { return m_ObjProto; }
+
+protected:
+	void setObjProto(CObjProto* inputProto);
+
+
 public:
 	CScene();
 	virtual ~CScene();

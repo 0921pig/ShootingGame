@@ -3,6 +3,11 @@
 #include "Scene.h"
 
 
+void CScene::setObjProto(CObjProto * inputProto)
+{
+	m_ObjProto = inputProto;
+}
+
 CScene::CScene()
 	:m_ObjProto(NULL)
 {

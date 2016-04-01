@@ -16,7 +16,7 @@ CLobby::~CLobby()
 void CLobby::Initialize()
 {
 	LoadTexture();
-	m_ObjProto = new CLobbyObjProto();
+	setObjProto(new CLobbyObjProto());
 	
 	CreateBaseObjects();
 }
@@ -47,4 +47,5 @@ void CLobby::LoadTexture()
 
 void CLobby::CreateBaseObjects()
 {
+	GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"Background");
 }
