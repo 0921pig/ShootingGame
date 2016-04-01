@@ -16,6 +16,9 @@ CLobby::~CLobby()
 void CLobby::Initialize()
 {
 	LoadTexture();
+	m_ObjProto = new CLobbyObjProto();
+	
+	CreateBaseObjects();
 }
 
 void CLobby::KeyProcess()
@@ -40,4 +43,8 @@ void CLobby::Release()
 void CLobby::LoadTexture()
 {
 	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/back_Lobby.png", L"Background", L"Background", L"Main", L"Nomral", 1);
+}
+
+void CLobby::CreateBaseObjects()
+{
 }

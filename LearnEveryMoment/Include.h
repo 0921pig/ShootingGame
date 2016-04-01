@@ -27,3 +27,9 @@
 
 /* tools */
 #include "ManageScene.h"
+
+/* 디자인 패턴 */
+#include "ProtoType.h"
+#include "ObjProto.h"
+#include "LobbyObjProto.h"
+#include "StageObjProto.h"

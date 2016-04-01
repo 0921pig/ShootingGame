@@ -2,9 +2,6 @@
 #include "Scene.h"
 class CLobby : public CScene
 {
-private:
-	CLobbyObjProto m_Proto;
-
 public:
 	virtual void Initialize();
 	virtual SceneReturn Progress();
@@ -13,6 +10,7 @@ public:
 	virtual void Release();
 
 	virtual void LoadTexture();
+	virtual void CreateBaseObjects();
 public:
 	CLobby();
 	virtual ~CLobby();

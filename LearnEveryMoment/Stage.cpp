@@ -16,6 +16,9 @@ CStage::~CStage()
 void CStage::Initialize()
 {
 	LoadTexture();
+	m_ObjProto = new CStageObjProto();
+
+	CreateBaseObjects();
 }
 
 
@@ -38,5 +41,9 @@ void CStage::Release()
 
 
 void CStage::LoadTexture()
+{
+}
+
+void CStage::CreateBaseObjects()
 {
 }

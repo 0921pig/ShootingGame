@@ -11,6 +11,7 @@ public:
 	virtual void Release();
 
 	virtual void LoadTexture();
+	virtual void CreateBaseObjects();
 
 public:
 	CStage(SceneNo WhatStage);

@@ -178,6 +178,9 @@
     <ClCompile Include="Util.cpp">
       <Filter>00.Header\lib\Trace</Filter>
     </ClCompile>
+    <ClCompile Include="StageObjProto.cpp">
+      <Filter>97.DesignPattern\ProtoType\Object\Stage</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DeviceMgr.h">
@@ -275,6 +278,9 @@
     </ClInclude>
     <ClInclude Include="Util.h">
       <Filter>00.Header\lib\Trace</Filter>
+    </ClInclude>
+    <ClInclude Include="StageObjProto.h">
+      <Filter>97.DesignPattern\ProtoType\Object\Stage</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -178,6 +178,7 @@
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SortMgr.h" />
     <ClInclude Include="Stage.h" />
+    <ClInclude Include="StageObjProto.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="struct.h" />
     <ClInclude Include="Texture.h" />
@@ -205,6 +206,7 @@
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SortMgr.cpp" />
     <ClCompile Include="Stage.cpp" />
+    <ClCompile Include="StageObjProto.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TextureMgr.cpp" />
     <ClCompile Include="Util.cpp" />

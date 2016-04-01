@@ -4,7 +4,7 @@
 
 
 CScene::CScene()
-	:m_ProtoType(NULL)
+	:m_ObjProto(NULL)
 {
 }
 
