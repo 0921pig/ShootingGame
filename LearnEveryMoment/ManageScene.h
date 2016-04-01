@@ -1,6 +1,14 @@
 ﻿#pragma once
-#include "Scene.h"
-#include "Info_ManageScene.h"
+
+#ifndef HEADER_Info_ManageScene
+	#define HEADER_Info_ManageScene
+	#include "Info_ManageScene.h"
+#endif
+
+#ifndef HEADER_Scene
+	#define HEADER_Scene
+	#include "Scene.h"
+#endif
 
 class CManageScene
 {

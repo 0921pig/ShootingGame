@@ -1,5 +1,8 @@
 #pragma once
-#include "Base.h"
+#ifndef HEADER_Base
+	#define HEADER_Base
+	#include "Base.h"
+#endif
 
 class CInfo_ManageScene
 {

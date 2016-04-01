@@ -1,5 +1,4 @@
 ﻿#include "stdafx.h"
-#include "ManageScene.h"
 #include "Include.h"
 
 CManageScene::CManageScene()

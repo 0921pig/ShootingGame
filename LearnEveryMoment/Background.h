@@ -1,7 +1,12 @@
 #pragma once
-#include "Base.h"
-#include "Include.h"
-#include "Obj.h"
+
+#ifndef HEADER_Base
+	#define HEADER_Base
+	#include "Base.h"
+#endif
+
+class CObj;
+
 class CBackground :	public CObj
 {
 private:

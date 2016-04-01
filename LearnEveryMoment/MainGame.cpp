@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "MainGame.h"
+#include "Include.h"
 
 CMainGame::CMainGame()
 {

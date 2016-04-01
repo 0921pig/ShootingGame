@@ -1,6 +1,6 @@
 #pragma once
-#include "ProtoType.h"
-#include "Include.h"
+class CObj;
+class CProtoType;
 
 class CObjProto : public CProtoType
 {

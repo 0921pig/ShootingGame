@@ -1,7 +1,6 @@
 ﻿#pragma once
 #include "stdafx.h"
-#include "Scene.h"
-
+#include "Include.h"
 
 void CScene::setObjProto(CObjProto * inputProto)
 {

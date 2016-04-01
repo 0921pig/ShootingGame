@@ -1,6 +1,9 @@
 ﻿#pragma once
-#include "Include.h"
-#include "ManageScene.h"
+
+#ifndef HEADER_ManageScene
+	#define HEADER_ManageScene
+	#include "ManageScene.h"
+#endif
 
 class CMainGame
 {

@@ -1,6 +1,5 @@
 ﻿#pragma once
 #include "stdafx.h"
-#include "Stage.h"
 #include "Include.h"
 
 CStage::CStage(SceneNo WhatStage)
@@ -46,5 +45,5 @@ void CStage::LoadTexture()
 
 void CStage::CreateBaseObjects()
 {
-	GET_SINGLE(CObjMgr)->AddObject()
+	//GET_SINGLE(CObjMgr)->AddObject()
 }

@@ -1,5 +1,5 @@
-#pragma once
-#include "ObjProto.h"
+﻿#pragma once
+class CObjProto;
 
 class CStageObjProto : public CObjProto
 {

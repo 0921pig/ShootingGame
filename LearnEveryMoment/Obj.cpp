@@ -1,5 +1,5 @@
-#include "Obj.h"
-#include "Base.h"
+#include "stdafx.h"
+#include "Info_Obj.h"
 #include "Include.h"
 
 CObj::CObj()
@@ -43,11 +43,11 @@ void CObj::drawTexture(CInfo_Obj inputInfo, RefPos option_RF, int iCnt, TCHAR * 
 	switch (option_RF)
 	{
 	case RefPos_LeftTop:
-		GET_SINGLE(CDeviceMgr)->GetSprite()->Draw(pTexInfo->pTexure, NULL, NULL, NULL, D3DCOLOR_ARGB(255, 255, 255, 255));
+		GET_SINGLE(CDeviceMgr)->GetSprite()->Draw(pTexInfo->pTexture, NULL, NULL, NULL, D3DCOLOR_ARGB(255, 255, 255, 255));
 		break;
 	
 	case RefPos_Center:
-		GET_SINGLE(CDeviceMgr)->GetSprite()->Draw(pTexInfo->pTexure, NULL, &inputInfo.getCenter(), NULL, D3DCOLOR_ARGB(255, 255, 255, 255));
+		GET_SINGLE(CDeviceMgr)->GetSprite()->Draw(pTexInfo->pTexture, NULL, &inputInfo.getCenter(), NULL, D3DCOLOR_ARGB(255, 255, 255, 255));
 		break;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿#pragma once
 #include "stdafx.h"
-#include "Lobby.h"
 #include "Include.h"
 
 CLobby::CLobby()

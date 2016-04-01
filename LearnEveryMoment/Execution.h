@@ -1,4 +1,3 @@
 ﻿#pragma once
-#include "Include.h"
+#include "stdafx.h"
 
-HWND g_hWnd;

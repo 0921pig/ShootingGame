@@ -107,6 +107,12 @@
     <Filter Include="00.Header\lib\Trace">
       <UniqueIdentifier>{731e3e7b-7197-45a5-8b6f-5f490cea3335}</UniqueIdentifier>
     </Filter>
+    <Filter Include="00.Header\Base\Base_var">
+      <UniqueIdentifier>{6bbcf4cd-794c-4433-9821-23f25fdb266c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00.Header\Base\Base_var\extern_hWnd">
+      <UniqueIdentifier>{035e005f-a778-43cd-9e69-a113d0b26e26}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp">
@@ -180,6 +186,9 @@
     </ClCompile>
     <ClCompile Include="StageObjProto.cpp">
       <Filter>97.DesignPattern\ProtoType\Object\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="extern_hWnd.cpp">
+      <Filter>00.Header\Base\Base_var\extern_hWnd</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -281,6 +290,9 @@
     </ClInclude>
     <ClInclude Include="StageObjProto.h">
       <Filter>97.DesignPattern\ProtoType\Object\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="extern_hWnd.h">
+      <Filter>00.Header\Base\Base_var\extern_hWnd</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

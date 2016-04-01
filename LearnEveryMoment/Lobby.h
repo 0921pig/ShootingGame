@@ -1,5 +1,7 @@
 ﻿#pragma once
-#include "Scene.h"
+
+class CScene;
+
 class CLobby : public CScene
 {
 public:

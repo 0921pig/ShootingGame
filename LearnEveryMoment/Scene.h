@@ -1,8 +1,8 @@
 ﻿#pragma once
 #include "stdafx.h"
-#include "Include.h"
 
 enum SceneReturn;
+class CObjProto;
 
 class CScene
 {

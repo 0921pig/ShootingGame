@@ -1,5 +1,5 @@
 #pragma once
-#include "ObjProto.h"
+class CObjProto;
 
 class CLobbyObjProto :public CObjProto
 {

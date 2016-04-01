@@ -159,6 +159,7 @@
     <ClInclude Include="DeviceMgr.h" />
     <ClInclude Include="enum.h" />
     <ClInclude Include="Execution.h" />
+    <ClInclude Include="extern_hWnd.h" />
     <ClInclude Include="function.h" />
     <ClInclude Include="Include.h" />
     <ClInclude Include="Info_ManageScene.h" />
@@ -191,6 +192,7 @@
     <ClCompile Include="Data_Move.cpp" />
     <ClCompile Include="DeviceMgr.cpp" />
     <ClCompile Include="Execution.cpp" />
+    <ClCompile Include="extern_hWnd.cpp" />
     <ClCompile Include="Info_ManageScene.cpp" />
     <ClCompile Include="Info_Obj.cpp" />
     <ClCompile Include="KeyMgr.cpp" />

@@ -1,6 +1,5 @@
 #pragma once
 #include "stdafx.h"
-#include "Base.h"
 
 class CProtoType // 얘의 역할은 인터페이스. 
 {

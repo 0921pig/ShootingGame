@@ -35,7 +35,7 @@ HRESULT CMultiTexture::InsertTexture( const TCHAR* pFileName, const TCHAR* pStat
 			,D3DPOOL_MANAGED,D3DX_DEFAULT,D3DX_DEFAULT
 			,D3DCOLOR_ARGB(255,255,0,0)
 			,&m_pTexInfo->ImgInfo
-			,NULL,&m_pTexInfo->pTexure)))
+			,NULL,&m_pTexInfo->pTexture)))
 			return E_FAIL;
 
 		vecTexture.push_back(m_pTexInfo);
@@ -66,7 +66,7 @@ void CMultiTexture::Release()
 	{
 		for(unsigned int i =0; i< iter->second.size();++i)
 		{
-			iter->second[i]->pTexure->Release();
+			iter->second[i]->pTexture->Release();
 			delete iter->second[i];
 			iter->second[i] = NULL;
 		}

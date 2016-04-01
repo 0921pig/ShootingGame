@@ -1,6 +1,13 @@
 #pragma once
-#include "Info_Obj.h"
-#include "Base.h"
+#ifndef HEADER_Base
+	#define HEADER_Base
+	#include "Base.h"
+#endif
+
+#ifndef HEADER_Info_Obj
+	#define HEADER_Info_Obj
+	#include "Info_Obj.h"
+#endif
 
 class CObj
 {

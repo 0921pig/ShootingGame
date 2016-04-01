@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Info_ManageScene.h"
+#include "Include.h"
 
 CInfo_ManageScene::CInfo_ManageScene()
 	:m_CurrentScene(SceneNo_None)

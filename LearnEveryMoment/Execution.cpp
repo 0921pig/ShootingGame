@@ -1,5 +1,4 @@
 ﻿#include "stdafx.h"
-#include "Execution.h"
 #include "Include.h"
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT, WPARAM wParam, LPARAM lParam);

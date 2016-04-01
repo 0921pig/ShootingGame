@@ -1,5 +1,4 @@
 #include "stdafx.h"
-#include "Background.h"
 #include "Include.h"
 
 
@@ -44,7 +43,7 @@ void CBackground::Render()
 	if (pTexInfo == NULL) return;
 	
 	GET_SINGLE(CDeviceMgr)->GetSprite()->SetTransform(&(getObjInfo()->getMatWorld()));
-	GET_SINGLE(CDeviceMgr)->GetSprite()->Draw(pTexInfo->pTexure, NULL, &( getObjInfo()->getCenter() ), NULL, D3DCOLOR_ARGB(255, 255, 255, 255));
+	GET_SINGLE(CDeviceMgr)->GetSprite()->Draw(pTexInfo->pTexture, NULL, &( getObjInfo()->getCenter() ), NULL, D3DCOLOR_ARGB(255, 255, 255, 255));
 }
 
 void CBackground::Release()
