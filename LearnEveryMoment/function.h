@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include <tchar.h>
 
 template<typename T>
 void SAFE_DELETE(T& Pointer)
@@ -13,4 +14,3 @@ void SAFE_DELETE_ARRAY(T& Pointer)
 	delete[] Pointer;
 	Pointer = NULL;
 }
-

@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "stdafx.h"
 #include "Lobby.h"
+#include "Include.h"
 
 CLobby::CLobby()
 {
@@ -14,6 +15,7 @@ CLobby::~CLobby()
 
 void CLobby::Initialize()
 {
+	LoadTexture();
 }
 
 void CLobby::KeyProcess()
@@ -34,3 +36,8 @@ void CLobby::Release()
 {
 }
 
+
+void CLobby::LoadTexture()
+{
+	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/back_Lobby.png", L"Background", L"Background", L"Main", L"Nomral", 1);
+}

@@ -1,5 +1,6 @@
 ﻿#include "stdafx.h"
 #include "Execution.h"
+#include "Include.h"
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT, WPARAM wParam, LPARAM lParam);
 
@@ -35,11 +36,15 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpCmdLine,
 
 	if (!g_hWnd) // 윈도우 핸들 잘 생성되었는지 체크
 		return FALSE;
-
+	
 	ShowWindow(g_hWnd, nShowCmd);
 	UpdateWindow(g_hWnd);
 	
+	// Mgr 초기화
+	GET_SINGLE(CDeviceMgr)->InitDevice(WINMODE_WIN);
+
 	
+
 	MSG msg; //While문에서 사용할 메세지
 	msg.message = WM_NULL;
 	CMainGame MainGame; // 생성자에서 자동으로 Initialize() 실행

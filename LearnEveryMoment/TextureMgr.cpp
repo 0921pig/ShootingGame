@@ -37,12 +37,12 @@ HRESULT CTextureMgr::InsertTexture(const TCHAR * pFileName, const TCHAR * pObjTy
 {
 	// 1단계
 	map<const TCHAR*, map<const TCHAR*, map<const TCHAR*, CTexture*>>>::iterator iter_ObjType = m_MapTexture.find(pObjType);
-	if (iter_ObjType == m_MapTexture.end())	{
+	if (iter_ObjType == m_MapTexture.end()) {
 		// 해당하는 노드가 없으면 추가한다.
 		m_MapTexture.insert(make_pair(pObjType, map<const TCHAR*, map<const TCHAR*, CTexture*>>()));
 		iter_ObjType = m_MapTexture.find(pObjType);
 	}
-	
+
 	// 2단계
 	map<const TCHAR*, map<const TCHAR*, CTexture*>>::iterator iter_ObjName = iter_ObjType->second.find(pObjName);
 	if (iter_ObjName == iter_ObjType->second.end()) {
@@ -61,8 +61,12 @@ HRESULT CTextureMgr::InsertTexture(const TCHAR * pFileName, const TCHAR * pObjTy
 	}
 
 	if (FAILED(iter_TextureName->second->InsertTexture(pFileName, pStateKey, iCnt)))
+	{
+		TRACE(L"%s - %s - %s - %s 텍스쳐 로드 실패\n", pObjType, pObjName, pTextureName, pStateKey);
 		return E_FAIL;
-		
+
+	}
+
 	return S_OK;
 }
 

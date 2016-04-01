@@ -15,7 +15,9 @@ CStage::~CStage()
 
 void CStage::Initialize()
 {
+	LoadTexture();
 }
+
 
 void CStage::KeyProcess()
 {
@@ -31,5 +33,10 @@ void CStage::Render()
 }
 
 void CStage::Release()
+{
+}
+
+
+void CStage::LoadTexture()
 {
 }

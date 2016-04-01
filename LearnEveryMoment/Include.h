@@ -3,6 +3,7 @@
 /* 기본 헤더 */
 #include "Base.h"
 #include "function.h"
+#include "Util.h"
 
 /* 매니저 헤더 */
 #include "DeviceMgr.h"

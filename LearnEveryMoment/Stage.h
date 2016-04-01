@@ -10,6 +10,8 @@ public:
 	virtual void Render();
 	virtual void Release();
 
+	virtual void LoadTexture();
+
 public:
 	CStage(SceneNo WhatStage);
 	virtual ~CStage();

@@ -101,6 +101,12 @@
     <Filter Include="01.Manager\KeyMgr">
       <UniqueIdentifier>{28a61235-54c8-4cdc-b89d-0f0efdf860c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="00.Header\lib">
+      <UniqueIdentifier>{e27b2f35-8ca9-4b52-8d3c-fe7f78805145}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00.Header\lib\Trace">
+      <UniqueIdentifier>{731e3e7b-7197-45a5-8b6f-5f490cea3335}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp">
@@ -168,6 +174,9 @@
     </ClCompile>
     <ClCompile Include="Texture.cpp">
       <Filter>01.Manager\TextureMgr\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Util.cpp">
+      <Filter>00.Header\lib\Trace</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -263,6 +272,9 @@
     </ClInclude>
     <ClInclude Include="Texture.h">
       <Filter>01.Manager\TextureMgr\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>00.Header\lib\Trace</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

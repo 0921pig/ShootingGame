@@ -5,7 +5,11 @@ enum SceneReturn;
 
 class CScene
 {
+private:
+	CProtoType* m_ProtoType;
+
 public:
+	virtual void LoadTexture()PURE;
 	virtual void Initialize()PURE;
 	virtual SceneReturn Progress()PURE;
 	virtual void KeyProcess()PURE;
