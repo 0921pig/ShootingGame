@@ -26,7 +26,7 @@ const TEXINFO * CTextureMgr::GetTexture(const TCHAR * pObjType, const TCHAR * pO
 		return NULL;
 
 	// 3단계
-	map<const TCHAR*, CTexture* > ::iterator iter_TextureName = iter_ObjName->second.find(pObjName);
+	map<const TCHAR*, CTexture* > ::iterator iter_TextureName = iter_ObjName->second.find(pTextureName);
 	if (iter_TextureName == iter_ObjName->second.end())
 		return NULL;
 	
@@ -48,7 +48,7 @@ HRESULT CTextureMgr::InsertTexture(const TCHAR * pFileName, const TCHAR * pObjTy
 	if (iter_ObjName == iter_ObjType->second.end()) {
 		// 해당하는 노드가 없으면 추가한다.
 		iter_ObjType->second.insert(make_pair(pObjName, map<const TCHAR*, CTexture*>()));
-		iter_ObjName = iter_ObjType->second.find(pObjType);
+		iter_ObjName = iter_ObjType->second.find(pObjName);
 	}
 
 	// 3단계

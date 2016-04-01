@@ -28,22 +28,36 @@ void CBackground::Initialize()
 	case SceneNo_Stage1: setObjName(L"State_01");  break;
 	}
 
-	setTextrueKey(L"Background_Image");
+	setTextrueKey(L"Main");
 	setStateKey(L"Normal");
+
+	getObjInfo()->setPos(D3DXVECTOR3(100.f, 100.f, 100.f));
 }
 
 void CBackground::Progress()
 {
-	// 여기서 어디를 출력할지 세팅
+	D3DXMATRIX	matTrans;
+	D3DXMatrixIdentity(&matTrans);
+	D3DXMatrixTranslation(&matTrans, WINSIZEX/2.f, WINSIZEY/2.f, 0.f);
+
+	D3DXMATRIX matScale;
+	D3DXMatrixIdentity(&matScale);
+	D3DXMatrixScaling(&matScale, 1.f, 1.f, 0.f);
+
+	getObjInfo()->setMatWorld(matScale * matTrans);
 }
 
 void CBackground::Render()
 {
-	const TEXINFO* pTexInfo = GET_SINGLE(CTextureMgr)->GetTexture( getObjkey(), getStatekey(), 0 ); // iCnt를 어떻게 해결해야하지
-	if (pTexInfo == NULL) return;
+	const TEXINFO* pTexInfo = GET_SINGLE(CTextureMgr)->GetTexture( getObjkey(), getObjName(), getTexturekey(), getStatekey(), 0); // iCnt를 어떻게 해결해야하지
+	if (pTexInfo == NULL) 
+		return;
 	
-	GET_SINGLE(CDeviceMgr)->GetSprite()->SetTransform(&(getObjInfo()->getMatWorld()));
-	GET_SINGLE(CDeviceMgr)->GetSprite()->Draw(pTexInfo->pTexture, NULL, &( getObjInfo()->getCenter() ), NULL, D3DCOLOR_ARGB(255, 255, 255, 255));
+	D3DXMATRIX temp = getObjInfo()->getMatWorld();
+	D3DXVECTOR3 vCenter = D3DXVECTOR3(pTexInfo->ImgInfo.Width / 2.f, pTexInfo->ImgInfo.Height / 2.f, 0.f);
+	
+	GET_SINGLE(CDeviceMgr)->GetSprite()->SetTransform(&temp);
+	GET_SINGLE(CDeviceMgr)->GetSprite()->Draw(pTexInfo->pTexture, NULL, &vCenter, NULL, D3DCOLOR_ARGB(255, 255, 255, 255));
 }
 
 void CBackground::Release()

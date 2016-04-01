@@ -14,6 +14,7 @@ private:
 	LPD3DXSPRITE				m_pSprite;
 	LPD3DXFONT					m_pFont;
 	LPD3DXLINE			m_pLine;
+
 public:
 	LPD3DXLINE GetLine() { return m_pLine; }
 	LPD3DXFONT GetFont() { return m_pFont; }

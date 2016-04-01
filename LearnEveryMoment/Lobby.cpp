@@ -14,6 +14,8 @@ CLobby::~CLobby()
 
 void CLobby::Initialize()
 {
+
+
 	LoadTexture();
 	setObjProto(new CLobbyObjProto());
 	
@@ -26,12 +28,14 @@ void CLobby::KeyProcess()
 
 SceneReturn CLobby::Progress()
 {
-	//return SceneReturn_NextStage;
-	return SceneReturn();
+	GET_SINGLE(CObjMgr)->Progress();
+
+	return SceneReturn_None;
 }
 
 void CLobby::Render()
 {
+	GET_SINGLE(CObjMgr)->Render();
 }
 
 void CLobby::Release()
@@ -41,7 +45,7 @@ void CLobby::Release()
 
 void CLobby::LoadTexture()
 {
-	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/back_Lobby.png", L"Background", L"Background", L"Main", L"Nomral", 1);
+	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/back_Lobby.png", L"Background", L"Lobby", L"Main", L"Normal", 1);
 }
 
 void CLobby::CreateBaseObjects()

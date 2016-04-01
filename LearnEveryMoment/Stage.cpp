@@ -45,5 +45,4 @@ void CStage::LoadTexture()
 
 void CStage::CreateBaseObjects()
 {
-	//GET_SINGLE(CObjMgr)->AddObject()
 }

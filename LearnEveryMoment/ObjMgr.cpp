@@ -50,13 +50,17 @@ void CObjMgr::Progress()
 		{
 			/* Progress */
 			(*list_iter)->Progress();
+
+			GET_SINGLE(CSortMgr)->AddSortObject(*list_iter);
 		}
 	}
+
+
 }
 
 void CObjMgr::Render()
 {
-	//GET_SINGLE(CSortMgr)->RenderObject();
+	GET_SINGLE(CSortMgr)->RenderObject();
 }
 
 void CObjMgr::Release()

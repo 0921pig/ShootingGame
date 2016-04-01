@@ -39,8 +39,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpCmdLine,
 	ShowWindow(g_hWnd, nShowCmd);
 	UpdateWindow(g_hWnd);
 	
-	// Mgr 초기화
-	GET_SINGLE(CDeviceMgr)->InitDevice(WINMODE_WIN);
+
 
 	
 

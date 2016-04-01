@@ -17,7 +17,7 @@ CDeviceMgr::~CDeviceMgr()
 void CDeviceMgr::Render_Begin()
 {
 	m_pDevice->Clear(0, NULL, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER | D3DCLEAR_STENCIL,
-		D3DCOLOR_ARGB(255, 0, 0, 0), 1.0f, 0);
+		D3DCOLOR_ARGB(255, 0, 0, 255), 1.0f, 0);
 	m_pDevice->BeginScene();
 	m_pSprite->Begin(D3DXSPRITE_ALPHABLEND);
 }
@@ -90,6 +90,8 @@ HRESULT CDeviceMgr::InitDevice(WINMODE Mode)
 		ERR_MSG(g_hWnd, L"라인 생성 실패");
 		return E_FAIL;
 	}
+
+	InitVB();
 
 	return S_OK;
 }

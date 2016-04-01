@@ -35,9 +35,6 @@
     <Filter Include="10.Scene\_Lobby">
       <UniqueIdentifier>{a0957643-f862-4438-ae3c-1e6a1fb51755}</UniqueIdentifier>
     </Filter>
-    <Filter Include="10.Scene\_Stage">
-      <UniqueIdentifier>{877fedc0-b48b-40bf-a7a4-9f05b760a00c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="10.Scene\tools\ManageScene">
       <UniqueIdentifier>{e5ee6224-0f8b-468f-bcd3-260fd3d18003}</UniqueIdentifier>
     </Filter>
@@ -113,6 +110,12 @@
     <Filter Include="00.Header\Base\Base_var\extern_hWnd">
       <UniqueIdentifier>{035e005f-a778-43cd-9e69-a113d0b26e26}</UniqueIdentifier>
     </Filter>
+    <Filter Include="97.DesignPattern\ProtoType\Object\Stage\StageObjProto">
+      <UniqueIdentifier>{fae68905-e80e-4043-90a0-9a9eebbffe08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="10.Scene\_Stage">
+      <UniqueIdentifier>{877fedc0-b48b-40bf-a7a4-9f05b760a00c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp">
@@ -184,11 +187,11 @@
     <ClCompile Include="Util.cpp">
       <Filter>00.Header\lib\Trace</Filter>
     </ClCompile>
-    <ClCompile Include="StageObjProto.cpp">
-      <Filter>97.DesignPattern\ProtoType\Object\Stage</Filter>
-    </ClCompile>
     <ClCompile Include="extern_hWnd.cpp">
       <Filter>00.Header\Base\Base_var\extern_hWnd</Filter>
+    </ClCompile>
+    <ClCompile Include="StageObjProto.cpp">
+      <Filter>97.DesignPattern\ProtoType\Object\Stage\StageObjProto</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -288,11 +291,11 @@
     <ClInclude Include="Util.h">
       <Filter>00.Header\lib\Trace</Filter>
     </ClInclude>
-    <ClInclude Include="StageObjProto.h">
-      <Filter>97.DesignPattern\ProtoType\Object\Stage</Filter>
-    </ClInclude>
     <ClInclude Include="extern_hWnd.h">
       <Filter>00.Header\Base\Base_var\extern_hWnd</Filter>
+    </ClInclude>
+    <ClInclude Include="StageObjProto.h">
+      <Filter>97.DesignPattern\ProtoType\Object\Stage\StageObjProto</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
