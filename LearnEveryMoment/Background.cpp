@@ -36,15 +36,15 @@ void CBackground::Initialize()
 
 void CBackground::Progress()
 {
-	D3DXMATRIX	matTrans;
-	D3DXMatrixIdentity(&matTrans);
-	D3DXMatrixTranslation(&matTrans, WINSIZEX/2.f, WINSIZEY/2.f, 0.f);
+	//D3DXMATRIX	matTrans;
+	//D3DXMatrixIdentity(&matTrans);
+	//D3DXMatrixTranslation(&matTrans, WINSIZEX/2.f, WINSIZEY/2.f, 0.f);
 
-	D3DXMATRIX matScale;
-	D3DXMatrixIdentity(&matScale);
-	D3DXMatrixScaling(&matScale, 1.f, 1.f, 0.f);
+	//D3DXMATRIX matScale;
+	//D3DXMatrixIdentity(&matScale);
+	//D3DXMatrixScaling(&matScale, 1.f, 1.f, 0.f);
 
-	getObjInfo()->setMatWorld(matScale * matTrans);
+	//getObjInfo()->setMatWorld(matScale * matTrans);
 }
 
 void CBackground::Render()

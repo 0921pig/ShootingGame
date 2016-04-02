@@ -5,10 +5,17 @@
 	#include "ManageScene.h"
 #endif
 
+#ifndef HEADER_Lobby
+	#define HEADER_Lobby
+	#include "Lobby.h"
+#endif
+
+
 class CMainGame
 {
 private:
-	CManageScene m_ManageScene;
+	//CManageScene m_ManageScene;
+	CLobby m_Lobby;
 
 public:
 	HRESULT Initialize();

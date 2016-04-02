@@ -18,6 +18,7 @@ HRESULT CMainGame::Initialize()
 	if (FAILED(GET_SINGLE(CDeviceMgr)->InitDevice(WINMODE_WIN)))
 		ERR_MSG(g_hWnd, L"InitDevice 실패");
 
+
 	return S_OK;
 }
 
@@ -30,9 +31,9 @@ void CMainGame::StartPhase()
 	2. 키 체크
 	*/
 
-	m_ManageScene.execute_changeScene(); // Scene변경이 예약되어있다면 이곳에서 Scene해제와 새로운 Scene할당을 처리
-	GET_SINGLE(CKeyMgr)->ProcessingSequence();
-	KeyProcess();
+	//m_managescene.execute_changescene(); // scene변경이 예약되어있다면 이곳에서 scene해제와 새로운 scene할당을 처리
+	//get_single(ckeymgr)->processingsequence();
+	//keyprocess();
 }
 
 void CMainGame::KeyProcess()
@@ -40,7 +41,7 @@ void CMainGame::KeyProcess()
 	/* MainGame의 키체크는 아래에서 */
 
 	/* Scene의 키체크는 아래에서*/
-	m_ManageScene.KeyProcess();
+	//m_ManageScene.KeyProcess();
 }
 
 void CMainGame::Release()
@@ -50,13 +51,20 @@ void CMainGame::Release()
 
 void CMainGame::Progress()
 {
-	m_ManageScene.Progress();
+	//m_Lobby->Progress();
+	//
+	//GET_SINGLE(CDeviceMgr)->Render_Begin();
+	//m_Lobby->Render();
+	//GET_SINGLE(CDeviceMgr)->Render_End();
+	//m_ManageScene.Progress();
+	m_Lobby.Progress();
 }
 
 void CMainGame::Render()
 {
 	GET_SINGLE(CDeviceMgr)->Render_Begin();
-	m_ManageScene.Render();
+	//m_ManageScene.Render();
+	m_Lobby.Render();
 	GET_SINGLE(CDeviceMgr)->Render_End();
 }
 

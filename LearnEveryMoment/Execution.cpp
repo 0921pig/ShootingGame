@@ -43,8 +43,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpCmdLine,
 
 	MSG msg; //While문에서 사용할 메세지
 	msg.message = WM_NULL;
-	//CMainGame MainGame; // 생성자에서 자동으로 Initialize() 실행
-	CLobby* m_Lobby = new CLobby();
+	CMainGame MainGame; // 생성자에서 자동으로 Initialize() 실행
+	//CLobby* m_Lobby = new CLobby();
 
 
 
@@ -58,13 +58,15 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpCmdLine,
 		}
 		else
 		{
-			m_Lobby->Progress();
-			GET_SINGLE(CDeviceMgr)->Render_Begin();
-			m_Lobby->Render();
-			GET_SINGLE(CDeviceMgr)->Render_End();
-			/*MainGame.StartPhase();
+			//m_Lobby->Progress();
+			//
+			//GET_SINGLE(CDeviceMgr)->Render_Begin();
+			//m_Lobby->Render();
+			//GET_SINGLE(CDeviceMgr)->Render_End();
+			
+			//MainGame.StartPhase();
 			MainGame.Progress();
-			MainGame.Render();*/
+			MainGame.Render();
 		}
 	}
 

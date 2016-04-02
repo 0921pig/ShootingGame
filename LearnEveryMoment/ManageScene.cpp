@@ -2,7 +2,7 @@
 #include "Include.h"
 
 CManageScene::CManageScene()
-	:m_Scene(NULL)
+	//:m_Scene(NULL)
 {
 	initiaize();
 }
@@ -16,7 +16,7 @@ CManageScene::~CManageScene()
 void CManageScene::initiaize()
 {
 	m_Scene = new CLobby();
-	m_SceneInfo.SetCurrentScene(SceneNo_Lobby);
+	//m_SceneInfo.SetCurrentScene(SceneNo_Lobby);
 }
 
 void CManageScene::KeyProcess()
@@ -27,10 +27,11 @@ void CManageScene::KeyProcess()
 void CManageScene::Progress()
 {
 	/* Progress 실행 결과 Scene 변경에 관련된 메세지를 받아서 변경을 예약한다. */
+
+	m_Scene->Progress();
 	
-	
-	SceneReturn returnMsg = m_Scene->Progress();
-	reserve_changeScene(returnMsg);
+	/*SceneReturn returnMsg = m_Scene->Progress();
+	reserve_changeScene(returnMsg);*/
 }
 
 void CManageScene::Render()
