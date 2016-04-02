@@ -14,9 +14,6 @@ CMainGame::~CMainGame()
 
 HRESULT CMainGame::Initialize()
 {
-	/* Device Mgr 초기화 */
-	if (FAILED(GET_SINGLE(CDeviceMgr)->InitDevice(WINMODE_WIN)))
-		ERR_MSG(g_hWnd, L"InitDevice 실패");
 
 	return S_OK;
 }

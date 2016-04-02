@@ -41,7 +41,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpCmdLine,
 	
 
 
-	
+	GET_SINGLE(CDeviceMgr)->InitDevice(WINMODE_WIN);
 
 	MSG msg; //While문에서 사용할 메세지
 	msg.message = WM_NULL;

@@ -91,8 +91,6 @@ HRESULT CDeviceMgr::InitDevice(WINMODE Mode)
 		return E_FAIL;
 	}
 
-	InitVB();
-
 	return S_OK;
 }
 
