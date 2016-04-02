@@ -49,15 +49,43 @@ void CBackground::Progress()
 
 void CBackground::Render()
 {
-	const TEXINFO* pTexInfo = GET_SINGLE(CTextureMgr)->GetTexture( getObjkey(), getObjName(), getTexturekey(), getStatekey(), 0); // iCnt를 어떻게 해결해야하지
-	if (pTexInfo == NULL) 
+	TEXINFO* pTexInfo = const_cast<TEXINFO*> (GET_SINGLE(CTextureMgr)->GetTexture( getObjkey(), getObjName(), getTexturekey(), getStatekey(), 1)); // iCnt를 어떻게 해결해야하지
+	
+	//D3DXMATRIX temp = getObjInfo()->getMatWorld();
+	//D3DXVECTOR3 vCenter = D3DXVECTOR3(pTexInfo->ImgInfo.Width / 2.f, pTexInfo->ImgInfo.Height / 2.f, 0.f);
+	//
+	//GET_SINGLE(CDeviceMgr)->GetSprite()->SetTransform(&temp);
+	//GET_SINGLE(CDeviceMgr)->GetSprite()->Draw(pTexInfo->pTexture, NULL, &vCenter, NULL, D3DCOLOR_ARGB(255, 255, 255, 255));
+
+	//TEXINFO* pTexInfo = new TEXINFO;
+	//ZeroMemory(pTexInfo, sizeof(TEXINFO));
+
+	//if (FAILED(D3DXGetImageInfoFromFile(L"resource/image/back_Lobby.png", &pTexInfo->ImgInfo)))
+	//	return;
+
+
+	//if (FAILED(D3DXCreateTextureFromFileEx(GET_SINGLE(CDeviceMgr)->GetDevice()
+	//	, L"resource/image/Daniel.jpg", pTexInfo->ImgInfo.Width
+	//	, pTexInfo->ImgInfo.Height, pTexInfo->ImgInfo.MipLevels
+	//	, 0, pTexInfo->ImgInfo.Format
+	//	, D3DPOOL_MANAGED, D3DX_DEFAULT, D3DX_DEFAULT
+	//	, D3DCOLOR_ARGB(255, 0, 0, 0)
+	//	, &pTexInfo->ImgInfo
+	//	, NULL, &pTexInfo->pTexture)))
+	//	return;
+
+	if (pTexInfo == NULL)
 		return;
-	
-	D3DXMATRIX temp = getObjInfo()->getMatWorld();
-	D3DXVECTOR3 vCenter = D3DXVECTOR3(pTexInfo->ImgInfo.Width / 2.f, pTexInfo->ImgInfo.Height / 2.f, 0.f);
-	
-	GET_SINGLE(CDeviceMgr)->GetSprite()->SetTransform(&temp);
-	GET_SINGLE(CDeviceMgr)->GetSprite()->Draw(pTexInfo->pTexture, NULL, &vCenter, NULL, D3DCOLOR_ARGB(255, 255, 255, 255));
+
+	if (pTexInfo->pTexture == NULL)
+		return;
+
+	D3DXMATRIX matTrans;
+	D3DXMatrixTranslation(&matTrans, 0.f, 0.f, 0.f);
+
+	GET_SINGLE(CDeviceMgr)->GetSprite()->SetTransform(&matTrans);
+	GET_SINGLE(CDeviceMgr)->GetSprite()->Draw(pTexInfo->pTexture, NULL, NULL, NULL, D3DCOLOR_ARGB(255, 255, 255, 255));
+
 }
 
 void CBackground::Release()

@@ -7,7 +7,7 @@ CDeviceMgr::CDeviceMgr()
 	, m_pSprite(NULL)
 	, m_pFont(NULL)
 {
-
+	InitDevice(WINMODE_WIN);
 }
 
 CDeviceMgr::~CDeviceMgr()
@@ -90,8 +90,6 @@ HRESULT CDeviceMgr::InitDevice(WINMODE Mode)
 		ERR_MSG(g_hWnd, L"라인 생성 실패");
 		return E_FAIL;
 	}
-
-	InitVB();
 
 	return S_OK;
 }

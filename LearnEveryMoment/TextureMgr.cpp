@@ -30,7 +30,9 @@ const TEXINFO * CTextureMgr::GetTexture(const TCHAR * pObjType, const TCHAR * pO
 	if (iter_TextureName == iter_ObjName->second.end())
 		return NULL;
 	
-	return iter_TextureName->second->GetTexture(pStateKey, iCnt);
+	CTexture* returnTexture = iter_TextureName->second;
+	
+	return returnTexture->GetTexture(pStateKey, iCnt);
 }
 
 HRESULT CTextureMgr::InsertTexture(const TCHAR * pFileName, const TCHAR * pObjType, const TCHAR * pObjName, const TCHAR * pTextureName, const TCHAR * pStateKey, const int & iCnt)

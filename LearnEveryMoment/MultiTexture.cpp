@@ -18,27 +18,30 @@ HRESULT CMultiTexture::InsertTexture( const TCHAR* pFileName, const TCHAR* pStat
 	TCHAR   szPath[128] = L"";
 
 	vector<TEXINFO*> vecTexture;
+	//vecTexture.reserve(iCnt); //공간 미리 확보
 
 	for(int i =0; i< iCnt; ++i)
 	{
-		wsprintf(szPath,pFileName,i);
-		TEXINFO* m_pTexInfo = new TEXINFO;
-		ZeroMemory(m_pTexInfo,sizeof(TEXINFO));
+		wsprintf(szPath, pFileName, i);
 
-		if(FAILED(D3DXGetImageInfoFromFile(szPath,&m_pTexInfo->ImgInfo)))
+		TEXINFO* pTexInfo = new TEXINFO();
+		ZeroMemory(pTexInfo,sizeof(TEXINFO));
+
+		if(FAILED(D3DXGetImageInfoFromFile(L"resource/image/Daniel.jpg",&pTexInfo->ImgInfo)))
 			return E_FAIL;
 
-		if(FAILED(D3DXCreateTextureFromFileEx(GET_SINGLE(CDeviceMgr)->GetDevice()
-			,szPath,m_pTexInfo->ImgInfo.Width
-			,m_pTexInfo->ImgInfo.Height,m_pTexInfo->ImgInfo.MipLevels
-			,0,m_pTexInfo->ImgInfo.Format
-			,D3DPOOL_MANAGED,D3DX_DEFAULT,D3DX_DEFAULT
-			,D3DCOLOR_ARGB(255,255,0,0)
-			,&m_pTexInfo->ImgInfo
-			,NULL,&m_pTexInfo->pTexture)))
-			return E_FAIL;
+		if (FAILED(D3DXCreateTextureFromFileEx(GET_SINGLE(CDeviceMgr)->GetDevice()
+			, L"resource/image/Daniel.jpg", pTexInfo->ImgInfo.Width
+			, pTexInfo->ImgInfo.Height, pTexInfo->ImgInfo.MipLevels
+			, 0, pTexInfo->ImgInfo.Format
+			, D3DPOOL_MANAGED, D3DX_DEFAULT, D3DX_DEFAULT
+			, D3DCOLOR_ARGB(255, 0, 0, 0)
+			, &pTexInfo->ImgInfo
+			, NULL, &pTexInfo->pTexture)))
+			return NULL;
 
-		vecTexture.push_back(m_pTexInfo);
+
+		vecTexture.push_back(pTexInfo);
 	}
 
 	m_MapTexture.insert(make_pair(pStateKey,vecTexture));
@@ -49,12 +52,22 @@ HRESULT CMultiTexture::InsertTexture( const TCHAR* pFileName, const TCHAR* pStat
 
 const TEXINFO* CMultiTexture::GetTexture(const TCHAR* pStateKey, const int& iCnt )
 {
-	map<const TCHAR*,vector<TEXINFO*>>::iterator iter 
-		= m_MapTexture.find(pStateKey);
+	map<const TCHAR*,vector<TEXINFO*>>::iterator iter = m_MapTexture.find(pStateKey);
 
 	if(iter == m_MapTexture.end())
 		return NULL;
 
+	//TEXINFO* pTexInfo = iter->second[0];
+
+	//if (FAILED(D3DXCreateTextureFromFileEx(GET_SINGLE(CDeviceMgr)->GetDevice()
+	//	, L"resource/image/back_Lobby.png", pTexInfo->ImgInfo.Width
+	//	, pTexInfo->ImgInfo.Height, pTexInfo->ImgInfo.MipLevels
+	//	, 0, pTexInfo->ImgInfo.Format
+	//	, D3DPOOL_MANAGED, D3DX_DEFAULT, D3DX_DEFAULT
+	//	, D3DCOLOR_ARGB(255, 0, 0, 0)
+	//	, &pTexInfo->ImgInfo
+	//	, NULL, &pTexInfo->pTexture)))
+	//	return NULL;
 
 	return iter->second[iCnt];
 }
