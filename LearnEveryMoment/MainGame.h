@@ -15,7 +15,7 @@ class CMainGame
 {
 private:
 	//CManageScene m_ManageScene;
-	CLobby m_Lobby;
+	CLobby* m_Lobby;
 
 public:
 	HRESULT Initialize();

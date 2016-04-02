@@ -16,6 +16,7 @@ void CLobby::Initialize()
 {
 
 
+	GET_SINGLE(CDeviceMgr)->InitDevice(WINMODE_WIN);
 	LoadTexture();
 	setObjProto(new CLobbyObjProto());
 	
@@ -45,7 +46,8 @@ void CLobby::Release()
 
 void CLobby::LoadTexture()
 {
-	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Daniel.jpg", L"Background", TEXTYPE_MULTI, L"Lobby", 1);
+	if (FAILED(GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Daniel.jpg", L"Background", TEXTYPE_MULTI, L"Lobby", 1)))
+		return;
 }
 
 void CLobby::CreateBaseObjects()

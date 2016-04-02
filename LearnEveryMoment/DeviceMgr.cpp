@@ -7,7 +7,7 @@ CDeviceMgr::CDeviceMgr()
 	, m_pSprite(NULL)
 	, m_pFont(NULL)
 {
-	InitDevice(WINMODE_WIN);
+	//InitDevice(WINMODE_WIN);
 }
 
 CDeviceMgr::~CDeviceMgr()

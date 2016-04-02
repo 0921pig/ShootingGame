@@ -39,10 +39,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpCmdLine,
 	ShowWindow(g_hWnd, nShowCmd);
 	UpdateWindow(g_hWnd);
 	
-	GET_SINGLE(CDeviceMgr)->InitDevice(WINMODE_WIN);
+
 
 	MSG msg; //While문에서 사용할 메세지
 	msg.message = WM_NULL;
+
 	CMainGame MainGame; // 생성자에서 자동으로 Initialize() 실행
 	//CLobby* m_Lobby = new CLobby();
 

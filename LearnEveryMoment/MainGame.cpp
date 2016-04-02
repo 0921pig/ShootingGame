@@ -15,9 +15,8 @@ CMainGame::~CMainGame()
 HRESULT CMainGame::Initialize()
 {
 	/* Device Mgr 초기화 */
-	if (FAILED(GET_SINGLE(CDeviceMgr)->InitDevice(WINMODE_WIN)))
-		ERR_MSG(g_hWnd, L"InitDevice 실패");
 
+	m_Lobby = new CLobby();
 
 	return S_OK;
 }
@@ -57,14 +56,14 @@ void CMainGame::Progress()
 	//m_Lobby->Render();
 	//GET_SINGLE(CDeviceMgr)->Render_End();
 	//m_ManageScene.Progress();
-	m_Lobby.Progress();
+	m_Lobby->Progress();
 }
 
 void CMainGame::Render()
 {
 	GET_SINGLE(CDeviceMgr)->Render_Begin();
 	//m_ManageScene.Render();
-	m_Lobby.Render();
+	m_Lobby->Render();
 	GET_SINGLE(CDeviceMgr)->Render_End();
 }
 
