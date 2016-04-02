@@ -177,6 +177,7 @@
     <ClInclude Include="ProtoType.h" />
     <ClInclude Include="readme.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="SingleTexture.h" />
     <ClInclude Include="SortMgr.h" />
     <ClInclude Include="Stage.h" />
     <ClInclude Include="StageObjProto.h" />
@@ -206,6 +207,7 @@
     <ClCompile Include="ObjProto.cpp" />
     <ClCompile Include="ProtoType.cpp" />
     <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SingleTexture.cpp" />
     <ClCompile Include="SortMgr.cpp" />
     <ClCompile Include="Stage.cpp" />
     <ClCompile Include="StageObjProto.cpp" />

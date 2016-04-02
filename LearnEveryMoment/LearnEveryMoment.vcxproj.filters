@@ -116,6 +116,9 @@
     <Filter Include="10.Scene\_Stage">
       <UniqueIdentifier>{877fedc0-b48b-40bf-a7a4-9f05b760a00c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01.Manager\TextureMgr\Texture\Single">
+      <UniqueIdentifier>{8f625fa6-ca4b-4345-be20-6d8b7de419ea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp">
@@ -192,6 +195,9 @@
     </ClCompile>
     <ClCompile Include="StageObjProto.cpp">
       <Filter>97.DesignPattern\ProtoType\Object\Stage\StageObjProto</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleTexture.cpp">
+      <Filter>01.Manager\TextureMgr\Texture\Single</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -296,6 +302,9 @@
     </ClInclude>
     <ClInclude Include="StageObjProto.h">
       <Filter>97.DesignPattern\ProtoType\Object\Stage\StageObjProto</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleTexture.h">
+      <Filter>01.Manager\TextureMgr\Texture\Single</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -79,6 +79,11 @@
 	#include "Texture.h"
 #endif
 
+#ifndef HEADER_SingleTexture
+	#define HEADER_SingleTexture
+	#include "SingleTexture.h"
+#endif
+
 #ifndef HEADER_MultiTexture
 	#define HEADER_MultiTexture
 	#include "MultiTexture.h"

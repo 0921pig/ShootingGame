@@ -29,3 +29,9 @@ enum RefPos
 	RefPos_LeftTop,
 	RefPos_Center,
 };
+
+enum TEXTYPE
+{
+	TEXTYPE_SINGLE,
+	TEXTYPE_MULTI
+};

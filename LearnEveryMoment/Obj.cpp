@@ -34,7 +34,7 @@ void CObj::setStateKey(TCHAR * inputStateKey)
 
 void CObj::drawTexture(CInfo_Obj inputInfo, RefPos option_RF, int iCnt, TCHAR * in_pObjType, TCHAR * in_pObjName, TCHAR * in_pTextureName, TCHAR * in_pStateKey)
 {
-	const TEXINFO* pTexInfo = GET_SINGLE(CTextureMgr)->GetTexture(in_pObjType, in_pObjName, in_pTextureName, in_pStateKey, iCnt);
+	/*const TEXINFO* pTexInfo = GET_SINGLE(CTextureMgr)->GetTexture(in_pObjType, in_pObjName, in_pTextureName, in_pStateKey, iCnt);
 	if (pTexInfo == NULL) 
 		return;
 
@@ -49,7 +49,7 @@ void CObj::drawTexture(CInfo_Obj inputInfo, RefPos option_RF, int iCnt, TCHAR * 
 	case RefPos_Center:
 		GET_SINGLE(CDeviceMgr)->GetSprite()->Draw(pTexInfo->pTexture, NULL, &inputInfo.getCenter(), NULL, D3DCOLOR_ARGB(255, 255, 255, 255));
 		break;
-	}
+	}*/
 }
 
 void CObj::setTextrueKey(TCHAR * inputKey)

@@ -45,7 +45,7 @@ void CLobby::Release()
 
 void CLobby::LoadTexture()
 {
-	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Daniel.jpg", L"Background", L"Lobby", L"Main", L"Normal", 10);
+	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Daniel.jpg", L"Background", TEXTYPE_MULTI, L"Lobby", 1);
 }
 
 void CLobby::CreateBaseObjects()

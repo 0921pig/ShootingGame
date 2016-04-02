@@ -49,7 +49,7 @@ void CBackground::Progress()
 
 void CBackground::Render()
 {
-	TEXINFO* pTexInfo = const_cast<TEXINFO*> (GET_SINGLE(CTextureMgr)->GetTexture( getObjkey(), getObjName(), getTexturekey(), getStatekey(), 1)); // iCnt를 어떻게 해결해야하지
+	TEXINFO* pTexInfo = const_cast<TEXINFO*> (GET_SINGLE(CTextureMgr)->GetTexture( getObjkey(),getObjName(), 0)); // iCnt를 어떻게 해결해야하지
 	
 	//D3DXMATRIX temp = getObjInfo()->getMatWorld();
 	//D3DXVECTOR3 vCenter = D3DXVECTOR3(pTexInfo->ImgInfo.Width / 2.f, pTexInfo->ImgInfo.Height / 2.f, 0.f);

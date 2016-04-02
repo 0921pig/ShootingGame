@@ -4,14 +4,12 @@
 class CTexture
 {
 public:
-	virtual const TEXINFO* GetTexture(const TCHAR* pStateKey =NULL
-		,const int& iCnt =0)PURE;
+	virtual const TEXINFO* GetTexture(const TCHAR* pStatKey = NULL, const int& iCnt = 0)PURE;
 public:
-	virtual HRESULT InsertTexture(const TCHAR* pFileName
-		,const TCHAR* pStateKey = 0,const int& iCnt =0)PURE;
+	virtual HRESULT InsertTexture(const TCHAR* pFileName, const TCHAR* pStatKey = NULL, const int& iCnt = 0)PURE;
 	virtual void Release()PURE;
 public:
-	CTexture(void);
-	virtual ~CTexture(void);
+	CTexture();
+	virtual ~CTexture();
 };
 

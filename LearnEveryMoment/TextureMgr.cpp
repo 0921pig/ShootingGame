@@ -1,94 +1,67 @@
-#include "stdafx.h"
 #include "TextureMgr.h"
-#include "Texture.h"
 #include "Include.h"
 
-
-CTextureMgr::CTextureMgr(void)
+CTextureMgr::CTextureMgr()
 {
 }
 
 
-CTextureMgr::~CTextureMgr(void)
+CTextureMgr::~CTextureMgr()
 {
+	Release();
 }
 
-const TEXINFO * CTextureMgr::GetTexture(const TCHAR * pObjType, const TCHAR * pObjName, const TCHAR * pTextureName, const TCHAR * pStateKey, const int & iCnt)
+const TEXINFO* CTextureMgr::GetTexture(const TCHAR* pObjKey, const TCHAR* pStatKey /*= NULL*/, const int& iCnt /*= 0*/)
 {
-	// 1단계
-	map<const TCHAR*, map<const TCHAR*, map<const TCHAR*, CTexture*>>>::iterator iter_ObjType = m_MapTexture.find(pObjType);
-	if (iter_ObjType == m_MapTexture.end())
-		return NULL;
-	
-	// 2단계
-	map<const TCHAR*, map<const TCHAR*, CTexture* >>::iterator iter_ObjName = iter_ObjType->second.find(pObjName);
-	if (iter_ObjName == iter_ObjType->second.end())
+	map<const TCHAR*, CTexture*>::iterator iter = m_MapTexture.find(pObjKey);
+
+	if (iter == m_MapTexture.end())
 		return NULL;
 
-	// 3단계
-	map<const TCHAR*, CTexture* > ::iterator iter_TextureName = iter_ObjName->second.find(pTextureName);
-	if (iter_TextureName == iter_ObjName->second.end())
-		return NULL;
-	
-	CTexture* returnTexture = iter_TextureName->second;
-	
-	return returnTexture->GetTexture(pStateKey, iCnt);
+	return iter->second->GetTexture(pStatKey, iCnt);
 }
 
-HRESULT CTextureMgr::InsertTexture(const TCHAR * pFileName, const TCHAR * pObjType, const TCHAR * pObjName, const TCHAR * pTextureName, const TCHAR * pStateKey, const int & iCnt)
+HRESULT CTextureMgr::InsertTexture(const TCHAR* pFileName, const TCHAR* pObjKey, TEXTYPE TypeID,
+	const TCHAR* pStatKey /*= NULL*/, const int& iCnt /*= 0*/)
 {
-	// 1단계
-	map<const TCHAR*, map<const TCHAR*, map<const TCHAR*, CTexture*>>>::iterator iter_ObjType = m_MapTexture.find(pObjType);
-	if (iter_ObjType == m_MapTexture.end()) {
-		// 해당하는 노드가 없으면 추가한다.
-		m_MapTexture.insert(make_pair(pObjType, map<const TCHAR*, map<const TCHAR*, CTexture*>>()));
-		iter_ObjType = m_MapTexture.find(pObjType);
-	}
+	map<const TCHAR*, CTexture*>::iterator iter = m_MapTexture.find(pObjKey);
 
-	// 2단계
-	map<const TCHAR*, map<const TCHAR*, CTexture*>>::iterator iter_ObjName = iter_ObjType->second.find(pObjName);
-	if (iter_ObjName == iter_ObjType->second.end()) {
-		// 해당하는 노드가 없으면 추가한다.
-		iter_ObjType->second.insert(make_pair(pObjName, map<const TCHAR*, CTexture*>()));
-		iter_ObjName = iter_ObjType->second.find(pObjName);
-	}
+	CTexture*	pTexture = NULL;
 
-	// 3단계
-	map<const TCHAR*, CTexture*>::iterator iter_TextureName = iter_ObjName->second.find(pTextureName);
-	if (iter_TextureName == iter_ObjName->second.end()) {
-		// 해당하는 노드가 없으면 추가한다.
-		CTexture* pTexture = new CMultiTexture;
-		iter_ObjName->second.insert(make_pair(pTextureName, pTexture));
-		iter_TextureName = iter_ObjName->second.find(pTextureName);
-	}
-
-	if (FAILED(iter_TextureName->second->InsertTexture(pFileName, pStateKey, iCnt)))
+	switch (TypeID)
 	{
-		TRACE(L"%s - %s - %s - %s 텍스쳐 로드 실패\n", pObjType, pObjName, pTextureName, pStateKey);
+	case TEXTYPE_SINGLE:
+		if (iter == m_MapTexture.end())
+			pTexture = new CSingleTexture;
+		else
+			return E_FAIL;
+		break;
+	case TEXTYPE_MULTI:
+		if (iter == m_MapTexture.end())
+			pTexture = new CMultiTexture;
+		else
+			pTexture = pTexture = (*iter).second;
+
+		break;
+	}
+
+	if (FAILED(pTexture->InsertTexture(pFileName, pStatKey, iCnt)))
 		return E_FAIL;
 
-	}
+	m_MapTexture.insert(make_pair(pObjKey, pTexture));
 
 	return S_OK;
 }
 
+
 void CTextureMgr::Release()
 {
-	for(map<const TCHAR*, map<const TCHAR*, map<const TCHAR*, CTexture*>>>::iterator iter_ObjType = m_MapTexture.begin(); 
-		iter_ObjType != m_MapTexture.end(); ++iter_ObjType)
+	for (map<const TCHAR*, CTexture*>::iterator iter = m_MapTexture.begin();
+		iter != m_MapTexture.end(); ++iter)
 	{
-		for (map<const TCHAR*, map<const TCHAR*, CTexture*>>::iterator iter_ObjName = iter_ObjType->second.begin();
-		iter_ObjName != iter_ObjType->second.end(); ++iter_ObjName)
-		{
-			for (map<const TCHAR*, CTexture*>::iterator iter_TextureName = iter_ObjName->second.begin();
-			iter_TextureName != iter_ObjName->second.end(); ++iter_TextureName)
-			{
-				delete iter_TextureName->second;
-				iter_TextureName->second = NULL;
-			}
-			iter_ObjName->second.clear();
-		}
-		iter_ObjType->second.clear();
+		delete iter->second;
+		iter->second = NULL;
 	}
+
 	m_MapTexture.clear();
 }
