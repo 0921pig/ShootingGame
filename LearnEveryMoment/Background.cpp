@@ -38,7 +38,7 @@ void CBackground::Progress()
 {
 	D3DXMATRIX	matTrans;
 	D3DXMatrixIdentity(&matTrans);
-	D3DXMatrixTranslation(&matTrans, WINSIZEX/2.f, WINSIZEY/2.f, 0.f);
+	D3DXMatrixTranslation(&matTrans, 0.f, 0.f, 0.f);
 
 	D3DXMATRIX matScale;
 	D3DXMatrixIdentity(&matScale);
@@ -49,15 +49,7 @@ void CBackground::Progress()
 
 void CBackground::Render()
 {
-	const TEXINFO* pTexInfo = GET_SINGLE(CTextureMgr)->GetTexture( getObjkey(), getObjName(), getTexturekey(), getStatekey(), 0); // iCnt를 어떻게 해결해야하지
-	if (pTexInfo == NULL) 
-		return;
-	
-	D3DXMATRIX temp = getObjInfo()->getMatWorld();
-	D3DXVECTOR3 vCenter = D3DXVECTOR3(pTexInfo->ImgInfo.Width / 2.f, pTexInfo->ImgInfo.Height / 2.f, 0.f);
-	
-	GET_SINGLE(CDeviceMgr)->GetSprite()->SetTransform(&temp);
-	GET_SINGLE(CDeviceMgr)->GetSprite()->Draw(pTexInfo->pTexture, NULL, &vCenter, NULL, D3DCOLOR_ARGB(255, 255, 255, 255));
+	drawTexture(getObjInfo(), RefPos_LeftTop, 0, getObjkey(), getObjName(), getTexturekey(), getStatekey());
 }
 
 void CBackground::Release()

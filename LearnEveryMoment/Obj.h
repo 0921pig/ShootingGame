@@ -34,8 +34,8 @@ public:
 	void setTextrueKey(TCHAR* inputName);
 	void setStateKey(TCHAR* inputStateKey);
 
-	void drawTexture(CInfo_Obj inputInfo, RefPos option_RF, int iCnt, 
-		TCHAR* in_pObjType, TCHAR* in_pObjName, TCHAR* in_pTextureName = NULL, TCHAR* in_pStateKey = NULL);
+	void drawTexture(CInfo_Obj* inputInfo, RefPos option_RF, int iCnt, 
+		const TCHAR* in_pObjType, const TCHAR* in_pObjName, const TCHAR* in_pTextureName = NULL, const TCHAR* in_pStateKey = NULL);
 
 public:
 	virtual void Initialize()PURE;

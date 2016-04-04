@@ -83,9 +83,6 @@
     <Filter Include="20. Obj\Objects">
       <UniqueIdentifier>{70dc5ce3-cd42-4fe0-ac99-49d20f71b3e3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="20. Obj\Objects\Background">
-      <UniqueIdentifier>{d5b464a6-4df6-4fca-82f6-e8d663f4ed11}</UniqueIdentifier>
-    </Filter>
     <Filter Include="01.Manager\TextureMgr">
       <UniqueIdentifier>{10304838-3bcb-41fe-8f1f-f166c8042dc3}</UniqueIdentifier>
     </Filter>
@@ -115,6 +112,18 @@
     </Filter>
     <Filter Include="10.Scene\_Stage">
       <UniqueIdentifier>{877fedc0-b48b-40bf-a7a4-9f05b760a00c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Background">
+      <UniqueIdentifier>{d5b464a6-4df6-4fca-82f6-e8d663f4ed11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Stage_only">
+      <UniqueIdentifier>{9a6f67c0-6416-4090-b959-3680163e02e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Lobby_only">
+      <UniqueIdentifier>{25193f81-3428-46cf-804d-4c2b1429c7ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Lobby_only\Number">
+      <UniqueIdentifier>{3b8a4d3f-3749-4059-9ac1-c75d2dbf0362}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -172,9 +181,6 @@
     <ClCompile Include="Data_Fire.cpp">
       <Filter>30. DataClass\Data_Fire</Filter>
     </ClCompile>
-    <ClCompile Include="Background.cpp">
-      <Filter>20. Obj\Objects\Background</Filter>
-    </ClCompile>
     <ClCompile Include="TextureMgr.cpp">
       <Filter>01.Manager\TextureMgr</Filter>
     </ClCompile>
@@ -192,6 +198,9 @@
     </ClCompile>
     <ClCompile Include="StageObjProto.cpp">
       <Filter>97.DesignPattern\ProtoType\Object\Stage\StageObjProto</Filter>
+    </ClCompile>
+    <ClCompile Include="Background.cpp">
+      <Filter>20. Obj\Objects\Background</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -276,9 +285,6 @@
     <ClInclude Include="Data_Fire.h">
       <Filter>30. DataClass\Data_Fire</Filter>
     </ClInclude>
-    <ClInclude Include="Background.h">
-      <Filter>20. Obj\Objects\Background</Filter>
-    </ClInclude>
     <ClInclude Include="TextureMgr.h">
       <Filter>01.Manager\TextureMgr</Filter>
     </ClInclude>
@@ -296,6 +302,9 @@
     </ClInclude>
     <ClInclude Include="StageObjProto.h">
       <Filter>97.DesignPattern\ProtoType\Object\Stage\StageObjProto</Filter>
+    </ClInclude>
+    <ClInclude Include="Background.h">
+      <Filter>20. Obj\Objects\Background</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
