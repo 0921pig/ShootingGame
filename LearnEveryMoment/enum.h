@@ -30,3 +30,21 @@ enum RefPos
 	RefPos_LeftTop,
 	RefPos_Center,
 };
+
+enum DIR4
+{
+	DIR4_LEFT,
+	DIR4_UP,
+	DIR4_RIGHT,
+	DIR4_DOWN,
+};
+
+enum PlayableAircraft
+{
+	PA_Harrier,
+	PA_Stealth,
+	PA_Raptor,
+	PA_Phantom,
+	PA_SuperHornet,
+	PA_Random
+};

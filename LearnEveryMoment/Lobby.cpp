@@ -18,10 +18,18 @@ void CLobby::Initialize()
 	setObjProto(new CLobbyObjProto()); //프로토타입 등록
 	
 	CreateBaseObjects();
+
+	m_selected = PA_SuperHornet;
+	m_select_fighter[m_selected]->select(true); //초기 세팅
 }
 
 void CLobby::KeyProcess()
 {
+	if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_LEFT) == KS_KeyDown)
+		moveSelect(DIR4_LEFT);
+
+	if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_RIGHT) == KS_KeyDown)
+		moveSelect(DIR4_RIGHT);
 }
 
 SceneReturn CLobby::Progress()
@@ -45,7 +53,8 @@ void CLobby::Release()
 
 void CLobby::LoadTexture()
 {
-	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Background/Lobby/back_Lobby.png", L"Background", L"Lobby", L"Main", L"Normal", 1);
+	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Background/Lobby/back_Lobby.png", L"Background", L"Lobby", L"Main", L"Normal", 1); 
+	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Background/Lobby/back_number.png", L"Background", L"Lobby", L"Number", L"Normal", 1); 
 
 	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/UI/Lobby/SelectMark/Normal/%02d.png", L"UI", L"Lobby", L"SelectMark", L"Normal", 1);
 	
@@ -105,13 +114,77 @@ void CLobby::CreateBaseObjects()
 {
 	m_background = (CBack_Lobby*) GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"Background");
 	
-	m_select_fighter[0] = (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_SuperHornet",	D3DXVECTOR3(096.f, 780.f, 0.f));
-	m_select_fighter[1] = (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Stealth",		D3DXVECTOR3(218.f, 780.f, 0.f));
-	m_select_fighter[2] = (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Raptor",		D3DXVECTOR3(341.f, 780.f, 0.f));
-	m_select_fighter[3] = (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Harrier",		D3DXVECTOR3(462.f, 780.f, 0.f));
-	m_select_fighter[4] = (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Phantom",		D3DXVECTOR3(584.f, 780.f, 0.f));
-	m_select_fighter[5] = (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Random",		D3DXVECTOR3(707.f, 780.f, 0.f));
+	m_select_fighter[PA_SuperHornet]	= (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_SuperHornet",	D3DXVECTOR3(096.f, 780.f, 0.f));
+	m_select_fighter[PA_Stealth]		= (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Stealth",		D3DXVECTOR3(218.f, 780.f, 0.f));
+	m_select_fighter[PA_Raptor]			= (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Raptor",		D3DXVECTOR3(341.f, 780.f, 0.f));
+	m_select_fighter[PA_Harrier]		= (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Harrier",		D3DXVECTOR3(462.f, 780.f, 0.f));
+	m_select_fighter[PA_Phantom]		= (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Phantom",		D3DXVECTOR3(584.f, 780.f, 0.f));
+	m_select_fighter[PA_Random]			= (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Random",		D3DXVECTOR3(707.f, 780.f, 0.f));
 
 
 
+}
+
+void CLobby::moveSelect(DIR4 direction)
+{
+	if (direction == DIR4_LEFT)
+	{
+		m_select_fighter[m_selected]->select(false); //선택 해제
+
+		switch (m_selected)
+		{
+		case PA_SuperHornet:
+			m_selected = PA_Random;
+			break;
+		case PA_Stealth:
+			m_selected = PA_SuperHornet;
+			break;
+		case PA_Raptor:
+			m_selected = PA_Stealth;
+			break;
+		case PA_Harrier:
+			m_selected = PA_Raptor;
+			break;
+		case PA_Phantom:
+			m_selected = PA_Harrier;
+			break;
+		case PA_Random:
+			m_selected = PA_Phantom;
+			break;
+		}
+
+		m_select_fighter[m_selected]->select(true); //선택
+	}
+	else if (direction == DIR4_RIGHT)
+	{
+		m_select_fighter[m_selected]->select(false); //선택 해제
+
+		switch (m_selected)
+		{
+		case PA_SuperHornet:
+			m_selected = PA_Stealth;
+			break;
+		case PA_Stealth:
+			m_selected = PA_Raptor;
+			break;
+		case PA_Raptor:
+			m_selected = PA_Harrier;
+			break;
+		case PA_Harrier:
+			m_selected = PA_Phantom;
+			break;
+		case PA_Phantom:
+			m_selected = PA_Random;
+			break;
+		case PA_Random:
+			m_selected = PA_SuperHornet;
+			break;
+		}
+
+		m_select_fighter[m_selected]->select(true); //선택
+	}
+	else
+	{
+		TRACE(L"CLobby moveSelect()에서 이상상황 발생");
+	}
 }

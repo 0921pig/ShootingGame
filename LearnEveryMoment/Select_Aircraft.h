@@ -1,8 +1,6 @@
 ﻿#pragma once
 #include "Obj.h"
 
-enum PlayableAircraft;
-
 class CSelect_Aircraft : public CObj
 {
 private:
@@ -15,7 +13,9 @@ private:
 	CInfo_Obj m_BigPicture;
 	CInfo_Obj m_WeaponInfo;
 	CInfo_Obj m_FighterCode;
+	CInfo_Obj m_FighterCode_Shadow;
 	CInfo_Obj m_FighterNickname;
+	CInfo_Obj m_FighterNickname_Shadow;
 
 public:
 	virtual void Initialize();
@@ -26,18 +26,11 @@ public:
 
 private:
 	void change_AircraftName(PlayableAircraft AircraftName);
+	void init_calculateMatrix();
 
 public:
 	CSelect_Aircraft(PlayableAircraft aircraft);
+	void select(bool val);
 	virtual ~CSelect_Aircraft();
 };
 
-enum PlayableAircraft
-{
-	PA_Harrier,
-	PA_Stealth,
-	PA_Raptor,
-	PA_Phantom,
-	PA_SuperHornet,
-	PA_Random
-};

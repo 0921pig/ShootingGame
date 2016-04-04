@@ -39,6 +39,7 @@ void CBack_Lobby::Progress()
 void CBack_Lobby::Render()
 {
 	drawTexture(getObjInfo(), RefPos_LeftTop, 0, getObjkey(), getObjName(), getTexturekey(), getStatekey());
+	drawTexture(getObjInfo(), RefPos_LeftTop, 0, getObjkey(), getObjName(), L"Number", getStatekey(), 255, D3DXVECTOR3(500.f, 0.f, 0.f));
 }
 
 void CBack_Lobby::Release()
