@@ -5,7 +5,7 @@
 	#include "Base.h"
 #endif
 
-class CObj;
+#include "Obj.h"
 
 class CBack_Lobby :	public CObj
 {
@@ -21,6 +21,6 @@ public:
 
 public:
 	CBack_Lobby();
-	~CBack_Lobby();
+	virtual ~CBack_Lobby();
 };
 

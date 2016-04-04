@@ -119,11 +119,17 @@
     <Filter Include="20. Obj\Objects\Lobby_only">
       <UniqueIdentifier>{25193f81-3428-46cf-804d-4c2b1429c7ca}</UniqueIdentifier>
     </Filter>
-    <Filter Include="20. Obj\Objects\Lobby_only\Number">
+    <Filter Include="20. Obj\Objects\Lobby_only\Back_Lobby">
+      <UniqueIdentifier>{d5b464a6-4df6-4fca-82f6-e8d663f4ed11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Lobby_only\Select_Aircraft">
       <UniqueIdentifier>{3b8a4d3f-3749-4059-9ac1-c75d2dbf0362}</UniqueIdentifier>
     </Filter>
-    <Filter Include="20. Obj\Objects\Back_Lobby">
-      <UniqueIdentifier>{d5b464a6-4df6-4fca-82f6-e8d663f4ed11}</UniqueIdentifier>
+    <Filter Include="20. Obj\Objects\Common">
+      <UniqueIdentifier>{dadab5be-758f-4132-99e7-47b9b887a43d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Common\Picture">
+      <UniqueIdentifier>{0da04cad-588e-44d4-9883-db7e1f2157b2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -200,7 +206,13 @@
       <Filter>97.DesignPattern\ProtoType\Object\Stage\StageObjProto</Filter>
     </ClCompile>
     <ClCompile Include="Back_Lobby.cpp">
-      <Filter>20. Obj\Objects\Back_Lobby</Filter>
+      <Filter>20. Obj\Objects\Lobby_only\Back_Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="Select_Aircraft.cpp">
+      <Filter>20. Obj\Objects\Lobby_only\Select_Aircraft</Filter>
+    </ClCompile>
+    <ClCompile Include="Picture.cpp">
+      <Filter>20. Obj\Objects\Common\Picture</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -304,7 +316,13 @@
       <Filter>97.DesignPattern\ProtoType\Object\Stage\StageObjProto</Filter>
     </ClInclude>
     <ClInclude Include="Back_Lobby.h">
-      <Filter>20. Obj\Objects\Back_Lobby</Filter>
+      <Filter>20. Obj\Objects\Lobby_only\Back_Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="Select_Aircraft.h">
+      <Filter>20. Obj\Objects\Lobby_only\Select_Aircraft</Filter>
+    </ClInclude>
+    <ClInclude Include="Picture.h">
+      <Filter>20. Obj\Objects\Common\Picture</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

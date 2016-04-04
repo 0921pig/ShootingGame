@@ -174,9 +174,11 @@
     <ClInclude Include="Obj.h" />
     <ClInclude Include="ObjMgr.h" />
     <ClInclude Include="ObjProto.h" />
+    <ClInclude Include="Picture.h" />
     <ClInclude Include="ProtoType.h" />
     <ClInclude Include="readme.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="Select_Aircraft.h" />
     <ClInclude Include="SortMgr.h" />
     <ClInclude Include="Stage.h" />
     <ClInclude Include="StageObjProto.h" />
@@ -204,8 +206,10 @@
     <ClCompile Include="Obj.cpp" />
     <ClCompile Include="ObjMgr.cpp" />
     <ClCompile Include="ObjProto.cpp" />
+    <ClCompile Include="Picture.cpp" />
     <ClCompile Include="ProtoType.cpp" />
     <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Select_Aircraft.cpp" />
     <ClCompile Include="SortMgr.cpp" />
     <ClCompile Include="Stage.cpp" />
     <ClCompile Include="StageObjProto.cpp" />

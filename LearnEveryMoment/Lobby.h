@@ -3,17 +3,18 @@
 class CScene;
 class CBack_Lobby;
 class CObj;
+class CSelect_Aircraft;
 
 class CLobby : public CScene
 {
-	CBack_Lobby* background;
+	CBack_Lobby* m_background;
 	
-	CObj* info_fighterPicture;
-	CObj* info_fighterName;
-	CObj* info_fighterWeapon;
+	CObj* m_fighterPicture;
+	CObj* m_fighterNameInfo;
+	CObj* m_fighterWeaponInfo;
 
-	CObj * selecting_cursor;
-	CObj* select_fighter[6];
+	CObj* m_selecting_cursor;
+	CSelect_Aircraft* m_select_fighter[6];
 
 public:
 	virtual void Initialize();

@@ -73,6 +73,13 @@
 	#include "Back_Lobby.h"
 #endif
 
+#ifndef HEADER_Select_Aircraft
+	#define HEADER_Select_Aircraft
+	#include "Select_Aircraft.h"
+#endif
+
+
+
 // 텍스쳐
 #ifndef HEADER_Texture
 	#define HEADER_Texture

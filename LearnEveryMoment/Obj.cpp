@@ -35,8 +35,11 @@ void CObj::setStateKey(TCHAR * inputStateKey)
 void CObj::drawTexture(CInfo_Obj* inputInfo, RefPos option_RF, int iCnt, const TCHAR * in_pObjType, const TCHAR * in_pObjName, const TCHAR * in_pTextureName, const TCHAR * in_pStateKey)
 {
 	const TEXINFO* pTexInfo = GET_SINGLE(CTextureMgr)->GetTexture(in_pObjType, in_pObjName, in_pTextureName, in_pStateKey, iCnt);
-	if (pTexInfo == NULL) 
+	if (pTexInfo == NULL)
+	{
+		TRACE(L"%s %s %s %s GetTexture ½ÇÆÐ\n", in_pObjType, in_pObjName, in_pTextureName, in_pStateKey);
 		return;
+	}
 
 	GET_SINGLE(CDeviceMgr)->GetSprite()->SetTransform(&inputInfo->getMatWorld());
 
