@@ -1,11 +1,11 @@
-#pragma once
+ï»¿#pragma once
 #include "stdafx.h"
 
 class CData_Fire
 {
 private:
-	// Fire¿¡¼­ Áß¿äÇÑ °ÍÀº ¹«¾ùÀÏ±î?
-	// ¾ğÁ¦(time), ¾îµğ·Î ¾î´ÀÁ¤µµÀÇ ÆÄ¿ö·Î(v, a)
+	// Fireì—ì„œ ì¤‘ìš”í•œ ê²ƒì€ ë¬´ì—‡ì¼ê¹Œ?
+	// ì–¸ì œ(time), ì–´ë””ë¡œ ì–´ëŠì •ë„ì˜ íŒŒì›Œë¡œ(v, a)
 	D3DXVECTOR3 m_Accel;
 	D3DXVECTOR3 m_Velocity;
 	float m_fTime;

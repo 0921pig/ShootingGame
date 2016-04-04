@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "MultiTexture.h"
 #include "DeviceMgr.h"
 
@@ -33,7 +33,7 @@ HRESULT CMultiTexture::InsertTexture( const TCHAR* pFileName, const TCHAR* pStat
 			,m_pTexInfo->ImgInfo.Height,m_pTexInfo->ImgInfo.MipLevels
 			,0,m_pTexInfo->ImgInfo.Format
 			,D3DPOOL_MANAGED,D3DX_DEFAULT,D3DX_DEFAULT
-			,NULL //ÄÃ·¯Å° ¼³Á¤ for example)  D3DCOLOR_ARGB(255,255,0,0)
+			,NULL //ì»¬ëŸ¬í‚¤ ì„¤ì • for example)  D3DCOLOR_ARGB(255,255,0,0)
 			,&m_pTexInfo->ImgInfo
 			,NULL,&m_pTexInfo->pTexture)))
 			return E_FAIL;

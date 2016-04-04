@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "stdafx.h"
 #include "ObjMgr.h"
 #include "ObjProto.h"
@@ -21,18 +21,18 @@ CObj* CObjMgr::AddObject(CProtoType* pProto, const TCHAR* pObjType, D3DXVECTOR3 
 	CObj*  pProtoInst = ((CObjProto*)pProto)->GetProto(pObjType);
 	if (pProtoInst == NULL)
 	{
-		TRACE(L"ObjMgr¿¡¼­ %s »ı¼º Áß¿¡ ¿¡·¯ ¹ß»ı\n", pObjType);
-		ERR_MSG(g_hWnd, L"ObjMgr AddObject ¿¡·¯");
+		TRACE(L"ObjMgrì—ì„œ %s ìƒì„± ì¤‘ì— ì—ëŸ¬ ë°œìƒ\n", pObjType);
+		ERR_MSG(g_hWnd, L"ObjMgr AddObject ì—ëŸ¬");
 		return NULL;
 	}
 
 	CObj* pObject = pProtoInst->Clone();
-	pObject->setPosition(vPos); // ÁÂÇ¥ ´ëÀÔ
+	pObject->setPosition(vPos); // ì¢Œí‘œ ëŒ€ì…
 	pObject->Initialize();
 
 	if (iter == m_MapObject.end())
 	{
-		//pObjType ¸®½ºÆ®°¡ ¾øÀ¸¸é, »õ·Î ¸®½ºÆ®¸¦ ¸¸µê.
+		//pObjType ë¦¬ìŠ¤íŠ¸ê°€ ì—†ìœ¼ë©´, ìƒˆë¡œ ë¦¬ìŠ¤íŠ¸ë¥¼ ë§Œë“¦.
 		list<CObj*> Objlist;
 		Objlist.push_back(pObject);
 
@@ -40,7 +40,7 @@ CObj* CObjMgr::AddObject(CProtoType* pProto, const TCHAR* pObjType, D3DXVECTOR3 
 	}
 	else
 	{
-		//pObjType ¸®½ºÆ®°¡ ÀÖ´Ù¸é °Å±â¿¡ Ãß°¡.
+		//pObjType ë¦¬ìŠ¤íŠ¸ê°€ ìˆë‹¤ë©´ ê±°ê¸°ì— ì¶”ê°€.
 		iter->second.push_back(pObject);
 	}
 
@@ -90,8 +90,8 @@ HRESULT CObjMgr::DeleteObject(CObj* pObj)
 
 	if (iter == m_MapObject.end())
 	{
-		//pObjType ¸®½ºÆ®°¡ ¾øÀ¸¸é, Á¾·á. ÀÌÁö¸¸ ±×·²¸®°¡ ÀÖ³ª
-		ERR_MSG(g_hWnd, L"ÀÌ°Ô °¡´ÉÇÑ °æ¿ì³Ä ? Delete Object");
+		//pObjType ë¦¬ìŠ¤íŠ¸ê°€ ì—†ìœ¼ë©´, ì¢…ë£Œ. ì´ì§€ë§Œ ê·¸ëŸ´ë¦¬ê°€ ìˆë‚˜
+		ERR_MSG(g_hWnd, L"ì´ê²Œ ê°€ëŠ¥í•œ ê²½ìš°ëƒ ? Delete Object");
 	}
 	else
 	{

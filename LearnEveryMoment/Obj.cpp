@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "Info_Obj.h"
 #include "Include.h"
 
@@ -59,15 +59,15 @@ void CObj::drawTexture(CInfo_Obj* inputInfo, RefPos option_RF, int iCnt, const T
 	const TEXINFO* pTexInfo = GET_SINGLE(CTextureMgr)->GetTexture(in_pObjType, in_pObjName, in_pTextureName, in_pStateKey, iCnt);
 	if (pTexInfo == NULL)
 	{
-		TRACE(L"GetTexture ½ÇÆÐ (%s %s %s %s)\n", in_pObjType, in_pObjName, in_pTextureName, in_pStateKey);
+		TRACE(L"GetTexture ì‹¤íŒ¨ (%s %s %s %s)\n", in_pObjType, in_pObjName, in_pTextureName, in_pStateKey);
 		return;
 	}
 
 	GET_SINGLE(CDeviceMgr)->GetSprite()->SetTransform(&inputInfo->getMatWorld());
 	
 
-	if (opacity > 255 || opacity < 0)	{ //Åõ¸íµµ ¹üÀ§ Ã¼Å©
-		ERR_MSG(g_hWnd, L"Opacity ¼öÄ¡ È®ÀÎ ¹Ù¶÷. 0 <= opacity <= 255 ¸¦ ¹Ýµå½Ã ÃæÁ·ÇØ¾ß ÇÔ.");
+	if (opacity > 255 || opacity < 0)	{ //íˆ¬ëª…ë„ ë²”ìœ„ ì²´í¬
+		ERR_MSG(g_hWnd, L"Opacity ìˆ˜ì¹˜ í™•ì¸ ë°”ëžŒ. 0 <= opacity <= 255 ë¥¼ ë°˜ë“œì‹œ ì¶©ì¡±í•´ì•¼ í•¨.");
 		return;
 	}
 		

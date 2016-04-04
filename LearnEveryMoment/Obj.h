@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #ifndef HEADER_Base
 	#define HEADER_Base
 	#include "Base.h"

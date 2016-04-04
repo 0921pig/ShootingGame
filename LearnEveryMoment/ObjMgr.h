@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "Obj.h"
 #include "ProtoType.h"
 

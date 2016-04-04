@@ -1,11 +1,11 @@
-#pragma once
+ï»¿#pragma once
 #include "stdafx.h"
 
 class CInfo_Obj
 {
 private:
-	D3DXVECTOR3	vPos; //ÁÂ»ó´Ü À§Ä¡
-	D3DXVECTOR3	vDir; //¹Ù¶óº¸°í ÀÖ´Â ¹æÇâ, È¤Àº ÀÌµ¿¹æÇâ Ã³·³ ¹æÇâº¤ÅÍ
+	D3DXVECTOR3	vPos; //ì¢Œìƒë‹¨ ìœ„ì¹˜
+	D3DXVECTOR3	vDir; //ë°”ë¼ë³´ê³  ìˆëŠ” ë°©í–¥, í˜¹ì€ ì´ë™ë°©í–¥ ì²˜ëŸ¼ ë°©í–¥ë²¡í„°
 	D3DXVECTOR3 vCenter;
 	D3DXMATRIX	matWorld;
 	float		radius;

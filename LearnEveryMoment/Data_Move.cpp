@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 #include "Data_Move.h"
 
 CData_Move::CData_Move()

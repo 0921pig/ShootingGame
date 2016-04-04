@@ -1,9 +1,9 @@
-#include "stdafx.h"
+Ôªø#include "stdafx.h"
 #include "Util.h"
 
 void TRACE(LPCTSTR lpszFormat, ...)
 {
-	TCHAR lpszBuffer[0x160]; //πˆ∆€ ≈©±‚.
+	TCHAR lpszBuffer[0x160]; //Î≤ÑÌçº ÌÅ¨Í∏∞.
 	va_list fmtList;
 	va_start(fmtList, lpszFormat);
 	_vstprintf_s(lpszBuffer, lpszFormat, fmtList);

@@ -1,7 +1,7 @@
-#pragma once
+ï»¿#pragma once
 #include "stdafx.h"
 
-class CProtoType // ¾êÀÇ ¿ªÇÒÀº ÀÎÅÍÆäÀÌ½º. 
+class CProtoType // ì–˜ì˜ ì—­í• ì€ ì¸í„°í˜ì´ìŠ¤. 
 {
 public:
 	virtual HRESULT InitProtoInstance()PURE;

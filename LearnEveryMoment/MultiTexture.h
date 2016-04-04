@@ -1,5 +1,5 @@
-#pragma once
-//ÀÌ¹ÌÁö ¿©·¯Àå
+ï»¿#pragma once
+//ì´ë¯¸ì§€ ì—¬ëŸ¬ì¥
 #include "Texture.h"
 
 class CMultiTexture:public CTexture

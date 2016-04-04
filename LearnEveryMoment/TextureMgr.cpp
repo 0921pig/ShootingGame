@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "TextureMgr.h"
 #include "Texture.h"
 #include "Include.h"
@@ -15,17 +15,17 @@ CTextureMgr::~CTextureMgr(void)
 
 const TEXINFO * CTextureMgr::GetTexture(const TCHAR * pObjType, const TCHAR * pObjName, const TCHAR * pTextureName, const TCHAR * pStateKey, const int & iCnt)
 {
-	// 1´Ü°è
+	// 1ë‹¨ê³„
 	map<const TCHAR*, map<const TCHAR*, map<const TCHAR*, CTexture*>>>::iterator iter_ObjType = m_MapTexture.find(pObjType);
 	if (iter_ObjType == m_MapTexture.end())
 		return NULL;
 	
-	// 2´Ü°è
+	// 2ë‹¨ê³„
 	map<const TCHAR*, map<const TCHAR*, CTexture* >>::iterator iter_ObjName = iter_ObjType->second.find(pObjName);
 	if (iter_ObjName == iter_ObjType->second.end())
 		return NULL;
 
-	// 3´Ü°è
+	// 3ë‹¨ê³„
 	map<const TCHAR*, CTexture* > ::iterator iter_TextureName = iter_ObjName->second.find(pTextureName);
 	if (iter_TextureName == iter_ObjName->second.end())
 		return NULL;
@@ -35,26 +35,26 @@ const TEXINFO * CTextureMgr::GetTexture(const TCHAR * pObjType, const TCHAR * pO
 
 HRESULT CTextureMgr::InsertTexture(const TCHAR * pFileName, const TCHAR * pObjType, const TCHAR * pObjName, const TCHAR * pTextureName, const TCHAR * pStateKey, const int & iCnt)
 {
-	// 1´Ü°è
+	// 1ë‹¨ê³„
 	map<const TCHAR*, map<const TCHAR*, map<const TCHAR*, CTexture*>>>::iterator iter_ObjType = m_MapTexture.find(pObjType);
 	if (iter_ObjType == m_MapTexture.end()) {
-		// ÇØ´çÇÏ´Â ³ëµå°¡ ¾øÀ¸¸é Ãß°¡ÇÑ´Ù.
+		// í•´ë‹¹í•˜ëŠ” ë…¸ë“œê°€ ì—†ìœ¼ë©´ ì¶”ê°€í•œë‹¤.
 		m_MapTexture.insert(make_pair(pObjType, map<const TCHAR*, map<const TCHAR*, CTexture*>>()));
 		iter_ObjType = m_MapTexture.find(pObjType);
 	}
 
-	// 2´Ü°è
+	// 2ë‹¨ê³„
 	map<const TCHAR*, map<const TCHAR*, CTexture*>>::iterator iter_ObjName = iter_ObjType->second.find(pObjName);
 	if (iter_ObjName == iter_ObjType->second.end()) {
-		// ÇØ´çÇÏ´Â ³ëµå°¡ ¾øÀ¸¸é Ãß°¡ÇÑ´Ù.
+		// í•´ë‹¹í•˜ëŠ” ë…¸ë“œê°€ ì—†ìœ¼ë©´ ì¶”ê°€í•œë‹¤.
 		iter_ObjType->second.insert(make_pair(pObjName, map<const TCHAR*, CTexture*>()));
 		iter_ObjName = iter_ObjType->second.find(pObjName);
 	}
 
-	// 3´Ü°è
+	// 3ë‹¨ê³„
 	map<const TCHAR*, CTexture*>::iterator iter_TextureName = iter_ObjName->second.find(pTextureName);
 	if (iter_TextureName == iter_ObjName->second.end()) {
-		// ÇØ´çÇÏ´Â ³ëµå°¡ ¾øÀ¸¸é Ãß°¡ÇÑ´Ù.
+		// í•´ë‹¹í•˜ëŠ” ë…¸ë“œê°€ ì—†ìœ¼ë©´ ì¶”ê°€í•œë‹¤.
 		CTexture* pTexture = new CMultiTexture;
 		iter_ObjName->second.insert(make_pair(pTextureName, pTexture));
 		iter_TextureName = iter_ObjName->second.find(pTextureName);
@@ -62,7 +62,7 @@ HRESULT CTextureMgr::InsertTexture(const TCHAR * pFileName, const TCHAR * pObjTy
 
 	if (FAILED(iter_TextureName->second->InsertTexture(pFileName, pStateKey, iCnt)))
 	{
-		TRACE(L"ÅØ½ºÃÄ µî·Ï ½ÇÆĞ  (%s - %s - %s - %s)\n", pObjType, pObjName, pTextureName, pStateKey);
+		TRACE(L"í…ìŠ¤ì³ ë“±ë¡ ì‹¤íŒ¨  (%s - %s - %s - %s)\n", pObjType, pObjName, pTextureName, pStateKey);
 		return E_FAIL;
 
 	}

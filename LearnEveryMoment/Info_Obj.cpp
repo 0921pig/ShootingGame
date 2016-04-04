@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 #include "Info_Obj.h"
 
 CInfo_Obj::CInfo_Obj()

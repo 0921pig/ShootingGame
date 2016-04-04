@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 class CObjProto;
 
 class CLobbyObjProto :public CObjProto

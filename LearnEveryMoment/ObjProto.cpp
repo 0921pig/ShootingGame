@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "Include.h"
 
 CObjProto::CObjProto()
@@ -18,13 +18,13 @@ CObj* CObjProto::GetProto(const TCHAR* pObjType)
 
 	if (iter == m_MapProto.end())
 	{
-		// ³»¿ëÀÌ ÅÖ ºñ¾î ÀÖÀ» °æ¿ì´Â NULL¸®ÅÏ
-		ERR_MSG(g_hWnd, L"º¹»çÇÏ·Á´Â ProtoType °´Ã¼°¡ ¾ø½À´Ï´Ù.");
+		// ë‚´ìš©ì´ í…… ë¹„ì–´ ìžˆì„ ê²½ìš°ëŠ” NULLë¦¬í„´
+		ERR_MSG(g_hWnd, L"ë³µì‚¬í•˜ë ¤ëŠ” ProtoType ê°ì²´ê°€ ì—†ìŠµë‹ˆë‹¤.");
 		return NULL;
 	}
 	else
 	{
-		// ³»¿ëÀÌ ºñ¾î ÀÖÁö ¾Ê´Â °æ¿ì¿¡´Â µ¢¾î¸® ¸®ÅÏ
+		// ë‚´ìš©ì´ ë¹„ì–´ ìžˆì§€ ì•ŠëŠ” ê²½ìš°ì—ëŠ” ë©ì–´ë¦¬ ë¦¬í„´
 		return iter->second;
 	}
 }

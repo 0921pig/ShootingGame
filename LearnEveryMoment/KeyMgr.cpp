@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "KeyMgr.h"
 
 CKeyMgr::CKeyMgr()
@@ -42,7 +42,7 @@ void CKeyMgr::KeyCheck()
 		}
 		else
 		{
-			ERR_MSG(g_hWnd, L"KeyCheck()¿¡¼­ ¿¹¿Ü»óÈ² ¹ß»ý. ¿©±ä Àý´ë µé¾î¿À¸é ¾ÈµÊ. µé¾î¿Ã¸®°¡ ¾øÁö¸¸");
+			ERR_MSG(g_hWnd, L"KeyCheck()ì—ì„œ ì˜ˆì™¸ìƒí™© ë°œìƒ. ì—¬ê¸´ ì ˆëŒ€ ë“¤ì–´ì˜¤ë©´ ì•ˆë¨. ë“¤ì–´ì˜¬ë¦¬ê°€ ì—†ì§€ë§Œ");
 		}
 
 	}
@@ -60,9 +60,9 @@ void CKeyMgr::swapTable()
 void CKeyMgr::ProcessingSequence()
 {
 	/*
-	1. Å×ÀÌºíÀ» ¹Ù²Û´Ù
-	2. ÇöÀç Å×ÀÌºíÀ» ¸ðµÎ KS_NoneÀ¸·Î ¼¼ÆÃ
-	3. KeyCheck¸¦ ÅëÇØ ´­¸° »óÅÂ¸¦ Á¶»çÇÑ´Ù
+	1. í…Œì´ë¸”ì„ ë°”ê¾¼ë‹¤
+	2. í˜„ìž¬ í…Œì´ë¸”ì„ ëª¨ë‘ KS_Noneìœ¼ë¡œ ì„¸íŒ…
+	3. KeyCheckë¥¼ í†µí•´ ëˆŒë¦° ìƒíƒœë¥¼ ì¡°ì‚¬í•œë‹¤
 	*/
 
 	swapTable();

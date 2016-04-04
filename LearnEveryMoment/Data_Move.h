@@ -1,12 +1,12 @@
-#pragma once
+ï»¿#pragma once
 #include "stdafx.h"
 
 class CData_Move
 {
 private:
-	// Move¿¡ ÀÖ¾î Áß¿äÇÑ °ÍÀº µ¥ÀÌÅÍ´Â
-	// ¾î´À ½Ã°£¿¡, ¾î´À À§Ä¡¿¡ ÀÖ´À³Ä.
-	// ±×·¸´Ù¸é µµÂø ½Ã°£°ú µµÂø À§Ä¡¸¦ ÀúÀåÇÏ¸é µÈ´Ù.
+	// Moveì— ìžˆì–´ ì¤‘ìš”í•œ ê²ƒì€ ë°ì´í„°ëŠ”
+	// ì–´ëŠ ì‹œê°„ì—, ì–´ëŠ ìœ„ì¹˜ì— ìžˆëŠëƒ.
+	// ê·¸ë ‡ë‹¤ë©´ ë„ì°© ì‹œê°„ê³¼ ë„ì°© ìœ„ì¹˜ë¥¼ ì €ìž¥í•˜ë©´ ëœë‹¤.
 	float m_fTime;
 	D3DXVECTOR3 m_StartPos;
 	D3DXVECTOR3 m_ArrivePos;
