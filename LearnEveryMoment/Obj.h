@@ -33,6 +33,7 @@ public:
 	void setObjName(TCHAR* inputName);
 	void setTextrueKey(TCHAR* inputName);
 	void setStateKey(TCHAR* inputStateKey);
+	void setPosition(D3DXVECTOR3 inputPos);
 
 	void drawTexture(CInfo_Obj* inputInfo, RefPos option_RF, int iCnt, 
 		const TCHAR* in_pObjType, const TCHAR* in_pObjName, const TCHAR* in_pTextureName = NULL, const TCHAR* in_pStateKey = NULL);

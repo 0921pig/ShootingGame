@@ -4,7 +4,6 @@
 
 CBack_Lobby::CBack_Lobby()
 {
-	Initialize();
 }
 
 CBack_Lobby::~CBack_Lobby()

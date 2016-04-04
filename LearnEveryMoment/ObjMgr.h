@@ -11,7 +11,7 @@ private:
 	list<CObj*>	m_DeleteList;
 
 public:
-	CObj* AddObject(CProtoType* pProto, const TCHAR* pObjType);
+	CObj* AddObject(CProtoType* pProto, const TCHAR* pObjType, D3DXVECTOR3 vPos = D3DXVECTOR3(0.f, 0.f, 0.f));
 	HRESULT DeleteObject(CObj* pObj);
 	
 	void Progress();

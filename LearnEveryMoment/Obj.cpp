@@ -32,12 +32,17 @@ void CObj::setStateKey(TCHAR * inputStateKey)
 	m_pStateKey = inputStateKey;
 }
 
+void CObj::setPosition(D3DXVECTOR3 inputPos)
+{
+	m_Info.setPos(inputPos);
+}
+
 void CObj::drawTexture(CInfo_Obj* inputInfo, RefPos option_RF, int iCnt, const TCHAR * in_pObjType, const TCHAR * in_pObjName, const TCHAR * in_pTextureName, const TCHAR * in_pStateKey)
 {
 	const TEXINFO* pTexInfo = GET_SINGLE(CTextureMgr)->GetTexture(in_pObjType, in_pObjName, in_pTextureName, in_pStateKey, iCnt);
 	if (pTexInfo == NULL)
 	{
-		TRACE(L"%s %s %s %s GetTexture 실패\n", in_pObjType, in_pObjName, in_pTextureName, in_pStateKey);
+		TRACE(L"GetTexture 실패 (%s %s %s %s)\n", in_pObjType, in_pObjName, in_pTextureName, in_pStateKey);
 		return;
 	}
 

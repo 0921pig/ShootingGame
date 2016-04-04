@@ -62,7 +62,7 @@ HRESULT CTextureMgr::InsertTexture(const TCHAR * pFileName, const TCHAR * pObjTy
 
 	if (FAILED(iter_TextureName->second->InsertTexture(pFileName, pStateKey, iCnt)))
 	{
-		TRACE(L"%s - %s - %s - %s 텍스쳐 로드 실패\n", pObjType, pObjName, pTextureName, pStateKey);
+		TRACE(L"텍스쳐 등록 실패  (%s - %s - %s - %s)\n", pObjType, pObjName, pTextureName, pStateKey);
 		return E_FAIL;
 
 	}

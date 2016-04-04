@@ -1,4 +1,5 @@
 #pragma once
+#include "stdafx.h"
 #include "ObjMgr.h"
 #include "ObjProto.h"
 #include "Include.h"
@@ -13,7 +14,7 @@ CObjMgr::~CObjMgr()
 	Release();
 }
 
-CObj* CObjMgr::AddObject(CProtoType* pProto, const TCHAR* pObjType)
+CObj* CObjMgr::AddObject(CProtoType* pProto, const TCHAR* pObjType, D3DXVECTOR3 vPos)
 {
 	map<const TCHAR*, list<CObj*>>::iterator iter = m_MapObject.find(pObjType);
 
@@ -26,6 +27,7 @@ CObj* CObjMgr::AddObject(CProtoType* pProto, const TCHAR* pObjType)
 	}
 
 	CObj* pObject = pProtoInst->Clone();
+	pObject->setPosition(vPos); // ÁÂÇ¥ ´ëÀÔ
 	pObject->Initialize();
 
 	if (iter == m_MapObject.end())

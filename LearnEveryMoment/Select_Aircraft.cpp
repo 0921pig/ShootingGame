@@ -5,7 +5,6 @@ CSelect_Aircraft::CSelect_Aircraft(PlayableAircraft aircraft)
 	:isRandom(false)
 	, m_Aircraft(aircraft)
 {
-	Initialize();
 }
 
 CSelect_Aircraft::~CSelect_Aircraft()
