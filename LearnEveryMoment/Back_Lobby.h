@@ -7,10 +7,9 @@
 
 class CObj;
 
-class CBackground :	public CObj
+class CBack_Lobby :	public CObj
 {
 private:
-	SceneNo m_SceneNo;
 
 public:
 	virtual void Initialize();
@@ -21,7 +20,7 @@ public:
 
 
 public:
-	CBackground(SceneNo SceneNum);
-	~CBackground();
+	CBack_Lobby();
+	~CBack_Lobby();
 };
 

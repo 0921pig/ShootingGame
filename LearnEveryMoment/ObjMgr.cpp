@@ -13,12 +13,17 @@ CObjMgr::~CObjMgr()
 	Release();
 }
 
-HRESULT CObjMgr::AddObject(CProtoType* pProto, const TCHAR* pObjType)
+CObj* CObjMgr::AddObject(CProtoType* pProto, const TCHAR* pObjType)
 {
 	map<const TCHAR*, list<CObj*>>::iterator iter = m_MapObject.find(pObjType);
 
 	CObj*  pProtoInst = ((CObjProto*)pProto)->GetProto(pObjType);
-	if (pProtoInst == NULL)	return E_FAIL;
+	if (pProtoInst == NULL)
+	{
+		TRACE(L"ObjMgr에서 %s 생성 중에 에러 발생\n", pObjType);
+		ERR_MSG(g_hWnd, L"ObjMgr AddObject 에러");
+		return NULL;
+	}
 
 	CObj* pObject = pProtoInst->Clone();
 	pObject->Initialize();
@@ -37,7 +42,7 @@ HRESULT CObjMgr::AddObject(CProtoType* pProto, const TCHAR* pObjType)
 		iter->second.push_back(pObject);
 	}
 
-	return S_OK;
+	return pObject;
 }
 
 void CObjMgr::Progress()

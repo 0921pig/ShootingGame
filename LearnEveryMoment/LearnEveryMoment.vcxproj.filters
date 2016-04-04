@@ -113,9 +113,6 @@
     <Filter Include="10.Scene\_Stage">
       <UniqueIdentifier>{877fedc0-b48b-40bf-a7a4-9f05b760a00c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="20. Obj\Objects\Background">
-      <UniqueIdentifier>{d5b464a6-4df6-4fca-82f6-e8d663f4ed11}</UniqueIdentifier>
-    </Filter>
     <Filter Include="20. Obj\Objects\Stage_only">
       <UniqueIdentifier>{9a6f67c0-6416-4090-b959-3680163e02e7}</UniqueIdentifier>
     </Filter>
@@ -124,6 +121,9 @@
     </Filter>
     <Filter Include="20. Obj\Objects\Lobby_only\Number">
       <UniqueIdentifier>{3b8a4d3f-3749-4059-9ac1-c75d2dbf0362}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Back_Lobby">
+      <UniqueIdentifier>{d5b464a6-4df6-4fca-82f6-e8d663f4ed11}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -199,8 +199,8 @@
     <ClCompile Include="StageObjProto.cpp">
       <Filter>97.DesignPattern\ProtoType\Object\Stage\StageObjProto</Filter>
     </ClCompile>
-    <ClCompile Include="Background.cpp">
-      <Filter>20. Obj\Objects\Background</Filter>
+    <ClCompile Include="Back_Lobby.cpp">
+      <Filter>20. Obj\Objects\Back_Lobby</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -303,8 +303,8 @@
     <ClInclude Include="StageObjProto.h">
       <Filter>97.DesignPattern\ProtoType\Object\Stage\StageObjProto</Filter>
     </ClInclude>
-    <ClInclude Include="Background.h">
-      <Filter>20. Obj\Objects\Background</Filter>
+    <ClInclude Include="Back_Lobby.h">
+      <Filter>20. Obj\Objects\Back_Lobby</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

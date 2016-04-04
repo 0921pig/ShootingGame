@@ -68,9 +68,9 @@
 	#include "Obj.h"
 #endif
 
-#ifndef HEADER_Background
-	#define HEADER_Background
-	#include "Background.h"
+#ifndef HEADER_Back_Lobby
+	#define HEADER_Back_Lobby
+	#include "Back_Lobby.h"
 #endif
 
 // 텍스쳐

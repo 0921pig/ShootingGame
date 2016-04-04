@@ -151,7 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Background.h" />
+    <ClInclude Include="Back_Lobby.h" />
     <ClInclude Include="Base.h" />
     <ClInclude Include="constant.h" />
     <ClInclude Include="Data_Fire.h" />
@@ -187,7 +187,7 @@
     <ClInclude Include="Util.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Background.cpp" />
+    <ClCompile Include="Back_Lobby.cpp" />
     <ClCompile Include="Data_Fire.cpp" />
     <ClCompile Include="Data_Move.cpp" />
     <ClCompile Include="DeviceMgr.cpp" />
