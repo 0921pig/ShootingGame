@@ -47,6 +47,7 @@ void CObj::drawTexture(CInfo_Obj* inputInfo, RefPos option_RF, int iCnt, const T
 	}
 
 	GET_SINGLE(CDeviceMgr)->GetSprite()->SetTransform(&inputInfo->getMatWorld());
+	
 
 	switch (option_RF)
 	{
@@ -55,6 +56,7 @@ void CObj::drawTexture(CInfo_Obj* inputInfo, RefPos option_RF, int iCnt, const T
 		break;
 	
 	case RefPos_Center:
+		inputInfo->setCenter(D3DXVECTOR3(pTexInfo->ImgInfo.Width / 2.f, pTexInfo->ImgInfo.Height / 2.f, 0.f));
 		GET_SINGLE(CDeviceMgr)->GetSprite()->Draw(pTexInfo->pTexture, NULL, &inputInfo->getCenter(), NULL, D3DCOLOR_ARGB(255, 255, 255, 255));
 		break;
 	}

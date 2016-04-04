@@ -50,11 +50,22 @@ void CSelect_Aircraft::Progress()
 	if (isRandom == true){
 		change_AircraftName(m_Aircraft);
 	}
+
+
+	D3DXMATRIX	matTrans;
+	D3DXMatrixIdentity(&matTrans);
+	D3DXMatrixTranslation(&matTrans, getObjInfo()->getPos().x, getObjInfo()->getPos().y, 0.f);
+
+	D3DXMATRIX matScale;
+	D3DXMatrixIdentity(&matScale);
+	D3DXMatrixScaling(&matScale, 3.f, 3.f, 0.f);
+
+	getObjInfo()->setMatWorld(matScale * matTrans);
 }
 
 void CSelect_Aircraft::Render()
 {
-	drawTexture(getObjInfo(), RefPos_Center, 0, getObjkey(), getObjName(), getTexturekey(), getStatekey());
+	drawTexture(getObjInfo(), RefPos_Center, 3, getObjkey(), getObjName(), getTexturekey(), getStatekey());
 }
 
 void CSelect_Aircraft::Release()

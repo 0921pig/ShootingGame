@@ -65,12 +65,12 @@ void CLobby::CreateBaseObjects()
 {
 	m_background = (CBack_Lobby*) GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"Background");
 	
-	m_select_fighter[0] = (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Harrier");
-	m_select_fighter[1] = (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Stealth");
-	m_select_fighter[2] = (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Raptor");
-	m_select_fighter[3] = (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Phantom");
-	m_select_fighter[4] = (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_SuperHornet");
-	m_select_fighter[5] = (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Random");
+	m_select_fighter[4] = (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_SuperHornet", D3DXVECTOR3(96.f, 777.f, 0.f));
+	m_select_fighter[0] = (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Harrier", D3DXVECTOR3(462.f, 777.f, 0.f));
+	m_select_fighter[1] = (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Stealth", D3DXVECTOR3(218.f, 777.f, 0.f));
+	m_select_fighter[2] = (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Raptor", D3DXVECTOR3(341.f, 777.f, 0.f));
+	m_select_fighter[3] = (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Phantom", D3DXVECTOR3(584.f, 777.f, 0.f));
+	m_select_fighter[5] = (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Random", D3DXVECTOR3(707.f, 777.f, 0.f));
 
 
 
