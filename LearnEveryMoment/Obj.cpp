@@ -37,6 +37,22 @@ void CObj::setPosition(D3DXVECTOR3 inputPos)
 	m_Info.setPos(inputPos);
 }
 
+
+
+void CObj::calculateMatworld(CInfo_Obj * pInfo, D3DXVECTOR3 inputPos, D3DXVECTOR3 inputScale)
+{
+	D3DXMATRIX	matTrans;
+	D3DXMatrixIdentity(&matTrans);
+	pInfo->setPos(inputPos);
+	D3DXMatrixTranslation(&matTrans, pInfo->getPos().x, pInfo->getPos().y, pInfo->getPos().z);
+
+	D3DXMATRIX matScale;
+	D3DXMatrixIdentity(&matScale);
+	D3DXMatrixScaling(&matScale, inputScale.x, inputScale.y, inputScale.z);
+
+	pInfo->setMatWorld(matScale * matTrans);
+}
+
 void CObj::drawTexture(CInfo_Obj* inputInfo, RefPos option_RF, int iCnt, const TCHAR * in_pObjType, const TCHAR * in_pObjName, const TCHAR * in_pTextureName, const TCHAR * in_pStateKey)
 {
 	const TEXINFO* pTexInfo = GET_SINGLE(CTextureMgr)->GetTexture(in_pObjType, in_pObjName, in_pTextureName, in_pStateKey, iCnt);

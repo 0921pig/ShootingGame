@@ -80,7 +80,6 @@ HRESULT CDeviceMgr::InitDevice(WINMODE Mode)
 		return E_FAIL;
 	}
 
-	//if (FAILED(D3DXCreateSprite(m_pDevice, &m_pSprite)));
 	D3DXCreateSprite(m_pDevice, &m_pSprite);
 
 	D3DXCreateFont(m_pDevice, 10, 0, FW_BOLD, 1, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, DEFAULT_QUALITY, DEFAULT_PITCH | FF_DONTCARE, L"Federation", &m_pFont);

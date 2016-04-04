@@ -9,6 +9,14 @@ private:
 	bool isRandom;
 	PlayableAircraft m_Aircraft;
 
+	bool isSelected;
+	CInfo_Obj m_CursorSelecting;
+
+	CInfo_Obj m_BigPicture;
+	CInfo_Obj m_WeaponInfo;
+	CInfo_Obj m_FighterCode;
+	CInfo_Obj m_FighterNickname;
+
 public:
 	virtual void Initialize();
 	virtual void Progress();

@@ -4,6 +4,7 @@
 CSelect_Aircraft::CSelect_Aircraft(PlayableAircraft aircraft)
 	:isRandom(false)
 	, m_Aircraft(aircraft)
+	, isSelected(false)
 {
 }
 
@@ -35,6 +36,7 @@ void CSelect_Aircraft::Initialize()
 		setObjName(L"Phantom");
 		break;
 	case PA_SuperHornet:
+		isSelected = true;
 		setObjName(L"SuperHornet");
 		break;
 	case PA_Random:
@@ -43,6 +45,18 @@ void CSelect_Aircraft::Initialize()
 		m_Aircraft = PA_Harrier;
 		break;
 	}
+
+	//Big picture
+	calculateMatworld(&m_BigPicture, D3DXVECTOR3(400.f, 320.f, 0.f), D3DXVECTOR3(2.7f, 2.7f, 0.f));
+	calculateMatworld(&m_WeaponInfo, D3DXVECTOR3(510.f, 456.f, 0.f), D3DXVECTOR3(3.6f, 2.7f, 0.f));
+	calculateMatworld(&m_FighterCode, D3DXVECTOR3(026.f, 503.f, 0.f), D3DXVECTOR3(2.7f, 2.7f, 0.f));
+	calculateMatworld(&m_FighterNickname, D3DXVECTOR3(026.f, 576.f, 0.f), D3DXVECTOR3(2.7f, 2.7f, 0.f));
+
+	//본체 Setting
+	calculateMatworld(getObjInfo(), getObjInfo()->getPos(), D3DXVECTOR3(3.f, 3.f, 0.f));
+
+	//커서 Setting
+	calculateMatworld(&m_CursorSelecting, D3DXVECTOR3(getObjInfo()->getPos().x, 710.f, 0.f), D3DXVECTOR3(1.f, 1.f, 0.f));
 }
 
 void CSelect_Aircraft::Progress()
@@ -52,20 +66,26 @@ void CSelect_Aircraft::Progress()
 	}
 
 
-	D3DXMATRIX	matTrans;
-	D3DXMatrixIdentity(&matTrans);
-	D3DXMatrixTranslation(&matTrans, getObjInfo()->getPos().x, getObjInfo()->getPos().y, 0.f);
 
-	D3DXMATRIX matScale;
-	D3DXMatrixIdentity(&matScale);
-	D3DXMatrixScaling(&matScale, 3.f, 3.f, 0.f);
-
-	getObjInfo()->setMatWorld(matScale * matTrans);
 }
 
 void CSelect_Aircraft::Render()
 {
+
+
 	drawTexture(getObjInfo(), RefPos_Center, 3, getObjkey(), getObjName(), getTexturekey(), getStatekey());
+	//여기에 그림자 넣기
+
+	
+	if (isSelected == true) // Select 상태 일때 출력할 이미지
+	{
+		drawTexture(&m_CursorSelecting, RefPos_Center, 0, L"UI", L"Lobby", L"SelectMark", L"Normal");
+
+		drawTexture(&m_BigPicture,		RefPos_Center,	0,	getObjkey(), getObjName(), L"Body",			L"Big");
+		drawTexture(&m_WeaponInfo,		RefPos_LeftTop, 0,	getObjkey(), getObjName(), L"WeaponInfo",	L"Normal");
+		drawTexture(&m_FighterCode,		RefPos_LeftTop, 0,	getObjkey(), getObjName(), L"Code",			L"Normal");
+		drawTexture(&m_FighterNickname, RefPos_LeftTop, 0,	getObjkey(), getObjName(), L"Nickname",		L"Normal");
+	}
 }
 
 void CSelect_Aircraft::Release()

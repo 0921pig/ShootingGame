@@ -8,12 +8,6 @@ class CSelect_Aircraft;
 class CLobby : public CScene
 {
 	CBack_Lobby* m_background;
-	
-	CObj* m_fighterPicture;
-	CObj* m_fighterNameInfo;
-	CObj* m_fighterWeaponInfo;
-
-	CObj* m_selecting_cursor;
 	CSelect_Aircraft* m_select_fighter[6];
 
 public:
