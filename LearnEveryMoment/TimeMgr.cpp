@@ -25,3 +25,9 @@ void CTimeMgr::SetTime()
 	m_fTime = float(m_CurrentTime.QuadPart - m_prevTime.QuadPart) / m_CpuTick.QuadPart;
 	m_prevTime = m_CurrentTime;
 }
+
+float CTimeMgr::GetTime()
+{
+	return 0.01f;
+	//return m_fTime;
+}

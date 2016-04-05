@@ -138,18 +138,23 @@ void CLobby::moveSelect(DIR4 direction)
 			break;
 		case PA_Stealth:
 			m_selected = PA_SuperHornet;
+			m_background->moveNumberBack(m_selected);
 			break;
 		case PA_Raptor:
 			m_selected = PA_Stealth;
+			m_background->moveNumberBack(m_selected);
 			break;
 		case PA_Harrier:
 			m_selected = PA_Raptor;
+			m_background->moveNumberBack(m_selected);
 			break;
 		case PA_Phantom:
 			m_selected = PA_Harrier;
+			m_background->moveNumberBack(m_selected);
 			break;
 		case PA_Random:
 			m_selected = PA_Phantom;
+			m_background->moveNumberBack(m_selected);
 			break;
 		}
 
@@ -163,25 +168,31 @@ void CLobby::moveSelect(DIR4 direction)
 		{
 		case PA_SuperHornet:
 			m_selected = PA_Stealth;
+			m_background->moveNumberBack(m_selected);
 			break;
 		case PA_Stealth:
 			m_selected = PA_Raptor;
+			m_background->moveNumberBack(m_selected);
 			break;
 		case PA_Raptor:
 			m_selected = PA_Harrier;
+			m_background->moveNumberBack(m_selected);
 			break;
 		case PA_Harrier:
 			m_selected = PA_Phantom;
+			m_background->moveNumberBack(m_selected);
 			break;
 		case PA_Phantom:
 			m_selected = PA_Random;
 			break;
 		case PA_Random:
 			m_selected = PA_SuperHornet;
+			m_background->moveNumberBack(m_selected);
 			break;
 		}
 
 		m_select_fighter[m_selected]->select(true); //선택
+
 	}
 	else
 	{

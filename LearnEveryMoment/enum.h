@@ -41,10 +41,10 @@ enum DIR4
 
 enum PlayableAircraft
 {
-	PA_Harrier,
+	PA_SuperHornet,
 	PA_Stealth,
 	PA_Raptor,
+	PA_Harrier,
 	PA_Phantom,
-	PA_SuperHornet,
 	PA_Random
 };

@@ -15,7 +15,7 @@ public:
 public:
 	void InitTimeMgr();
 	void SetTime();
-	float GetTime() { return m_fTime; }
+	float GetTime();
 
 private:
 	CTimeMgr();

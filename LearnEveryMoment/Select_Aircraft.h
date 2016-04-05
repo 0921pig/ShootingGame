@@ -1,5 +1,8 @@
 ﻿#pragma once
-#include "Obj.h"
+#ifndef HEADER_Obj
+	#define HEADER_Obj
+	#include "Obj.h"
+#endif
 
 class CSelect_Aircraft : public CObj
 {

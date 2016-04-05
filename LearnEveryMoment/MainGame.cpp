@@ -14,7 +14,7 @@ CMainGame::~CMainGame()
 
 HRESULT CMainGame::Initialize()
 {
-
+	GET_SINGLE(CTimeMgr)->InitTimeMgr();
 	return S_OK;
 }
 
@@ -47,6 +47,7 @@ void CMainGame::Release()
 
 void CMainGame::Progress()
 {
+	GET_SINGLE(CTimeMgr)->SetTime();
 	m_ManageScene.Progress();
 }
 

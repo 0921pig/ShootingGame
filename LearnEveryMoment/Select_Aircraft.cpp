@@ -28,8 +28,8 @@ void CSelect_Aircraft::Initialize()
 
 	switch (m_Aircraft)
 	{
-	case PA_Harrier:
-		setObjName(L"Harrier");
+	case PA_SuperHornet:
+		setObjName(L"SuperHornet");
 		break;
 	case PA_Stealth:
 		setObjName(L"Stealth");
@@ -37,11 +37,11 @@ void CSelect_Aircraft::Initialize()
 	case PA_Raptor:
 		setObjName(L"Raptor");
 		break;
+	case PA_Harrier:
+		setObjName(L"Harrier");
+		break;
 	case PA_Phantom:
 		setObjName(L"Phantom");
-		break;
-	case PA_SuperHornet:
-		setObjName(L"SuperHornet");
 		break;
 	case PA_Random:
 		isRandom = true;
@@ -97,7 +97,7 @@ void CSelect_Aircraft::change_AircraftName(PlayableAircraft AircraftName)
 {
 	switch (AircraftName)
 	{
-	case PA_Harrier:
+	case PA_SuperHornet:
 		m_Aircraft = PA_Stealth;
 		setObjName(L"Stealth");
 		break;
@@ -106,16 +106,16 @@ void CSelect_Aircraft::change_AircraftName(PlayableAircraft AircraftName)
 		setObjName(L"Raptor");
 		break;
 	case PA_Raptor:
+		m_Aircraft = PA_Harrier;
+		setObjName(L"Harrier");
+		break;
+	case PA_Harrier:
 		m_Aircraft = PA_Phantom;
 		setObjName(L"Phantom");
 		break;
 	case PA_Phantom:
 		m_Aircraft = PA_SuperHornet;
 		setObjName(L"SuperHornet");
-		break;
-	case PA_SuperHornet:
-		m_Aircraft = PA_Harrier;
-		setObjName(L"Harrier");
 		break;
 	}
 }
