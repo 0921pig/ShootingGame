@@ -81,10 +81,12 @@ void CBack_Lobby::Progress()
 			}
 		}
 
+		// 현재속도로 실제로 이동하기
 		m_NumberBack.position_current += m_NumberBack.speed_cur;
 
 		if (abs(m_NumberBack.position_current - m_NumberBack.position_goal) < 1.f)
 		{
+			// 도착지점에 도착했을 때 강력하게 멈추기
 			m_NumberBack.speed_cur = 0.f;
 			m_NumberBack.position_current = m_NumberBack.position_goal;
 			isMoving_NumberBack = false;
