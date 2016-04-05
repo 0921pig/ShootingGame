@@ -131,6 +131,9 @@
     <Filter Include="20. Obj\Objects\Common\Picture">
       <UniqueIdentifier>{0da04cad-588e-44d4-9883-db7e1f2157b2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01.Manager\TimeMgr">
+      <UniqueIdentifier>{ac2f8e22-3de0-49cb-a584-67f2109514ff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp">
@@ -213,6 +216,9 @@
     </ClCompile>
     <ClCompile Include="Picture.cpp">
       <Filter>20. Obj\Objects\Common\Picture</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeMgr.cpp">
+      <Filter>01.Manager\TimeMgr</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -323,6 +329,9 @@
     </ClInclude>
     <ClInclude Include="Picture.h">
       <Filter>20. Obj\Objects\Common\Picture</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeMgr.h">
+      <Filter>01.Manager\TimeMgr</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

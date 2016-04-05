@@ -185,6 +185,7 @@
     <ClInclude Include="struct.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="TextureMgr.h" />
+    <ClInclude Include="TimeMgr.h" />
     <ClInclude Include="Util.h" />
   </ItemGroup>
   <ItemGroup>
@@ -214,6 +215,7 @@
     <ClCompile Include="StageObjProto.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TextureMgr.cpp" />
+    <ClCompile Include="TimeMgr.cpp" />
     <ClCompile Include="Util.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

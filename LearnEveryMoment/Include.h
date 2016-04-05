@@ -41,6 +41,11 @@
 	#include "ObjMgr.h"
 #endif
 
+#ifndef HEADER_TimeMgr
+	#define HEADER_TimeMgr
+	#include "TimeMgr.h"
+#endif
+
 /* 구조 */
 #ifndef HEADER_MainGame
 	#define HEADER_MainGame
