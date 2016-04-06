@@ -2,9 +2,9 @@
 #include "AudioMgr.h"
 
 // WAVE_BANK must be location of .xwb file.
-const TCHAR* WAVE_BANK = L"resource/Audio/Win/WaveBank_1945.xwb";
+const TCHAR* WAVE_BANK = L"resource/Audio/Win/Wave Bank.xwb";
 // SOUND_BANK must be location of .xsb file.
-const TCHAR* SOUND_BANK = L"resource/audio/Win/SoundBank_1945.xsb";
+const TCHAR* SOUND_BANK = L"resource/Audio/Win/Sound Bank.xsb";
 
 //=============================================================================
 // default constructor

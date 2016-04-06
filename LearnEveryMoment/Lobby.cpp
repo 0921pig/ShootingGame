@@ -22,24 +22,41 @@ void CLobby::Initialize()
 
 	m_selected = PA_SuperHornet;
 	m_select_fighter[m_selected]->select(true); //초기 세팅
+
+	GET_SINGLE(CAudioMgr)->playCue(LOBBY);
 }
 
 void CLobby::KeyProcess()
 {
 	if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_LEFT) == KS_KeyDown)
+	{
+		GET_SINGLE(CAudioMgr)->playCue(LowBeep);
+		GET_SINGLE(CAudioMgr)->playCue(DryBeep);
 		moveCursor(DIR4_LEFT);
 
+	}
+
 	if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_RIGHT) == KS_KeyDown)
+	{
+		GET_SINGLE(CAudioMgr)->playCue(LowBeep);
+		GET_SINGLE(CAudioMgr)->playCue(DryBeep);
 		moveCursor(DIR4_RIGHT);
+
+	}
+
+	if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_RETURN) == KS_KeyDown)
+		selectAircraft(m_selected);
+
 }
 
 SceneReturn CLobby::Progress()
 {
 	GET_SINGLE(CObjMgr)->Progress();
 
-
-
-	return SceneReturn_None;
+	if (isSelect == true)
+		return SceneReturn_NextStage;
+	else
+		return SceneReturn_None;
 }
 
 void CLobby::Render()
@@ -49,6 +66,7 @@ void CLobby::Render()
 
 void CLobby::Release()
 {
+	GET_SINGLE(CAudioMgr)->stopCue("Lobby");
 }
 
 
@@ -205,5 +223,6 @@ void CLobby::moveCursor(DIR4 direction)
 
 void CLobby::selectAircraft(PlayableAircraft aircraft)
 {
-	
+	GET_SINGLE(CMainGame)->getPlayerInfo()->initialize(aircraft);
+	isSelect = true;
 }

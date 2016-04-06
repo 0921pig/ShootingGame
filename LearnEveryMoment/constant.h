@@ -4,8 +4,7 @@ const int WINSIZEX = 800;
 const int WINSIZEY = 900;
 
 // audio cues
-static const TCHAR* BEEP1	= L"beep1";
-static const TCHAR* BEEP2	= L"beep2";
-static const TCHAR* BEEP3	= L"beep3";
-static const TCHAR* BEEP4	= L"beep4";
-static const TCHAR* HIT		= L"hit";
+static const char STAGE1[]	= "Stage_1";
+static const char LOBBY[]	= "Lobby";
+static const char DryBeep[] = "DryBeep";
+static const char LowBeep[] = "LowBeep";

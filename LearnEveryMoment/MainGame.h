@@ -5,6 +5,7 @@
 	#include "ManageScene.h"
 #endif
 
+class CInfo_Player;
 
 class CMainGame
 {

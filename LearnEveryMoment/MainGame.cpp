@@ -9,8 +9,8 @@ CInfo_Player * CMainGame::getPlayerInfo()
 
 CMainGame::CMainGame()
 {
-	m_Player[0] = NULL;
-	m_Player[1] = NULL;
+	m_Player[0] = new CInfo_Player;
+	m_Player[1] = NULL; //이건 플레이어1 다 적용되면 확장
 }
 
 
@@ -52,7 +52,6 @@ void CMainGame::Release()
 	// CInfo_Player의 객체 해제
 	delete m_Player[0];
 	delete m_Player[1];
-	delete[] m_Player;
 	
 	DESTROY_SINGLE(CDeviceMgr);
 }
