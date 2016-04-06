@@ -41,6 +41,7 @@ enum DIR4
 
 enum PlayableAircraft
 {
+	PA_None,
 	PA_SuperHornet,
 	PA_Stealth,
 	PA_Raptor,

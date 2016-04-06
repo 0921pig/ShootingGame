@@ -1,9 +1,16 @@
 ﻿#include "stdafx.h"
 #include "Include.h"
 
+CInfo_Player * CMainGame::getPlayerInfo()
+{
+	//아직은 테스트니까 1Player만
+	return m_Player[0];
+}
+
 CMainGame::CMainGame()
 {
-	Initialize();
+	m_Player[0] = NULL;
+	m_Player[1] = NULL;
 }
 
 
@@ -34,14 +41,19 @@ void CMainGame::StartPhase()
 
 void CMainGame::KeyProcess()
 {
-	/* MainGame의 키체크는 아래에서 */
+	/* MainGame의 키체크 */
 
-	/* Scene의 키체크는 아래에서*/
+	/* Scene의 키체크 */
 	m_ManageScene.KeyProcess();
 }
 
 void CMainGame::Release()
 {
+	// CInfo_Player의 객체 해제
+	delete m_Player[0];
+	delete m_Player[1];
+	delete[] m_Player;
+	
 	DESTROY_SINGLE(CDeviceMgr);
 }
 

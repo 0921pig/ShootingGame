@@ -94,14 +94,8 @@
     <Filter Include="00.Header\lib">
       <UniqueIdentifier>{e27b2f35-8ca9-4b52-8d3c-fe7f78805145}</UniqueIdentifier>
     </Filter>
-    <Filter Include="00.Header\lib\Trace">
-      <UniqueIdentifier>{731e3e7b-7197-45a5-8b6f-5f490cea3335}</UniqueIdentifier>
-    </Filter>
     <Filter Include="00.Header\Base\Base_var">
       <UniqueIdentifier>{6bbcf4cd-794c-4433-9821-23f25fdb266c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="00.Header\Base\Base_var\extern_hWnd">
-      <UniqueIdentifier>{035e005f-a778-43cd-9e69-a113d0b26e26}</UniqueIdentifier>
     </Filter>
     <Filter Include="97.DesignPattern\ProtoType\Object\Stage\StageObjProto">
       <UniqueIdentifier>{fae68905-e80e-4043-90a0-9a9eebbffe08}</UniqueIdentifier>
@@ -132,6 +126,15 @@
     </Filter>
     <Filter Include="01.Manager\AudioMgr">
       <UniqueIdentifier>{3786ae34-b869-4dd3-a8c9-63dd8cec1457}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00.Header\Base\Base_var\extern_var">
+      <UniqueIdentifier>{035e005f-a778-43cd-9e69-a113d0b26e26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00.Header\lib\Util">
+      <UniqueIdentifier>{731e3e7b-7197-45a5-8b6f-5f490cea3335}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="80.MainGame\Info_Player">
+      <UniqueIdentifier>{ccd08278-400a-4bb6-8073-c46ff24bb820}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -199,10 +202,7 @@
       <Filter>01.Manager\TextureMgr\Texture</Filter>
     </ClCompile>
     <ClCompile Include="Util.cpp">
-      <Filter>00.Header\lib\Trace</Filter>
-    </ClCompile>
-    <ClCompile Include="extern_hWnd.cpp">
-      <Filter>00.Header\Base\Base_var\extern_hWnd</Filter>
+      <Filter>00.Header\lib\Util</Filter>
     </ClCompile>
     <ClCompile Include="StageObjProto.cpp">
       <Filter>97.DesignPattern\ProtoType\Object\Stage\StageObjProto</Filter>
@@ -221,6 +221,12 @@
     </ClCompile>
     <ClCompile Include="AudioMgr.cpp">
       <Filter>01.Manager\AudioMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="extern_var.cpp">
+      <Filter>00.Header\Base\Base_var\extern_var</Filter>
+    </ClCompile>
+    <ClCompile Include="Info_Player.cpp">
+      <Filter>80.MainGame\Info_Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -315,10 +321,7 @@
       <Filter>01.Manager\TextureMgr\Texture</Filter>
     </ClInclude>
     <ClInclude Include="Util.h">
-      <Filter>00.Header\lib\Trace</Filter>
-    </ClInclude>
-    <ClInclude Include="extern_hWnd.h">
-      <Filter>00.Header\Base\Base_var\extern_hWnd</Filter>
+      <Filter>00.Header\lib\Util</Filter>
     </ClInclude>
     <ClInclude Include="StageObjProto.h">
       <Filter>97.DesignPattern\ProtoType\Object\Stage\StageObjProto</Filter>
@@ -337,6 +340,12 @@
     </ClInclude>
     <ClInclude Include="AudioMgr.h">
       <Filter>01.Manager\AudioMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="extern_var.h">
+      <Filter>00.Header\Base\Base_var\extern_var</Filter>
+    </ClInclude>
+    <ClInclude Include="Info_Player.h">
+      <Filter>80.MainGame\Info_Player</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

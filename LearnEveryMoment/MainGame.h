@@ -5,10 +5,14 @@
 	#include "ManageScene.h"
 #endif
 
+
 class CMainGame
 {
+	DECLARE_SINGLETON(CMainGame);
+
 private:
 	CManageScene m_ManageScene;
+	CInfo_Player* m_Player[2];
 
 public:
 	HRESULT Initialize();
@@ -19,7 +23,11 @@ public:
 	void Release();
 
 public:
+	CInfo_Player* getPlayerInfo();
+
+private:
 	CMainGame();
+public:
 	~CMainGame();
 };
 

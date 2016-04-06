@@ -20,7 +20,7 @@
 	#include "enum.h"
 #endif
 
-#ifndef HEADER_extern_hWnd
-	#define HEADER_extern_hWnd
-	#include "extern_hWnd.h"
+#ifndef HEADER_extern_var
+	#define HEADER_extern_var
+	#include "extern_var.h"
 #endif

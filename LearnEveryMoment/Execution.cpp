@@ -46,7 +46,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpCmdLine,
 
 	MSG msg; //While문에서 사용할 메세지
 	msg.message = WM_NULL;
-	CMainGame MainGame; // 생성자에서 자동으로 Initialize() 실행
+
+	GET_SINGLE(CMainGame)->Initialize();  //CMainGame은 프로그램 전체에 하나만 존재해야하므로, 싱글톤으로 지정.
 
 	/* 메세지 처리 루틴 */
 	while (msg.message != WM_QUIT)
@@ -58,9 +59,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpCmdLine,
 		}
 		else
 		{
-			MainGame.StartPhase();
-			MainGame.Progress();
-			MainGame.Render();
+			GET_SINGLE(CMainGame)->StartPhase();
+			GET_SINGLE(CMainGame)->Progress();
+			GET_SINGLE(CMainGame)->Render();
 		}
 	}
 

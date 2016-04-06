@@ -159,11 +159,12 @@
     <ClInclude Include="DeviceMgr.h" />
     <ClInclude Include="enum.h" />
     <ClInclude Include="Execution.h" />
-    <ClInclude Include="extern_hWnd.h" />
+    <ClInclude Include="extern_var.h" />
     <ClInclude Include="function.h" />
     <ClInclude Include="Include.h" />
     <ClInclude Include="Info_ManageScene.h" />
     <ClInclude Include="Info_Obj.h" />
+    <ClInclude Include="Info_Player.h" />
     <ClInclude Include="KeyMgr.h" />
     <ClInclude Include="Lobby.h" />
     <ClInclude Include="LobbyObjProto.h" />
@@ -196,9 +197,10 @@
     <ClCompile Include="Data_Move.cpp" />
     <ClCompile Include="DeviceMgr.cpp" />
     <ClCompile Include="Execution.cpp" />
-    <ClCompile Include="extern_hWnd.cpp" />
+    <ClCompile Include="extern_var.cpp" />
     <ClCompile Include="Info_ManageScene.cpp" />
     <ClCompile Include="Info_Obj.cpp" />
+    <ClCompile Include="Info_Player.cpp" />
     <ClCompile Include="KeyMgr.cpp" />
     <ClCompile Include="Lobby.cpp" />
     <ClCompile Include="LobbyObjProto.cpp" />

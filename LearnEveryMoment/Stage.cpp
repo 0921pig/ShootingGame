@@ -18,6 +18,8 @@ void CStage::Initialize()
 	setObjProto(new CStageObjProto());
 
 	CreateBaseObjects();
+
+	m_Player = GET_SINGLE(CMainGame)->getPlayerInfo(); // 매 스테이지 시작 때 플레이어 정보를 가지고 온다. 이렇게하면 매번 싱글톤을 이용 할 필요 없이 한번만 쓰면 된다.
 }
 
 

@@ -1,9 +1,13 @@
 ﻿#pragma once
 
 class CScene;
+class CInfo_Player;
 
 class CStage : public CScene
 {
+private:
+	CInfo_Player* m_Player;
+
 public:
 	virtual void Initialize();
 	virtual SceneReturn Progress();

@@ -4,7 +4,6 @@
 
 class CSortMgr
 {
-public:
 	DECLARE_SINGLETON(CSortMgr);
 
 private:

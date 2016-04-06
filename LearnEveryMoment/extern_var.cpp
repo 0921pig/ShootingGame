@@ -1,4 +1,4 @@
 ﻿#include "stdafx.h"
-#include "extern_hWnd.h"
+#include "extern_var.h"
 
 HWND g_hWnd;

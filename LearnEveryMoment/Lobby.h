@@ -13,6 +13,8 @@ class CLobby : public CScene
 	PlayableAircraft m_selected;
 	CSelect_Aircraft* m_select_fighter[6];
 
+	bool isSelect;
+
 public:
 	virtual void Initialize();
 	virtual SceneReturn Progress();
@@ -23,7 +25,8 @@ public:
 private:
 	virtual void LoadTexture();
 	virtual void CreateBaseObjects();
-	void moveSelect(DIR4 direction);
+	void moveCursor(DIR4 direction);
+	void selectAircraft(PlayableAircraft aircraft);
 
 public:
 	CLobby();

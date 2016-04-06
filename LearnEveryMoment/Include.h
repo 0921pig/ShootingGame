@@ -117,6 +117,13 @@
 	#include "Info_ManageScene.h"
 #endif
 
+#ifndef HEADER_Info_Player
+	#define HEADER_Info_Player
+	#include "Info_Player.h"
+#endif
+
+
+
 /* 디자인 패턴 */
 #ifndef HEADER_ProtoType
 	#define HEADER_ProtoType

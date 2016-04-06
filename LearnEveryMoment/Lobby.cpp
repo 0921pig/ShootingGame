@@ -3,6 +3,7 @@
 #include "Include.h"
 
 CLobby::CLobby()
+	:isSelect(false)
 {
 	Initialize();
 }
@@ -26,10 +27,10 @@ void CLobby::Initialize()
 void CLobby::KeyProcess()
 {
 	if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_LEFT) == KS_KeyDown)
-		moveSelect(DIR4_LEFT);
+		moveCursor(DIR4_LEFT);
 
 	if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_RIGHT) == KS_KeyDown)
-		moveSelect(DIR4_RIGHT);
+		moveCursor(DIR4_RIGHT);
 }
 
 SceneReturn CLobby::Progress()
@@ -125,7 +126,9 @@ void CLobby::CreateBaseObjects()
 
 }
 
-void CLobby::moveSelect(DIR4 direction)
+
+
+void CLobby::moveCursor(DIR4 direction)
 {
 	if (direction == DIR4_LEFT)
 	{
@@ -196,6 +199,11 @@ void CLobby::moveSelect(DIR4 direction)
 	}
 	else
 	{
-		TRACE(L"CLobby moveSelect()에서 이상상황 발생");
+		TRACE(L"CLobby moveCursor()에서 이상상황 발생");
 	}
+}
+
+void CLobby::selectAircraft(PlayableAircraft aircraft)
+{
+	
 }
