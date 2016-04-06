@@ -130,6 +130,9 @@
     <Filter Include="01.Manager\TimeMgr">
       <UniqueIdentifier>{ac2f8e22-3de0-49cb-a584-67f2109514ff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01.Manager\AudioMgr">
+      <UniqueIdentifier>{3786ae34-b869-4dd3-a8c9-63dd8cec1457}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp">
@@ -215,6 +218,9 @@
     </ClCompile>
     <ClCompile Include="TimeMgr.cpp">
       <Filter>01.Manager\TimeMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioMgr.cpp">
+      <Filter>01.Manager\AudioMgr</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -328,6 +334,9 @@
     </ClInclude>
     <ClInclude Include="TimeMgr.h">
       <Filter>01.Manager\TimeMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioMgr.h">
+      <Filter>01.Manager\AudioMgr</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

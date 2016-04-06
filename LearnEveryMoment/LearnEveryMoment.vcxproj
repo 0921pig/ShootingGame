@@ -150,6 +150,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AudioMgr.h" />
     <ClInclude Include="Back_Lobby.h" />
     <ClInclude Include="Base.h" />
     <ClInclude Include="constant.h" />
@@ -189,6 +190,7 @@
     <ClInclude Include="Util.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AudioMgr.cpp" />
     <ClCompile Include="Back_Lobby.cpp" />
     <ClCompile Include="Data_Fire.cpp" />
     <ClCompile Include="Data_Move.cpp" />

@@ -46,6 +46,11 @@
 	#include "TimeMgr.h"
 #endif
 
+#ifndef HEADER_AudioMgr
+	#define HEADER_AudioMgr
+	#include "AudioMgr.h"
+#endif
+
 /* 구조 */
 #ifndef HEADER_MainGame
 	#define HEADER_MainGame

@@ -47,6 +47,7 @@ void CMainGame::Release()
 
 void CMainGame::Progress()
 {
+	GET_SINGLE(CAudioMgr)->run(); //AudioMgr의 run함수는 주기적으로 호출되어야 한다
 	GET_SINGLE(CTimeMgr)->SetTime();
 	m_ManageScene.Progress();
 }
