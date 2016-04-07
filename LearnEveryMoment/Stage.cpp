@@ -3,6 +3,9 @@
 #include "Include.h"
 
 CStage::CStage(SceneNo WhatStage)
+	:isClear_ThisStage(false)
+	, m_background(NULL)
+	, m_Player(NULL)
 {
 	Initialize();
 }
@@ -19,7 +22,7 @@ void CStage::Initialize()
 
 	CreateBaseObjects();
 
-	m_Player = GET_SINGLE(CMainGame)->getPlayerInfo(); // 매 스테이지 시작 때 플레이어 정보를 가지고 온다. 이렇게하면 매번 싱글톤을 이용 할 필요 없이 한번만 쓰면 된다.
+	//m_Player = GET_SINGLE(CMainGame)->getPlayerInfo(); // 매 스테이지 시작 때 플레이어 정보를 가지고 온다. 이렇게하면 매번 싱글톤을 이용 할 필요 없이 한번만 쓰면 된다.
 
 	GET_SINGLE(CAudioMgr)->playCue(STAGE1);
 
@@ -32,11 +35,17 @@ void CStage::KeyProcess()
 
 SceneReturn CStage::Progress()
 {
-	return SceneReturn();
+	GET_SINGLE(CObjMgr)->Progress();
+
+	if (isClear_ThisStage == true)
+		return SceneReturn_NextStage;
+	else
+		return SceneReturn_None;
 }
 
 void CStage::Render()
 {
+	GET_SINGLE(CObjMgr)->Render();
 }
 
 void CStage::Release()
@@ -46,8 +55,34 @@ void CStage::Release()
 
 void CStage::LoadTexture()
 {
+	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Background/Stage_01/Stage_01.png", L"Background", L"Stage_01", L"Main", L"Normal", 1);
+
+	// Harrier
+	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Aircraft/Harrier/Body/Normal/%02d.png", L"Aircraft", L"Harrier", L"Body", L"Normal", 7);
+	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Aircraft/Harrier/Body/Boost/%02d.png", L"Aircraft", L"Harrier", L"Body", L"Boost", 7);
+
+
+	// Stealth
+	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Aircraft/Stealth/Body/Normal/%02d.png", L"Aircraft", L"Stealth", L"Body", L"Normal", 7);
+	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Aircraft/Stealth/Body/Boost/%02d.png", L"Aircraft", L"Stealth", L"Body", L"Boost", 7);
+
+	// Raptor
+	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Aircraft/Raptor/Body/Normal/%02d.png", L"Aircraft", L"Raptor", L"Body", L"Normal", 7);
+	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Aircraft/Raptor/Body/Boost/%02d.png", L"Aircraft", L"Raptor", L"Body", L"Boost", 7);
+
+	// Phantom
+	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Aircraft/Phantom/Body/Normal/%02d.png", L"Aircraft", L"Phantom", L"Body", L"Normal", 7);
+	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Aircraft/Phantom/Body/Boost/%02d.png", L"Aircraft", L"Phantom", L"Body", L"Boost", 7);
+
+	//SuperHornet
+	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Aircraft/SuperHornet/Body/Normal/%02d.png", L"Aircraft", L"SuperHornet", L"Body", L"Normal", 7);
+	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Aircraft/SuperHornet/Body/Boost/%02d.png", L"Aircraft", L"SuperHornet", L"Body", L"Boost", 7);
 }
 
 void CStage::CreateBaseObjects()
 {
+	m_background = (CBack_Stage*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"Background");
+
+	m_Player = (CPlayer_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_SuperHornet", D3DXVECTOR3(096.f, 780.f, 0.f));
+
 }

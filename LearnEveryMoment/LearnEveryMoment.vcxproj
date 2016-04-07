@@ -152,6 +152,7 @@
   <ItemGroup>
     <ClInclude Include="AudioMgr.h" />
     <ClInclude Include="Back_Lobby.h" />
+    <ClInclude Include="Back_Stage.h" />
     <ClInclude Include="Base.h" />
     <ClInclude Include="constant.h" />
     <ClInclude Include="Data_Fire.h" />
@@ -176,6 +177,7 @@
     <ClInclude Include="ObjMgr.h" />
     <ClInclude Include="ObjProto.h" />
     <ClInclude Include="Picture.h" />
+    <ClInclude Include="Player_Aircraft.h" />
     <ClInclude Include="ProtoType.h" />
     <ClInclude Include="readme.h" />
     <ClInclude Include="Scene.h" />
@@ -193,6 +195,7 @@
   <ItemGroup>
     <ClCompile Include="AudioMgr.cpp" />
     <ClCompile Include="Back_Lobby.cpp" />
+    <ClCompile Include="Back_Stage.cpp" />
     <ClCompile Include="Data_Fire.cpp" />
     <ClCompile Include="Data_Move.cpp" />
     <ClCompile Include="DeviceMgr.cpp" />
@@ -211,6 +214,7 @@
     <ClCompile Include="ObjMgr.cpp" />
     <ClCompile Include="ObjProto.cpp" />
     <ClCompile Include="Picture.cpp" />
+    <ClCompile Include="Player_Aircraft.cpp" />
     <ClCompile Include="ProtoType.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Select_Aircraft.cpp" />

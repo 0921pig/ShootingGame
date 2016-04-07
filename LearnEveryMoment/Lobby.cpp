@@ -4,6 +4,7 @@
 
 CLobby::CLobby()
 	:isSelect(false)
+	, m_background(NULL)
 {
 	Initialize();
 }
@@ -30,7 +31,6 @@ void CLobby::KeyProcess()
 {
 	if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_LEFT) == KS_KeyDown)
 	{
-		GET_SINGLE(CAudioMgr)->playCue(LowBeep);
 		GET_SINGLE(CAudioMgr)->playCue(DryBeep);
 		moveCursor(DIR4_LEFT);
 
@@ -38,7 +38,6 @@ void CLobby::KeyProcess()
 
 	if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_RIGHT) == KS_KeyDown)
 	{
-		GET_SINGLE(CAudioMgr)->playCue(LowBeep);
 		GET_SINGLE(CAudioMgr)->playCue(DryBeep);
 		moveCursor(DIR4_RIGHT);
 

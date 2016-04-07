@@ -78,6 +78,7 @@
 	#include "Obj.h"
 #endif
 
+	// 로비
 #ifndef HEADER_Back_Lobby
 	#define HEADER_Back_Lobby
 	#include "Back_Lobby.h"
@@ -87,6 +88,18 @@
 	#define HEADER_Select_Aircraft
 	#include "Select_Aircraft.h"
 #endif
+
+	// 스테이지
+#ifndef HEADER_Back_Stage
+	#define HEADER_Back_Stage
+	#include "Back_Stage.h"
+#endif
+
+#ifndef HEADER_Player_Aircraft
+	#define HEADER_Player_Aircraft
+	#include "Player_Aircraft.h"
+#endif
+
 
 
 

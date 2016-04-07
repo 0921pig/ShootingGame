@@ -16,8 +16,8 @@ Global Settings
     Header File = AudioPorject.h;
     Exclude Category Names = 0;
     Exclude Variable Names = 0;
-    Last Modified Low = 192910748;
-    Last Modified High = 30511108;
+    Last Modified Low = 23085408;
+    Last Modified High = 30511244;
 
     Category
     {
@@ -225,8 +225,12 @@ Wave Bank
     Windows Bank Path Edited = 0;
     Seek Tables = 1;
     Compression Preset Name = <none>;
-    Bank Last Revised Low = 1009115927;
-    Bank Last Revised High = 30511110;
+    Xbox Bank Last Modified Low = 0;
+    Xbox Bank Last Modified High = 0;
+    PC Bank Last Modified Low = 23172640;
+    PC Bank Last Modified High = 30511244;
+    Bank Last Revised Low = 23152629;
+    Bank Last Revised High = 30511244;
 
     Wave
     {
@@ -264,13 +268,13 @@ Wave Bank
             Channels = 2;
             Sampling Rate = 44100;
             Bits Per Sample = 1;
-            Play Region Offset = 58;
-            Play Region Length = 2641136;
+            Play Region Offset = 78;
+            Play Region Length = 13230080;
             Loop Region Offset = 0;
             Loop Region Length = 0;
             File Type = 1;
-            Last Modified Low = 2501025232;
-            Last Modified High = 30511108;
+            Last Modified Low = 3846010519;
+            Last Modified High = 30511243;
         }
     }
 
@@ -1059,7 +1063,7 @@ Sound Bank
 
     Cue
     {
-        Name = Stage01;
+        Name = Stage_1;
 
         Variation
         {

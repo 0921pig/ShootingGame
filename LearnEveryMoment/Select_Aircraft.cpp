@@ -65,8 +65,6 @@ void CSelect_Aircraft::Progress()
 
 void CSelect_Aircraft::Render()
 {
-
-
 	drawTexture(getObjInfo(), RefPos_Center, 3, getObjkey(), getObjName(), getTexturekey(), getStatekey());
 	//여기에 그림자 넣기
 

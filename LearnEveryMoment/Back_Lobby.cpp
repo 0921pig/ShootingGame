@@ -118,8 +118,8 @@ void CBack_Lobby::moveNumberBack(PlayableAircraft inputAircraft)
 
 	float distance_between = (endPos - startPos) / 4.f;
 
-	m_NumberBack.acceleration = 30.f;
-	m_NumberBack.speed_max = 15.f;
+	m_NumberBack.acceleration = 20.f;
+	m_NumberBack.speed_max = 10.f;
 
 	switch (inputAircraft)
 	{

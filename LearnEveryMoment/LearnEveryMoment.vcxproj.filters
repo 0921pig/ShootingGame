@@ -136,6 +136,12 @@
     <Filter Include="80.MainGame\Info_Player">
       <UniqueIdentifier>{ccd08278-400a-4bb6-8073-c46ff24bb820}</UniqueIdentifier>
     </Filter>
+    <Filter Include="20. Obj\Objects\Stage_only\Back_Stage">
+      <UniqueIdentifier>{05fdad7d-02fe-475b-88c5-ea1312219cf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Stage_only\Player_Aircraft">
+      <UniqueIdentifier>{a05965f7-f041-40c6-ab2c-03e8f7e61a0a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp">
@@ -227,6 +233,12 @@
     </ClCompile>
     <ClCompile Include="Info_Player.cpp">
       <Filter>80.MainGame\Info_Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Back_Stage.cpp">
+      <Filter>20. Obj\Objects\Stage_only\Back_Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="Player_Aircraft.cpp">
+      <Filter>20. Obj\Objects\Stage_only\Player_Aircraft</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -346,6 +358,12 @@
     </ClInclude>
     <ClInclude Include="Info_Player.h">
       <Filter>80.MainGame\Info_Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Back_Stage.h">
+      <Filter>20. Obj\Objects\Stage_only\Back_Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Player_Aircraft.h">
+      <Filter>20. Obj\Objects\Stage_only\Player_Aircraft</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
