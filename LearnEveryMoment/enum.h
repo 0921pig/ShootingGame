@@ -39,13 +39,13 @@ enum DIR4
 	DIR4_DOWN,
 };
 
-enum PlayableAircraft
+enum AircraftTypeOfPlayer
 {
-	PA_None,
-	PA_SuperHornet,
-	PA_Stealth,
-	PA_Raptor,
-	PA_Harrier,
-	PA_Phantom,
-	PA_Random
+	AT_None,
+	AT_SuperHornet,
+	AT_Stealth,
+	AT_Raptor,
+	AT_Harrier,
+	AT_Phantom,
+	AT_Random
 };

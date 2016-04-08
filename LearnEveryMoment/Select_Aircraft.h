@@ -8,7 +8,7 @@ class CSelect_Aircraft : public CObj
 {
 private:
 	bool isRandom;
-	PlayableAircraft m_Aircraft;
+	AircraftTypeOfPlayer m_Aircraft;
 
 	bool isSelected;
 	CInfo_Obj m_CursorSelecting;
@@ -28,11 +28,11 @@ public:
 	virtual CObj* Clone();
 
 private:
-	void change_AircraftName(PlayableAircraft AircraftName);
+	void change_AircraftName(AircraftTypeOfPlayer AircraftName);
 	void init_calculateMatrix();
 
 public:
-	CSelect_Aircraft(PlayableAircraft aircraft);
+	CSelect_Aircraft(AircraftTypeOfPlayer aircraft);
 	void select(bool val);
 	virtual ~CSelect_Aircraft();
 };

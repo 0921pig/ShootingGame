@@ -1,15 +1,9 @@
 ﻿#include "stdafx.h"
 #include "Include.h"
 
-CInfo_Player * CMainGame::getPlayerInfo()
-{
-	//아직은 테스트니까 1Player만
-	return m_Player[0];
-}
-
 CMainGame::CMainGame()
 {
-	m_Player[0] = new CInfo_Player;
+	m_Player[0] = new CPlayer_Belonging();
 	m_Player[1] = NULL; //이건 플레이어1 다 적용되면 확장
 }
 
@@ -49,7 +43,7 @@ void CMainGame::KeyProcess()
 
 void CMainGame::Release()
 {
-	// CInfo_Player의 객체 해제
+	// CPlayer_Belonging의 객체 해제
 	delete m_Player[0];
 	delete m_Player[1];
 	
@@ -70,3 +64,8 @@ void CMainGame::Render()
 	GET_SINGLE(CDeviceMgr)->Render_End();
 }
 
+CPlayer_Belonging * CMainGame::getPlayerBelonging()
+{
+	//아직은 테스트니까 1Player만
+	return m_Player[0];
+}

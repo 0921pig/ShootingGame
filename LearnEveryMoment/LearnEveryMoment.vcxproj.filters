@@ -139,7 +139,7 @@
     <Filter Include="20. Obj\Objects\Stage_only\Back_Stage">
       <UniqueIdentifier>{05fdad7d-02fe-475b-88c5-ea1312219cf4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="20. Obj\Objects\Stage_only\Player_Aircraft">
+    <Filter Include="20. Obj\Objects\Stage_only\PlayerControl">
       <UniqueIdentifier>{a05965f7-f041-40c6-ab2c-03e8f7e61a0a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -231,14 +231,14 @@
     <ClCompile Include="extern_var.cpp">
       <Filter>00.Header\Base\Base_var\extern_var</Filter>
     </ClCompile>
-    <ClCompile Include="Info_Player.cpp">
-      <Filter>80.MainGame\Info_Player</Filter>
-    </ClCompile>
     <ClCompile Include="Back_Stage.cpp">
       <Filter>20. Obj\Objects\Stage_only\Back_Stage</Filter>
     </ClCompile>
-    <ClCompile Include="Player_Aircraft.cpp">
-      <Filter>20. Obj\Objects\Stage_only\Player_Aircraft</Filter>
+    <ClCompile Include="Player_Belonging.cpp">
+      <Filter>80.MainGame\Info_Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerControl.cpp">
+      <Filter>20. Obj\Objects\Stage_only\PlayerControl</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -356,14 +356,15 @@
     <ClInclude Include="extern_var.h">
       <Filter>00.Header\Base\Base_var\extern_var</Filter>
     </ClInclude>
-    <ClInclude Include="Info_Player.h">
-      <Filter>80.MainGame\Info_Player</Filter>
-    </ClInclude>
     <ClInclude Include="Back_Stage.h">
       <Filter>20. Obj\Objects\Stage_only\Back_Stage</Filter>
     </ClInclude>
-    <ClInclude Include="Player_Aircraft.h">
-      <Filter>20. Obj\Objects\Stage_only\Player_Aircraft</Filter>
+    <ClInclude Include="Player_Belonging.h">
+      <Filter>80.MainGame\Info_Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\program files (x86)\windows kits\8.1\include\um\winuser.h" />
+    <ClInclude Include="PlayerControl.h">
+      <Filter>20. Obj\Objects\Stage_only\PlayerControl</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

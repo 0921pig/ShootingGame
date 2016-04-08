@@ -1,7 +1,7 @@
 ﻿#include "stdafx.h"
 #include "Include.h"
 
-CSelect_Aircraft::CSelect_Aircraft(PlayableAircraft aircraft)
+CSelect_Aircraft::CSelect_Aircraft(AircraftTypeOfPlayer aircraft)
 	:isRandom(false)
 	, m_Aircraft(aircraft)
 	, isSelected(false)
@@ -28,25 +28,25 @@ void CSelect_Aircraft::Initialize()
 
 	switch (m_Aircraft)
 	{
-	case PA_SuperHornet:
+	case AT_SuperHornet:
 		setObjName(L"SuperHornet");
 		break;
-	case PA_Stealth:
+	case AT_Stealth:
 		setObjName(L"Stealth");
 		break;
-	case PA_Raptor:
+	case AT_Raptor:
 		setObjName(L"Raptor");
 		break;
-	case PA_Harrier:
+	case AT_Harrier:
 		setObjName(L"Harrier");
 		break;
-	case PA_Phantom:
+	case AT_Phantom:
 		setObjName(L"Phantom");
 		break;
-	case PA_Random:
+	case AT_Random:
 		isRandom = true;
 		setObjName(L"Harrier");
-		m_Aircraft = PA_Harrier;
+		m_Aircraft = AT_Harrier;
 		break;
 	}
 
@@ -91,28 +91,28 @@ CObj * CSelect_Aircraft::Clone()
 	return new CSelect_Aircraft(*this);
 }
 
-void CSelect_Aircraft::change_AircraftName(PlayableAircraft AircraftName)
+void CSelect_Aircraft::change_AircraftName(AircraftTypeOfPlayer AircraftName)
 {
 	switch (AircraftName)
 	{
-	case PA_SuperHornet:
-		m_Aircraft = PA_Stealth;
+	case AT_SuperHornet:
+		m_Aircraft = AT_Stealth;
 		setObjName(L"Stealth");
 		break;
-	case PA_Stealth:
-		m_Aircraft = PA_Raptor;
+	case AT_Stealth:
+		m_Aircraft = AT_Raptor;
 		setObjName(L"Raptor");
 		break;
-	case PA_Raptor:
-		m_Aircraft = PA_Harrier;
+	case AT_Raptor:
+		m_Aircraft = AT_Harrier;
 		setObjName(L"Harrier");
 		break;
-	case PA_Harrier:
-		m_Aircraft = PA_Phantom;
+	case AT_Harrier:
+		m_Aircraft = AT_Phantom;
 		setObjName(L"Phantom");
 		break;
-	case PA_Phantom:
-		m_Aircraft = PA_SuperHornet;
+	case AT_Phantom:
+		m_Aircraft = AT_SuperHornet;
 		setObjName(L"SuperHornet");
 		break;
 	}

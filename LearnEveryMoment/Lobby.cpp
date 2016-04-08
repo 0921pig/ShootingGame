@@ -21,7 +21,7 @@ void CLobby::Initialize()
 	
 	CreateBaseObjects();
 
-	m_selected = PA_SuperHornet;
+	m_selected = AT_SuperHornet;
 	m_select_fighter[m_selected]->select(true); //초기 세팅
 
 	GET_SINGLE(CAudioMgr)->playCue(LOBBY);
@@ -66,6 +66,7 @@ void CLobby::Render()
 void CLobby::Release()
 {
 	GET_SINGLE(CAudioMgr)->stopCue("Lobby");
+	GET_SINGLE(CObjMgr)->Release();
 }
 
 
@@ -132,12 +133,12 @@ void CLobby::CreateBaseObjects()
 {
 	m_background = (CBack_Lobby*) GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"Background");
 	
-	m_select_fighter[PA_SuperHornet]	= (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_SuperHornet",	D3DXVECTOR3(096.f, 780.f, 0.f));
-	m_select_fighter[PA_Stealth]		= (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Stealth",		D3DXVECTOR3(218.f, 780.f, 0.f));
-	m_select_fighter[PA_Raptor]			= (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Raptor",		D3DXVECTOR3(341.f, 780.f, 0.f));
-	m_select_fighter[PA_Harrier]		= (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Harrier",		D3DXVECTOR3(462.f, 780.f, 0.f));
-	m_select_fighter[PA_Phantom]		= (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Phantom",		D3DXVECTOR3(584.f, 780.f, 0.f));
-	m_select_fighter[PA_Random]			= (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Random",		D3DXVECTOR3(707.f, 780.f, 0.f));
+	m_select_fighter[AT_SuperHornet]	= (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_SuperHornet",	D3DXVECTOR3(096.f, 780.f, 0.f));
+	m_select_fighter[AT_Stealth]		= (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Stealth",		D3DXVECTOR3(218.f, 780.f, 0.f));
+	m_select_fighter[AT_Raptor]			= (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Raptor",		D3DXVECTOR3(341.f, 780.f, 0.f));
+	m_select_fighter[AT_Harrier]		= (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Harrier",		D3DXVECTOR3(462.f, 780.f, 0.f));
+	m_select_fighter[AT_Phantom]		= (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Phantom",		D3DXVECTOR3(584.f, 780.f, 0.f));
+	m_select_fighter[AT_Random]			= (CSelect_Aircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"SA_Random",		D3DXVECTOR3(707.f, 780.f, 0.f));
 
 
 
@@ -153,27 +154,27 @@ void CLobby::moveCursor(DIR4 direction)
 
 		switch (m_selected)
 		{
-		case PA_SuperHornet:
-			m_selected = PA_Random;
+		case AT_SuperHornet:
+			m_selected = AT_Random;
 			break;
-		case PA_Stealth:
-			m_selected = PA_SuperHornet;
+		case AT_Stealth:
+			m_selected = AT_SuperHornet;
 			m_background->moveNumberBack(m_selected);
 			break;
-		case PA_Raptor:
-			m_selected = PA_Stealth;
+		case AT_Raptor:
+			m_selected = AT_Stealth;
 			m_background->moveNumberBack(m_selected);
 			break;
-		case PA_Harrier:
-			m_selected = PA_Raptor;
+		case AT_Harrier:
+			m_selected = AT_Raptor;
 			m_background->moveNumberBack(m_selected);
 			break;
-		case PA_Phantom:
-			m_selected = PA_Harrier;
+		case AT_Phantom:
+			m_selected = AT_Harrier;
 			m_background->moveNumberBack(m_selected);
 			break;
-		case PA_Random:
-			m_selected = PA_Phantom;
+		case AT_Random:
+			m_selected = AT_Phantom;
 			m_background->moveNumberBack(m_selected);
 			break;
 		}
@@ -186,27 +187,27 @@ void CLobby::moveCursor(DIR4 direction)
 
 		switch (m_selected)
 		{
-		case PA_SuperHornet:
-			m_selected = PA_Stealth;
+		case AT_SuperHornet:
+			m_selected = AT_Stealth;
 			m_background->moveNumberBack(m_selected);
 			break;
-		case PA_Stealth:
-			m_selected = PA_Raptor;
+		case AT_Stealth:
+			m_selected = AT_Raptor;
 			m_background->moveNumberBack(m_selected);
 			break;
-		case PA_Raptor:
-			m_selected = PA_Harrier;
+		case AT_Raptor:
+			m_selected = AT_Harrier;
 			m_background->moveNumberBack(m_selected);
 			break;
-		case PA_Harrier:
-			m_selected = PA_Phantom;
+		case AT_Harrier:
+			m_selected = AT_Phantom;
 			m_background->moveNumberBack(m_selected);
 			break;
-		case PA_Phantom:
-			m_selected = PA_Random;
+		case AT_Phantom:
+			m_selected = AT_Random;
 			break;
-		case PA_Random:
-			m_selected = PA_SuperHornet;
+		case AT_Random:
+			m_selected = AT_SuperHornet;
 			m_background->moveNumberBack(m_selected);
 			break;
 		}
@@ -220,8 +221,8 @@ void CLobby::moveCursor(DIR4 direction)
 	}
 }
 
-void CLobby::selectAircraft(PlayableAircraft aircraft)
+void CLobby::selectAircraft(AircraftTypeOfPlayer aircraft)
 {
-	GET_SINGLE(CMainGame)->getPlayerInfo()->initialize(aircraft);
+	GET_SINGLE(CMainGame)->getPlayerBelonging()->initialize(aircraft);
 	isSelect = true;
 }

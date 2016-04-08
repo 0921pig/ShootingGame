@@ -150,6 +150,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\program files (x86)\windows kits\8.1\include\um\winuser.h" />
     <ClInclude Include="AudioMgr.h" />
     <ClInclude Include="Back_Lobby.h" />
     <ClInclude Include="Back_Stage.h" />
@@ -165,7 +166,7 @@
     <ClInclude Include="Include.h" />
     <ClInclude Include="Info_ManageScene.h" />
     <ClInclude Include="Info_Obj.h" />
-    <ClInclude Include="Info_Player.h" />
+    <ClInclude Include="Player_Belonging.h" />
     <ClInclude Include="KeyMgr.h" />
     <ClInclude Include="Lobby.h" />
     <ClInclude Include="LobbyObjProto.h" />
@@ -177,7 +178,7 @@
     <ClInclude Include="ObjMgr.h" />
     <ClInclude Include="ObjProto.h" />
     <ClInclude Include="Picture.h" />
-    <ClInclude Include="Player_Aircraft.h" />
+    <ClInclude Include="PlayerControl.h" />
     <ClInclude Include="ProtoType.h" />
     <ClInclude Include="readme.h" />
     <ClInclude Include="Scene.h" />
@@ -203,7 +204,7 @@
     <ClCompile Include="extern_var.cpp" />
     <ClCompile Include="Info_ManageScene.cpp" />
     <ClCompile Include="Info_Obj.cpp" />
-    <ClCompile Include="Info_Player.cpp" />
+    <ClCompile Include="Player_Belonging.cpp" />
     <ClCompile Include="KeyMgr.cpp" />
     <ClCompile Include="Lobby.cpp" />
     <ClCompile Include="LobbyObjProto.cpp" />
@@ -214,7 +215,7 @@
     <ClCompile Include="ObjMgr.cpp" />
     <ClCompile Include="ObjProto.cpp" />
     <ClCompile Include="Picture.cpp" />
-    <ClCompile Include="Player_Aircraft.cpp" />
+    <ClCompile Include="PlayerControl.cpp" />
     <ClCompile Include="ProtoType.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Select_Aircraft.cpp" />

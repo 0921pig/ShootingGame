@@ -5,7 +5,12 @@
 	#include "ManageScene.h"
 #endif
 
-class CInfo_Player;
+#ifndef HEADER_Base
+	#define HEADER_Base
+	#include "Base.h"
+#endif
+
+class CPlayer_Belonging;
 
 class CMainGame
 {
@@ -13,7 +18,7 @@ class CMainGame
 
 private:
 	CManageScene m_ManageScene;
-	CInfo_Player* m_Player[2];
+	CPlayer_Belonging* m_Player[2];
 
 public:
 	HRESULT Initialize();
@@ -24,7 +29,7 @@ public:
 	void Release();
 
 public:
-	CInfo_Player* getPlayerInfo();
+	CPlayer_Belonging* getPlayerBelonging();
 
 private:
 	CMainGame();

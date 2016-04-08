@@ -40,7 +40,7 @@ public:
 	virtual CObj* Clone();
 
 public:
-	void moveNumberBack(PlayableAircraft inputAircraft);
+	void moveNumberBack(AircraftTypeOfPlayer inputAircraft);
 
 public:
 	CBack_Lobby();

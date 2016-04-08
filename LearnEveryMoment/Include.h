@@ -95,9 +95,9 @@
 	#include "Back_Stage.h"
 #endif
 
-#ifndef HEADER_Player_Aircraft
-	#define HEADER_Player_Aircraft
-	#include "Player_Aircraft.h"
+#ifndef HEADER_PlayerControl
+	#define HEADER_PlayerControl
+	#include "PlayerControl.h"
 #endif
 
 
@@ -130,9 +130,9 @@
 	#include "Info_ManageScene.h"
 #endif
 
-#ifndef HEADER_Info_Player
-	#define HEADER_Info_Player
-	#include "Info_Player.h"
+#ifndef HEADER_Player_Belonging
+	#define HEADER_Player_Belonging
+	#include "Player_Belonging.h"
 #endif
 
 

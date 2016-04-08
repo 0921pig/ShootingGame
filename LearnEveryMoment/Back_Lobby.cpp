@@ -110,7 +110,7 @@ CObj * CBack_Lobby::Clone()
 	return new CBack_Lobby(*this);
 }
 
-void CBack_Lobby::moveNumberBack(PlayableAircraft inputAircraft)
+void CBack_Lobby::moveNumberBack(AircraftTypeOfPlayer inputAircraft)
 {
 	float startPos = -171.f; 
 	const TEXINFO* pTexInfo = GET_SINGLE(CTextureMgr)->GetTexture(getObjkey(), getObjName(), L"Number", getStatekey(), 0);
@@ -123,19 +123,19 @@ void CBack_Lobby::moveNumberBack(PlayableAircraft inputAircraft)
 
 	switch (inputAircraft)
 	{
-	case PA_SuperHornet:
+	case AT_SuperHornet:
 		m_NumberBack.position_goal = startPos;
 		break;
-	case PA_Stealth:
+	case AT_Stealth:
 		m_NumberBack.position_goal = startPos + distance_between;
 		break;
-	case PA_Raptor:
+	case AT_Raptor:
 		m_NumberBack.position_goal = startPos + distance_between * 2;
 		break;
-	case PA_Harrier:
+	case AT_Harrier:
 		m_NumberBack.position_goal = startPos + distance_between * 3;
 		break;
-	case PA_Phantom:
+	case AT_Phantom:
 		m_NumberBack.position_goal = endPos;
 		break;
 	}
