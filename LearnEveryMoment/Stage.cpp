@@ -27,7 +27,6 @@ void CStage::Initialize()
 
 
 	GET_SINGLE(CAudioMgr)->playCue(STAGE1);
-
 }
 
 

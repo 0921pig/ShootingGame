@@ -45,7 +45,7 @@ public:
 private:
 	CAudioMgr();
 public:
-	virtual ~CAudioMgr();
+	~CAudioMgr();
 
 };
 

@@ -35,9 +35,9 @@ public:
 	void setStateKey(TCHAR* inputStateKey);
 	void setPosition(D3DXVECTOR3 inputPos);
 
-	void calculateMatworld(CInfo_Obj* pInfo, D3DXVECTOR3 inputPos, D3DXVECTOR3 inputScale);
+	void calculateMatworld(CInfo_Obj* pInfo, D3DXVECTOR3 inputPos, D3DXVECTOR3 inputScale = D3DXVECTOR3(1.f, 1.f, 0.f));
 	void drawTexture(CInfo_Obj* inputInfo, RefPos option_RF, int iCnt, 
-		const TCHAR* in_pObjType, const TCHAR* in_pObjName, const TCHAR* in_pTextureName, const TCHAR* in_pStateKey, int opacity = 255, D3DXVECTOR3 pPos = D3DXVECTOR3(0.f, 0.f, 0.f));
+		const TCHAR* in_pObjType, const TCHAR* in_pObjName, const TCHAR* in_pTextureName, const TCHAR* in_pStateKey, int opacity = 255);
 
 public:
 	virtual void Initialize()PURE;

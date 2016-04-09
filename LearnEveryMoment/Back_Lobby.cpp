@@ -93,12 +93,14 @@ void CBack_Lobby::Progress()
 
 		}
 	}
+
+	calculateMatworld(&m_NumberBackInfo, D3DXVECTOR3(-m_NumberBack.position_current, 0.f, 0.f));
 }
 
 void CBack_Lobby::Render()
 {
 	drawTexture(getObjInfo(), RefPos_LeftTop, 0, getObjkey(), getObjName(), getTexturekey(), getStatekey());
-	drawTexture(getObjInfo(), RefPos_LeftTop, 0, getObjkey(), getObjName(), L"Number", getStatekey(), 255, D3DXVECTOR3(m_NumberBack.position_current, 0.f, 0.f));
+	drawTexture(&m_NumberBackInfo, RefPos_LeftTop, 0, getObjkey(), getObjName(), L"Number", getStatekey(), 255);
 }
 
 void CBack_Lobby::Release()

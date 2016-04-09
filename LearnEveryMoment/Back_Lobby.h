@@ -31,6 +31,7 @@ class CBack_Lobby :	public CObj
 private:
 	bool isMoving_NumberBack;
 	PHYSICS_Base m_NumberBack;
+	CInfo_Obj m_NumberBackInfo;
 
 public:
 	virtual void Initialize();
