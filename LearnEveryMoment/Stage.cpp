@@ -56,7 +56,8 @@ void CStage::Release()
 
 void CStage::LoadTexture()
 {
-	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Background/Stage_01/Stage_01.png", L"Background", L"Stage_01", L"Main", L"Normal", 1);
+	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Background/Stage_01/Stage01.png", L"Background", L"Stage_01", L"Main", L"Big", 1);
+	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Background/Stage_01/Stage01_%03d.png", L"Background", L"Stage_01", L"Main", L"Small", 182);
 
 	// Harrier
 	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Aircraft/Harrier/Body/Normal/%02d.png", L"Aircraft", L"Harrier", L"Body", L"Normal", 7);

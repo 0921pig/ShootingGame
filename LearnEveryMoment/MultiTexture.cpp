@@ -18,10 +18,12 @@ HRESULT CMultiTexture::InsertTexture( const TCHAR* pFileName, const TCHAR* pStat
 	TCHAR   szPath[128] = L"";
 
 	vector<TEXINFO*> vecTexture;
+	vecTexture.reserve(iCnt); 
 
 	for(int i =0; i< iCnt; ++i)
 	{
-		wsprintf(szPath,pFileName,i);
+		wsprintf(szPath, pFileName,i);
+		
 		TEXINFO* m_pTexInfo = new TEXINFO;
 		ZeroMemory(m_pTexInfo,sizeof(TEXINFO));
 

@@ -7,6 +7,8 @@ class CBack_Stage :	public CObj
 private:
 	int m_TopPointOfTheMap;
 
+	CInfo_Obj m_MapStrips[10];
+
 public:
 	virtual void Initialize();
 	virtual void Progress();
@@ -16,6 +18,8 @@ public:
 
 private:
 	int getHeightOfTheMap();
+	int getTopPointOfTheMap();
+	void setTopPointOfTheMap(int TopPoint);
 
 public:
 	CBack_Stage();

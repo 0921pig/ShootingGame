@@ -18,28 +18,25 @@ void CBack_Stage::Initialize()
 	setObjName(L"Stage_01");
 
 	setTextrueKey(L"Main");
-	setStateKey(L"Normal");
+	setStateKey(L"Small");
 
-	D3DXMATRIX	matTrans;
-	D3DXMatrixIdentity(&matTrans);
-	D3DXMatrixTranslation(&matTrans, 0.f, 0.f, 0.f);
-
-	D3DXMATRIX matScale;
-	D3DXMatrixIdentity(&matScale);
-	D3DXMatrixScaling(&matScale, 1.f, 1.f, 1.f);
-
-	getObjInfo()->setMatWorld(matScale * matTrans);
-
-	m_TopPointOfTheMap = getHeightOfTheMap() - WINSIZEY;
+	m_TopPointOfTheMap = WINSIZEY;
 }
 
 void CBack_Stage::Progress()
 {
+	for (int i = 0; i < 10; ++i)
+	{
+		calculateMatworld(&m_MapStrips[i], D3DXVECTOR3(0.f, getTopPointOfTheMap() % 100 + i * 100, 0.f));
+	}
 }
 
 void CBack_Stage::Render()
 {
-	drawTexture(getObjInfo(), RefPos_LeftTop, 0, getObjkey(), getObjName(), getTexturekey(), getStatekey(), 255);
+	for (int i = 0; i < 10; ++i)
+	{
+		drawTexture(&m_MapStrips[i], RefPos_LeftTop, (int)((getHeightOfTheMap() - getTopPointOfTheMap()) / 100 + (i)), getObjkey(), getObjName(), getTexturekey(), getStatekey(), 255);
+	}
 }
 
 void CBack_Stage::Release()
@@ -53,13 +50,25 @@ CObj* CBack_Stage::Clone()
 
 int CBack_Stage::getHeightOfTheMap()
 {
-	const TEXINFO* pTexInfo = GET_SINGLE(CTextureMgr)->GetTexture(getObjkey(), getObjName(), getTexturekey(), getStatekey(), 0);
-	if (pTexInfo == NULL)
-	{
-		TRACE(L"TexInfo 로드 에러 발생 (CBack_Stage getMapHeight() - %s %s %s %s\n", getObjkey(), getObjName(), getTexturekey(), getStatekey());
-		return 0;
-	}
+	//const TEXINFO* pTexInfo = GET_SINGLE(CTextureMgr)->GetTexture(getObjkey(), getObjName(), getTexturekey(), getStatekey(), 0);
+	//if (pTexInfo == NULL)
+	//{
+	//	TRACE(L"TexInfo 로드 에러 발생 (CBack_Stage getMapHeight() - %s %s %s %s\n", getObjkey(), getObjName(), getTexturekey(), getStatekey());
+	//	return 0;
+	//}
 
-	return (int)(pTexInfo->ImgInfo.Height);
+	//return (int)(pTexInfo->ImgInfo.Height);
+
+	return 18165.f;
+}
+
+int CBack_Stage::getTopPointOfTheMap()
+{
+	return m_TopPointOfTheMap;
+}
+
+void CBack_Stage::setTopPointOfTheMap(int TopPoint)
+{
+	m_TopPointOfTheMap = TopPoint;
 }
 

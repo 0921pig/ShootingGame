@@ -150,7 +150,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\program files (x86)\windows kits\8.1\include\um\winuser.h" />
     <ClInclude Include="AudioMgr.h" />
     <ClInclude Include="Back_Lobby.h" />
     <ClInclude Include="Back_Stage.h" />

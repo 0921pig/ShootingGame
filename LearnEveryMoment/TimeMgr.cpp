@@ -28,6 +28,6 @@ void CTimeMgr::SetTime()
 
 float CTimeMgr::GetTime()
 {
-	return 0.01f;
-	//return m_fTime;
+	//return 0.01f;
+	return m_fTime;
 }

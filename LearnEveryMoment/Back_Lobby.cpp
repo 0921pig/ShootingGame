@@ -94,6 +94,7 @@ void CBack_Lobby::Progress()
 		}
 	}
 
+	// NumberBack Position_Info
 	calculateMatworld(&m_NumberBackInfo, D3DXVECTOR3(-m_NumberBack.position_current, 0.f, 0.f));
 }
 

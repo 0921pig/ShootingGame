@@ -362,7 +362,6 @@
     <ClInclude Include="Player_Belonging.h">
       <Filter>80.MainGame\Info_Player</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\program files (x86)\windows kits\8.1\include\um\winuser.h" />
     <ClInclude Include="PlayerControl.h">
       <Filter>20. Obj\Objects\Stage_only\PlayerControl</Filter>
     </ClInclude>
