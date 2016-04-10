@@ -20,14 +20,17 @@ void CBack_Stage::Initialize()
 	setTextrueKey(L"Main");
 	setStateKey(L"Small");
 
-	m_TopPointOfTheMap = WINSIZEY;
+	m_TopPointOfTheMap = WINSIZEY - 2;
 }
 
 void CBack_Stage::Progress()
 {
+	m_TopPointOfTheMap += 10;
+
 	for (int i = 0; i < 10; ++i)
 	{
-		calculateMatworld(&m_MapStrips[i], D3DXVECTOR3(0.f, getTopPointOfTheMap() % 100 + i * 100, 0.f));
+		float temp = (float)((getTopPointOfTheMap() - 1 ) % 100) + i * 100.f - 100.f;
+		calculateMatworld(&m_MapStrips[i], D3DXVECTOR3(0.f, temp, 0.f));
 	}
 }
 
@@ -35,7 +38,8 @@ void CBack_Stage::Render()
 {
 	for (int i = 0; i < 10; ++i)
 	{
-		drawTexture(&m_MapStrips[i], RefPos_LeftTop, (int)((getHeightOfTheMap() - getTopPointOfTheMap()) / 100 + (i)), getObjkey(), getObjName(), getTexturekey(), getStatekey(), 255);
+		int temp = (int)((getHeightOfTheMap() - getTopPointOfTheMap() - getHeightOfTheMap()%100) / 100 + (i));
+		drawTexture(&m_MapStrips[i], RefPos_LeftTop, temp, getObjkey(), getObjName(), getTexturekey(), getStatekey(), 255);
 	}
 }
 
@@ -59,7 +63,7 @@ int CBack_Stage::getHeightOfTheMap()
 
 	//return (int)(pTexInfo->ImgInfo.Height);
 
-	return 18165.f;
+	return 18165;
 }
 
 int CBack_Stage::getTopPointOfTheMap()
