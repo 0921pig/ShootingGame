@@ -25,21 +25,25 @@ void CBack_Stage::Initialize()
 
 void CBack_Stage::Progress()
 {
-	m_TopPointOfTheMap += 10;
+	m_TopPointOfTheMap += 1;
+
+	if (getTopPointOfTheMap() > getHeightOfTheMap())
+		return;
 
 	for (int i = 0; i < 10; ++i)
 	{
-		float temp = (float)((getTopPointOfTheMap() - 1 ) % 100) + i * 100.f - 100.f;
-		calculateMatworld(&m_MapStrips[i], D3DXVECTOR3(0.f, temp, 0.f));
+		calculateMatworld(&m_MapStrips[i], D3DXVECTOR3(0.f, (float)((getTopPointOfTheMap() + 1) % 100 - 100) + i * 100.f, 0.f));
+		m_NumOfMapStrip[i] = ((getHeightOfTheMap() - WINSIZEY) / 100) - ((getTopPointOfTheMap() + 1 - WINSIZEY) / 100) + i - 1;
 	}
+
+		
 }
 
 void CBack_Stage::Render()
 {
 	for (int i = 0; i < 10; ++i)
 	{
-		int temp = (int)((getHeightOfTheMap() - getTopPointOfTheMap() - getHeightOfTheMap()%100) / 100 + (i));
-		drawTexture(&m_MapStrips[i], RefPos_LeftTop, temp, getObjkey(), getObjName(), getTexturekey(), getStatekey(), 255);
+		drawTexture(&m_MapStrips[i], RefPos_LeftTop, m_NumOfMapStrip[i], getObjkey(), getObjName(), getTexturekey(), getStatekey(), 255);
 	}
 }
 
