@@ -3,9 +3,6 @@
 
 class CAircraft : public CObj 
 {
-private:
-	float m_Speed;
-
 public:
 	virtual void Initialize()PURE;
 	virtual void Progress()PURE;
@@ -14,10 +11,9 @@ public:
 	virtual CObj* Clone()PURE;
 
 public:
-	virtual void MoveAircraft(DIR4 dir);
+	virtual void MoveAircraft(DIR8 dir);
 
-	float getSpeed();
-	void setSpeed(float inputSpeed);
+
 public:
 	CAircraft();
 	virtual ~CAircraft();

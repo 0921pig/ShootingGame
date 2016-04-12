@@ -40,6 +40,18 @@ enum DIR4
 	DIR4_DOWN,
 };
 
+enum DIR8
+{
+	LEFTUP,
+	LEFT,
+	UP,
+	RIGHTUP,
+	RIGHT,
+	RIGHTDOWN,
+	DOWN,
+	LEFTDOWN,
+};
+
 enum AircraftTypeOfPlayer
 {
 	AT_None,

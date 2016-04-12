@@ -32,24 +32,50 @@ void CStage::KeyProcess()
 {
 	if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_LEFT) == KS_KeyPressing)
 	{
-		getPlayerControl()->getAircraft()->MoveAircraft(DIR4_LEFT);
-	}
+		if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_UP) == KS_KeyPressing)
+		{
+			// 왼쪽 위
+			getPlayerControl()->getAircraft()->MoveAircraft(LEFTUP);
+		}
+		else if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_DOWN) == KS_KeyPressing)
+		{
+			// 왼쪽 아래
+			getPlayerControl()->getAircraft()->MoveAircraft(LEFTDOWN);
+		}
+		else
+		{
+			// 왼쪽
+			getPlayerControl()->getAircraft()->MoveAircraft(LEFT);
+		}
 
-	if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_RIGHT) == KS_KeyPressing)
+	}
+	else if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_RIGHT) == KS_KeyPressing)
 	{
-		getPlayerControl()->getAircraft()->MoveAircraft(DIR4_RIGHT);
+		if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_UP) == KS_KeyPressing)
+		{
+			// 오른쪽 위
+			getPlayerControl()->getAircraft()->MoveAircraft(RIGHTUP);
+		}
+		else if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_DOWN) == KS_KeyPressing)
+		{
+			// 오른쪽 아래
+			getPlayerControl()->getAircraft()->MoveAircraft(RIGHTDOWN);
+		}
+		else
+		{
+			// 오른쪽
+			getPlayerControl()->getAircraft()->MoveAircraft(RIGHT);
+		}
 	}
-
-	if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_UP) == KS_KeyPressing)
+	else if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_UP) == KS_KeyPressing)
 	{
-		getPlayerControl()->getAircraft()->MoveAircraft(DIR4_UP);
+		getPlayerControl()->getAircraft()->MoveAircraft(UP);
 	}
-
-	if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_DOWN) == KS_KeyPressing)
+	else if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_DOWN) == KS_KeyPressing)
 	{
-		getPlayerControl()->getAircraft()->MoveAircraft(DIR4_DOWN);
-
+		getPlayerControl()->getAircraft()->MoveAircraft(DOWN);
 	}
+
 }
 
 SceneReturn CStage::Progress()
