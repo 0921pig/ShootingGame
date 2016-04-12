@@ -15,7 +15,7 @@ void CBack_Stage::Initialize()
 	setSortID(SortID_Back);
 
 	setObjKey(L"Background");
-	setObjName(L"Stage_01");
+	setObjName(L"Stage01");
 
 	setTextrueKey(L"Main");
 	setStateKey(L"Small");
@@ -25,7 +25,7 @@ void CBack_Stage::Initialize()
 
 void CBack_Stage::Progress()
 {
-	m_TopPointOfTheMap += 1;
+	m_TopPointOfTheMap += 2;
 
 	if (getTopPointOfTheMap() > getHeightOfTheMap())
 		return;

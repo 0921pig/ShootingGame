@@ -100,7 +100,15 @@
 	#include "PlayerControl.h"
 #endif
 
+#ifndef HEADER_Aircraft
+	#define HEADER_Aircraft
+	#include "Aircraft.h"
+#endif
 
+#ifndef HEADER_Harrier
+	#define HEADER_Harrier
+	#include "Harrier.h"
+#endif
 
 
 // 텍스쳐

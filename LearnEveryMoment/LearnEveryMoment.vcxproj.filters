@@ -142,6 +142,24 @@
     <Filter Include="20. Obj\Objects\Stage_only\PlayerControl">
       <UniqueIdentifier>{a05965f7-f041-40c6-ab2c-03e8f7e61a0a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="20. Obj\Objects\Stage_only\Aircraft">
+      <UniqueIdentifier>{6a8d0265-5ff0-406f-8fdc-c88bded91ad5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Stage_only\Aircraft\Harrier">
+      <UniqueIdentifier>{b4dda2d7-7763-42fc-b839-cb255b87956b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Stage_only\Aircraft\Raptor">
+      <UniqueIdentifier>{c48dee03-7dbd-4178-a045-469a00785c97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Stage_only\Aircraft\Stealth">
+      <UniqueIdentifier>{e39a4711-a2a2-4e64-b5be-e72b884fd83d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Stage_only\Aircraft\Phantom">
+      <UniqueIdentifier>{543cd136-9830-4953-97bb-634e0089e7d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Stage_only\Aircraft\SuperHornet">
+      <UniqueIdentifier>{7e1405cc-cba3-4435-a4ef-c358b5071e3f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp">
@@ -239,6 +257,12 @@
     </ClCompile>
     <ClCompile Include="PlayerControl.cpp">
       <Filter>20. Obj\Objects\Stage_only\PlayerControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Aircraft.cpp">
+      <Filter>20. Obj\Objects\Stage_only\Aircraft</Filter>
+    </ClCompile>
+    <ClCompile Include="Harrier.cpp">
+      <Filter>20. Obj\Objects\Stage_only\Aircraft\Harrier</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -364,6 +388,12 @@
     </ClInclude>
     <ClInclude Include="PlayerControl.h">
       <Filter>20. Obj\Objects\Stage_only\PlayerControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Aircraft.h">
+      <Filter>20. Obj\Objects\Stage_only\Aircraft</Filter>
+    </ClInclude>
+    <ClInclude Include="Harrier.h">
+      <Filter>20. Obj\Objects\Stage_only\Aircraft\Harrier</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

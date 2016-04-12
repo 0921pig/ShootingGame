@@ -40,7 +40,6 @@ void CLobby::KeyProcess()
 	{
 		GET_SINGLE(CAudioMgr)->playCue(DryBeep);
 		moveCursor(DIR4_RIGHT);
-
 	}
 
 	if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_RETURN) == KS_KeyDown)

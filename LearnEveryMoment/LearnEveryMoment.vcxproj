@@ -150,6 +150,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Aircraft.h" />
     <ClInclude Include="AudioMgr.h" />
     <ClInclude Include="Back_Lobby.h" />
     <ClInclude Include="Back_Stage.h" />
@@ -162,6 +163,7 @@
     <ClInclude Include="Execution.h" />
     <ClInclude Include="extern_var.h" />
     <ClInclude Include="function.h" />
+    <ClInclude Include="Harrier.h" />
     <ClInclude Include="Include.h" />
     <ClInclude Include="Info_ManageScene.h" />
     <ClInclude Include="Info_Obj.h" />
@@ -193,6 +195,7 @@
     <ClInclude Include="Util.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Aircraft.cpp" />
     <ClCompile Include="AudioMgr.cpp" />
     <ClCompile Include="Back_Lobby.cpp" />
     <ClCompile Include="Back_Stage.cpp" />
@@ -201,6 +204,7 @@
     <ClCompile Include="DeviceMgr.cpp" />
     <ClCompile Include="Execution.cpp" />
     <ClCompile Include="extern_var.cpp" />
+    <ClCompile Include="Harrier.cpp" />
     <ClCompile Include="Info_ManageScene.cpp" />
     <ClCompile Include="Info_Obj.cpp" />
     <ClCompile Include="Player_Belonging.cpp" />

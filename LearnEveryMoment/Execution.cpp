@@ -28,7 +28,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpCmdLine,
 	RECT rcWindow = { 0, 0, WINSIZEX, WINSIZEY };
 	AdjustWindowRect(&rcWindow, WS_OVERLAPPEDWINDOW, false);
 
-#define NoteBookPC
+//#define NoteBookPC
 
 #ifdef NoteBookPC
 	g_hWnd = CreateWindow(WndClass.lpszClassName, L"Window Caption", WS_OVERLAPPEDWINDOW, 1920 - WINSIZEX, 10, WINSIZEX, WINSIZEY, NULL, NULL, hInstance, NULL); 

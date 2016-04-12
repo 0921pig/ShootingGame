@@ -1,9 +1,13 @@
 ﻿#pragma once
 #include "Obj.h"
+
+class CAircraft;
+
 class CPlayerControl : public CObj
 {
 private:
 	CPlayer_Belonging* m_Belonging;
+	CAircraft* m_Aircraft;
 
 public:
 	virtual void Initialize();
@@ -14,9 +18,11 @@ public:
 
 public:
 	void setBelonging(CPlayer_Belonging* inputBelonging);
+	CAircraft* getAircraft();
+	void setAircraft(CAircraft* inputAircraft);
 
 public:
-	CPlayerControl();
+	CPlayerControl(AircraftTypeOfPlayer Name);
 	virtual ~CPlayerControl();
 };
 

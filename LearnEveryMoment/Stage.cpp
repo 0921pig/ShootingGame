@@ -22,8 +22,6 @@ void CStage::Initialize()
 
 	CreateBaseObjects();
 
-	m_PlayerControl = new CPlayerControl();
-	m_PlayerControl->setBelonging(GET_SINGLE(CMainGame)->getPlayerBelonging()); // 매 스테이지 시작 때 플레이어 정보를 가지고 온다. 이렇게하면 매번 싱글톤을 이용 할 필요 없이 한번만 쓰면 된다.
 
 
 	GET_SINGLE(CAudioMgr)->playCue(STAGE1);
@@ -32,6 +30,26 @@ void CStage::Initialize()
 
 void CStage::KeyProcess()
 {
+	if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_LEFT) == KS_KeyPressing)
+	{
+		getPlayerControl()->getAircraft()->MoveAircraft(DIR4_LEFT);
+	}
+
+	if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_RIGHT) == KS_KeyPressing)
+	{
+		getPlayerControl()->getAircraft()->MoveAircraft(DIR4_RIGHT);
+	}
+
+	if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_UP) == KS_KeyPressing)
+	{
+		getPlayerControl()->getAircraft()->MoveAircraft(DIR4_UP);
+	}
+
+	if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_DOWN) == KS_KeyPressing)
+	{
+		getPlayerControl()->getAircraft()->MoveAircraft(DIR4_DOWN);
+
+	}
 }
 
 SceneReturn CStage::Progress()
@@ -56,8 +74,8 @@ void CStage::Release()
 
 void CStage::LoadTexture()
 {
-	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Background/Stage_01/Stage01.png", L"Background", L"Stage_01", L"Main", L"Big", 1);
-	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Background/Stage_01/Stage01_%03d.png", L"Background", L"Stage_01", L"Main", L"Small", 183);
+	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Background/Stage01/Stage01.png", L"Background", L"Stage01", L"Main", L"Big", 1);
+	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Background/Stage01/Stage01_%03d.png", L"Background", L"Stage01", L"Main", L"Small", 183);
 
 	// Harrier
 	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Aircraft/Harrier/Body/Normal/%02d.png", L"Aircraft", L"Harrier", L"Body", L"Normal", 7);
@@ -84,4 +102,13 @@ void CStage::LoadTexture()
 void CStage::CreateBaseObjects()
 {
 	m_background = (CBack_Stage*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"Background");
+
+	m_PlayerControl = new CPlayerControl(GET_SINGLE(CMainGame)->getPlayerBelonging()->getAircraftType());
+	m_PlayerControl->setBelonging(GET_SINGLE(CMainGame)->getPlayerBelonging()); // 매 스테이지 시작 때 플레이어 정보를 가지고 온다. 이렇게하면 매번 싱글톤을 이용 할 필요 없이 한번만 쓰면 된다.
+	m_PlayerControl->setAircraft((CAircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"Player_Harrier"));
+}
+
+CPlayerControl * CStage::getPlayerControl()
+{
+	return m_PlayerControl;
 }

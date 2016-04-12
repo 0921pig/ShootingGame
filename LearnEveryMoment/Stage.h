@@ -23,6 +23,10 @@ public:
 	virtual void CreateBaseObjects();
 
 public:
+	CPlayerControl* getPlayerControl();
+
+
+public:
 	CStage(SceneNo WhatStage);
 	virtual ~CStage();
 };
