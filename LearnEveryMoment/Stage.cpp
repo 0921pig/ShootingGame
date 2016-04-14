@@ -22,6 +22,7 @@ void CStage::Initialize()
 
 	CreateBaseObjects();
 	GET_SINGLE(CObjScheduleMgr)->Initialize(m_background->getTopPointPointer(), getObjProto());
+	GET_SINGLE(CObjScheduleMgr)->AddSchedule(1500, D3DXVECTOR3(WINSIZEX / 2.f, 200.f, 0.f), L"Player_Harrier");
 
 
 	GET_SINGLE(CAudioMgr)->playCue(STAGE1);

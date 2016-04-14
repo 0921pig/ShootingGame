@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "Include.h"
 #include "ObjScheduleMgr.h"
 
@@ -13,7 +13,8 @@ CObjScheduleMgr::~CObjScheduleMgr()
 
 void CObjScheduleMgr::Initialize(const int* pTopPoint, CProtoType* pProto)
 {
-
+	m_StageProto = pProto;
+	m_pTopPointOfTheMap = pTopPoint;
 }
 
 void CObjScheduleMgr::AddSchedule(int _topPoint, D3DXVECTOR3 _startPosition, TCHAR* _objectName)
@@ -23,8 +24,9 @@ void CObjScheduleMgr::AddSchedule(int _topPoint, D3DXVECTOR3 _startPosition, TCH
 
 void CObjScheduleMgr::schedulingProcess(int _topPoint)
 {
-	/* ½ºÄÉÁì Æ÷ÀÎÆ®¿¡ µµÂøÇß°Å³ª Áö³ªÄ£ °ÍÀÌ ÀÖÀ¸¸é Object¸¦ »ý¼ºÇÏ´Â ÇÔ¼ö */
-	while (m_SchedulingList.front().topPoint <= *m_pTopPointOfTheMap) 
+	/* ìŠ¤ì¼€ì¥´ í¬ì¸íŠ¸ì— ë„ì°©í–ˆê±°ë‚˜ ì§€ë‚˜ì¹œ ê²ƒì´ ìžˆìœ¼ë©´ Objectë¥¼ ìƒì„±í•˜ëŠ” í•¨ìˆ˜ */
+
+	while (m_SchedulingList.size() > 0 && m_SchedulingList.front().topPoint <= *m_pTopPointOfTheMap)
 	{
 		Row_ObjectSchedule input = m_SchedulingList.front();
 		GET_SINGLE(CObjMgr)->AddObject(m_StageProto, input.ObjectName, input.startPosition);

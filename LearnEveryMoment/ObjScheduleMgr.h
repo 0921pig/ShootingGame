@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "Include.h"
 
 typedef struct Row_ObjectSchedule
@@ -19,7 +19,6 @@ typedef struct Row_ObjectSchedule
 
 	~Row_ObjectSchedule()
 	{
-		delete ObjectName;
 	}
 
 }Row_ObjectSchedule;
@@ -34,7 +33,7 @@ private:
 	CProtoType* m_StageProto;
 
 public:
-	void Initialize(int* pTopPoint, CProtoType* pProto);
+	void Initialize(const int* pTopPoint, CProtoType* pProto);
 	void AddSchedule(int _topPoint, D3DXVECTOR3 _startPosition, TCHAR* _objectName);
 	void schedulingProcess(int _topPoint);
 
