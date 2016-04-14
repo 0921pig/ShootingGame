@@ -13,7 +13,6 @@ class CObj
 {
 private:
 	CInfo_Obj m_Info;
-	float m_Speed;
 
 	SortID	m_SortID;
 
@@ -29,7 +28,6 @@ public:
 	const TCHAR* getObjName() { return m_pObjName; }
 	const TCHAR* getTexturekey() { return m_pTextureKey; }
 	const TCHAR* getStatekey() { return m_pStateKey; }
-	float getSpeed();
 
 	void setSortID(SortID inputSortID);
 	void setObjKey(TCHAR* inputKey);
@@ -37,13 +35,12 @@ public:
 	void setTextrueKey(TCHAR* inputName);
 	void setStateKey(TCHAR* inputStateKey);
 	void setPosition(D3DXVECTOR3 inputPos);
-	void setSpeed(float inputSpeed);
+
 
 
 	void calculateMatworld(CInfo_Obj* pInfo, D3DXVECTOR3 inputPos, D3DXVECTOR3 inputScale = D3DXVECTOR3(1.f, 1.f, 0.f));
 	void drawTexture(CInfo_Obj* inputInfo, RefPos option_RF, int iCnt, 
 		const TCHAR* in_pObjType, const TCHAR* in_pObjName, const TCHAR* in_pTextureName, const TCHAR* in_pStateKey, int opacity = 255);
-	void moveToDir();
 
 public:
 	virtual void Initialize()PURE;

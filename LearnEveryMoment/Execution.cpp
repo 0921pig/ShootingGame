@@ -33,7 +33,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpCmdLine,
 #ifdef NoteBookPC
 	g_hWnd = CreateWindow(WndClass.lpszClassName, L"Window Caption", WS_OVERLAPPEDWINDOW, 1920 - WINSIZEX, 10, WINSIZEX, WINSIZEY, NULL, NULL, hInstance, NULL); 
 #else
-	g_hWnd = CreateWindow(WndClass.lpszClassName, L"Window Caption", WS_OVERLAPPEDWINDOW, -WINSIZEX, 10, rcWindow.right - rcWindow.left , rcWindow.bottom - rcWindow.top, NULL, NULL, hInstance, NULL);
+	g_hWnd = CreateWindow(WndClass.lpszClassName, L"Window Caption", WS_OVERLAPPEDWINDOW, -WINSIZEX - 20, 10, rcWindow.right - rcWindow.left , rcWindow.bottom - rcWindow.top, NULL, NULL, hInstance, NULL);
 #endif
 
 	if (!g_hWnd) // 윈도우 핸들 잘 생성되었는지 체크

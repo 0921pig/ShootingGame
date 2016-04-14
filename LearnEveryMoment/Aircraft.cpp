@@ -13,8 +13,6 @@ void CAircraft::MoveAircraft(DIR8 dir)
 {
 	D3DXVECTOR3 vDir;
 	
-	/*	실제로 이동하는 것은 Progress에서 직접 실행하고,
-	우리는 이동을 예약한다.*/
 	switch(dir)
 	{
 	case LEFTUP:
@@ -43,9 +41,19 @@ void CAircraft::MoveAircraft(DIR8 dir)
 		break;
 	}
 
-	vDir = vDir / D3DXVec3Length(&vDir);
+	vDir = vDir / D3DXVec3Length(&vDir); // Normalization
 
 	D3DXVECTOR3 vPrevPos = getObjInfo()->getPos();
 	getObjInfo()->setPos(vPrevPos + vDir * getSpeed());
 }
 
+
+float CAircraft::getSpeed()
+{
+	return m_Speed;
+}
+
+void CAircraft::setSpeed(float inputSpeed)
+{
+	m_Speed = inputSpeed;
+}

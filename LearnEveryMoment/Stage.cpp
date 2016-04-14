@@ -21,7 +21,7 @@ void CStage::Initialize()
 	setObjProto(new CStageObjProto());
 
 	CreateBaseObjects();
-
+	GET_SINGLE(CObjScheduleMgr)->Initialize(m_background->getTopPointPointer(), getObjProto());
 
 
 	GET_SINGLE(CAudioMgr)->playCue(STAGE1);
@@ -80,6 +80,7 @@ void CStage::KeyProcess()
 
 SceneReturn CStage::Progress()
 {
+	GET_SINGLE(CObjScheduleMgr)->schedulingProcess(m_background->getTopPointOfTheMap());
 	GET_SINGLE(CObjMgr)->Progress();
 
 	if (isClear_ThisStage == true)

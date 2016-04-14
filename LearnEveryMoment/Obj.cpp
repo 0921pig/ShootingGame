@@ -85,24 +85,9 @@ void CObj::drawTexture(CInfo_Obj* inputInfo, RefPos option_RF, int iCnt, const T
 	}
 }
 
-void CObj::moveToDir()
-{
-	getObjInfo()->setPos(getObjInfo()->getPos() + getObjInfo()->getDir() * getSpeed());
-	
-}
-
 void CObj::setTextrueKey(TCHAR * inputKey)
 {
 	m_pTextureKey = inputKey;
 }
 
-float CObj::getSpeed()
-{
-	return m_Speed;
-}
-
-void CObj::setSpeed(float inputSpeed)
-{
-	m_Speed = inputSpeed;
-}
 

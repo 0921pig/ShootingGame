@@ -51,6 +51,11 @@
 	#include "AudioMgr.h"
 #endif
 
+#ifndef HEADER_ObjScheduleMgr
+	#define HEADER_ObjScheduleMgr
+	#include "ObjScheduleMgr.h"
+#endif
+
 /* 구조 */
 #ifndef HEADER_MainGame
 	#define HEADER_MainGame

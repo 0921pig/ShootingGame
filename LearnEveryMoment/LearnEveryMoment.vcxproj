@@ -167,6 +167,7 @@
     <ClInclude Include="Include.h" />
     <ClInclude Include="Info_ManageScene.h" />
     <ClInclude Include="Info_Obj.h" />
+    <ClInclude Include="ObjScheduleMgr.h" />
     <ClInclude Include="Player_Belonging.h" />
     <ClInclude Include="KeyMgr.h" />
     <ClInclude Include="Lobby.h" />
@@ -207,6 +208,7 @@
     <ClCompile Include="Harrier.cpp" />
     <ClCompile Include="Info_ManageScene.cpp" />
     <ClCompile Include="Info_Obj.cpp" />
+    <ClCompile Include="ObjScheduleMgr.cpp" />
     <ClCompile Include="Player_Belonging.cpp" />
     <ClCompile Include="KeyMgr.cpp" />
     <ClCompile Include="Lobby.cpp" />

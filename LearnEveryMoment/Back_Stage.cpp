@@ -70,6 +70,11 @@ int CBack_Stage::getHeightOfTheMap()
 	return 18165;
 }
 
+const int* CBack_Stage::getTopPointPointer()
+{
+	return &m_TopPointOfTheMap;
+}
+
 int CBack_Stage::getTopPointOfTheMap()
 {
 	return m_TopPointOfTheMap;

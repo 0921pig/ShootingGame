@@ -17,8 +17,9 @@ public:
 	virtual void Release();
 	virtual CObj* Clone();
 
-private:
+public:
 	int getHeightOfTheMap();
+	const int* getTopPointPointer();
 	int getTopPointOfTheMap();
 	void setTopPointOfTheMap(int TopPoint);
 

@@ -3,6 +3,9 @@
 
 class CAircraft : public CObj 
 {
+private:
+	float m_Speed;
+
 public:
 	virtual void Initialize()PURE;
 	virtual void Progress()PURE;
@@ -12,7 +15,8 @@ public:
 
 public:
 	virtual void MoveAircraft(DIR8 dir);
-
+	float getSpeed();
+	void setSpeed(float inputSpeed);
 
 public:
 	CAircraft();

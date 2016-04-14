@@ -160,6 +160,9 @@
     <Filter Include="20. Obj\Objects\Stage_only\Aircraft\SuperHornet">
       <UniqueIdentifier>{7e1405cc-cba3-4435-a4ef-c358b5071e3f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01.Manager\ObjScheduleMgr">
+      <UniqueIdentifier>{c84d7114-41d1-40bc-8fae-325ec49ac6c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp">
@@ -263,6 +266,9 @@
     </ClCompile>
     <ClCompile Include="Harrier.cpp">
       <Filter>20. Obj\Objects\Stage_only\Aircraft\Harrier</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjScheduleMgr.cpp">
+      <Filter>01.Manager\ObjScheduleMgr</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -394,6 +400,9 @@
     </ClInclude>
     <ClInclude Include="Harrier.h">
       <Filter>20. Obj\Objects\Stage_only\Aircraft\Harrier</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjScheduleMgr.h">
+      <Filter>01.Manager\ObjScheduleMgr</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
