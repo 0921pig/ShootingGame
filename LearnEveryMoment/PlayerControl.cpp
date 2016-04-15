@@ -53,12 +53,12 @@ void CPlayerControl::setBelonging(CPlayer_Belonging* inputBelonging)
 	m_Belonging = inputBelonging;
 }
 
-void CPlayerControl::setAircraft(CAircraft* inputAircraft)
+void CPlayerControl::setPlayerAircraft(CPlayerAircraft* inputAircraft)
 {
-	m_Aircraft = inputAircraft;
+	m_PlayerAircraft = inputAircraft;
 }
 
-CAircraft* CPlayerControl::getAircraft()
+CPlayerAircraft* CPlayerControl::getPlayerAircraft()
 {
-	return m_Aircraft;
+	return m_PlayerAircraft;
 }

@@ -136,21 +136,6 @@
     <Filter Include="20. Obj\Objects\Stage_only\Aircraft">
       <UniqueIdentifier>{6a8d0265-5ff0-406f-8fdc-c88bded91ad5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="20. Obj\Objects\Stage_only\Aircraft\Harrier">
-      <UniqueIdentifier>{b4dda2d7-7763-42fc-b839-cb255b87956b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="20. Obj\Objects\Stage_only\Aircraft\Raptor">
-      <UniqueIdentifier>{c48dee03-7dbd-4178-a045-469a00785c97}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="20. Obj\Objects\Stage_only\Aircraft\Stealth">
-      <UniqueIdentifier>{e39a4711-a2a2-4e64-b5be-e72b884fd83d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="20. Obj\Objects\Stage_only\Aircraft\Phantom">
-      <UniqueIdentifier>{543cd136-9830-4953-97bb-634e0089e7d3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="20. Obj\Objects\Stage_only\Aircraft\SuperHornet">
-      <UniqueIdentifier>{7e1405cc-cba3-4435-a4ef-c358b5071e3f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="01.Manager\ObjScheduleMgr">
       <UniqueIdentifier>{c84d7114-41d1-40bc-8fae-325ec49ac6c5}</UniqueIdentifier>
     </Filter>
@@ -168,6 +153,30 @@
     </Filter>
     <Filter Include="30. ControlPattern\AttackPattern\Data_Attack">
       <UniqueIdentifier>{113fddf0-b20c-4b74-ae6f-7899d281b6dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Stage_only\Aircraft\PlayerAircraft">
+      <UniqueIdentifier>{18ced132-bf53-4660-8aa6-e05c28fc54c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Stage_only\Aircraft\EnemyAircraft">
+      <UniqueIdentifier>{924191d0-16f6-42ef-b407-7b7030d4e4c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Stage_only\Aircraft\PlayerAircraft\Harrier">
+      <UniqueIdentifier>{b4dda2d7-7763-42fc-b839-cb255b87956b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Stage_only\Aircraft\PlayerAircraft\Phantom">
+      <UniqueIdentifier>{543cd136-9830-4953-97bb-634e0089e7d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Stage_only\Aircraft\PlayerAircraft\Raptor">
+      <UniqueIdentifier>{c48dee03-7dbd-4178-a045-469a00785c97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Stage_only\Aircraft\PlayerAircraft\Stealth">
+      <UniqueIdentifier>{e39a4711-a2a2-4e64-b5be-e72b884fd83d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Stage_only\Aircraft\PlayerAircraft\SuperHornet">
+      <UniqueIdentifier>{7e1405cc-cba3-4435-a4ef-c358b5071e3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="20. Obj\Objects\Stage_only\Aircraft\EnemyAircraft\TestEnemy01">
+      <UniqueIdentifier>{ef2bb5d1-d535-4930-ab3d-848c54dc0ef4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -265,7 +274,7 @@
       <Filter>20. Obj\Objects\Stage_only\Aircraft</Filter>
     </ClCompile>
     <ClCompile Include="Harrier.cpp">
-      <Filter>20. Obj\Objects\Stage_only\Aircraft\Harrier</Filter>
+      <Filter>20. Obj\Objects\Stage_only\Aircraft\PlayerAircraft\Harrier</Filter>
     </ClCompile>
     <ClCompile Include="ObjScheduleMgr.cpp">
       <Filter>01.Manager\ObjScheduleMgr</Filter>
@@ -281,6 +290,12 @@
     </ClCompile>
     <ClCompile Include="MovingCoursePattern.cpp">
       <Filter>30. ControlPattern\MovingCoursePattern</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyAircraft.cpp">
+      <Filter>20. Obj\Objects\Stage_only\Aircraft\EnemyAircraft</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerAircraft.cpp">
+      <Filter>20. Obj\Objects\Stage_only\Aircraft\PlayerAircraft</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -405,7 +420,7 @@
       <Filter>20. Obj\Objects\Stage_only\Aircraft</Filter>
     </ClInclude>
     <ClInclude Include="Harrier.h">
-      <Filter>20. Obj\Objects\Stage_only\Aircraft\Harrier</Filter>
+      <Filter>20. Obj\Objects\Stage_only\Aircraft\PlayerAircraft\Harrier</Filter>
     </ClInclude>
     <ClInclude Include="ObjScheduleMgr.h">
       <Filter>01.Manager\ObjScheduleMgr</Filter>
@@ -421,6 +436,12 @@
     </ClInclude>
     <ClInclude Include="MovingCoursePattern.h">
       <Filter>30. ControlPattern\MovingCoursePattern</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyAircraft.h">
+      <Filter>20. Obj\Objects\Stage_only\Aircraft\EnemyAircraft</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerAircraft.h">
+      <Filter>20. Obj\Objects\Stage_only\Aircraft\PlayerAircraft</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

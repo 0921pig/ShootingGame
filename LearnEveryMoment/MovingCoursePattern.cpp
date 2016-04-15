@@ -1,4 +1,5 @@
-﻿#include "MovingCoursePattern.h"
+﻿#include "stdafx.h"
+#include "MovingCoursePattern.h"
 
 
 

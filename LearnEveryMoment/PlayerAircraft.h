@@ -1,11 +1,8 @@
 ﻿#pragma once
-#include "Obj.h"
+#include "Aircraft.h"
 
-class CAircraft : public CObj 
+class CPlayerAircraft :	public CAircraft
 {
-private:
-	float m_Speed;
-
 public:
 	virtual void Initialize()PURE;
 	virtual void Progress()PURE;
@@ -14,11 +11,10 @@ public:
 	virtual CObj* Clone()PURE;
 
 public:
-	float getSpeed();
-	void setSpeed(float inputSpeed);
+	void MoveAircraft(DIR8 dir);
 
 public:
-	CAircraft();
-	virtual ~CAircraft();
+	CPlayerAircraft();
+	virtual ~CPlayerAircraft();
 };
 

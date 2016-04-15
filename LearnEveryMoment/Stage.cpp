@@ -36,17 +36,17 @@ void CStage::KeyProcess()
 		if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_UP) == KS_KeyPressing)
 		{
 			// 왼쪽 위
-			getPlayerControl()->getAircraft()->MoveAircraft(LEFTUP);
+			getPlayerControl()->getPlayerAircraft()->MoveAircraft(LEFTUP);
 		}
 		else if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_DOWN) == KS_KeyPressing)
 		{
 			// 왼쪽 아래
-			getPlayerControl()->getAircraft()->MoveAircraft(LEFTDOWN);
+			getPlayerControl()->getPlayerAircraft()->MoveAircraft(LEFTDOWN);
 		}
 		else
 		{
 			// 왼쪽
-			getPlayerControl()->getAircraft()->MoveAircraft(LEFT);
+			getPlayerControl()->getPlayerAircraft()->MoveAircraft(LEFT);
 		}
 
 	}
@@ -55,26 +55,26 @@ void CStage::KeyProcess()
 		if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_UP) == KS_KeyPressing)
 		{
 			// 오른쪽 위
-			getPlayerControl()->getAircraft()->MoveAircraft(RIGHTUP);
+			getPlayerControl()->getPlayerAircraft()->MoveAircraft(RIGHTUP);
 		}
 		else if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_DOWN) == KS_KeyPressing)
 		{
 			// 오른쪽 아래
-			getPlayerControl()->getAircraft()->MoveAircraft(RIGHTDOWN);
+			getPlayerControl()->getPlayerAircraft()->MoveAircraft(RIGHTDOWN);
 		}
 		else
 		{
 			// 오른쪽
-			getPlayerControl()->getAircraft()->MoveAircraft(RIGHT);
+			getPlayerControl()->getPlayerAircraft()->MoveAircraft(RIGHT);
 		}
 	}
 	else if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_UP) == KS_KeyPressing)
 	{
-		getPlayerControl()->getAircraft()->MoveAircraft(UP);
+		getPlayerControl()->getPlayerAircraft()->MoveAircraft(UP);
 	}
 	else if (GET_SINGLE(CKeyMgr)->GetKeyState(VK_DOWN) == KS_KeyPressing)
 	{
-		getPlayerControl()->getAircraft()->MoveAircraft(DOWN);
+		getPlayerControl()->getPlayerAircraft()->MoveAircraft(DOWN);
 	}
 
 }
@@ -133,7 +133,7 @@ void CStage::CreateBaseObjects()
 
 	m_PlayerControl = new CPlayerControl(GET_SINGLE(CMainGame)->getPlayerBelonging()->getAircraftType());
 	m_PlayerControl->setBelonging(GET_SINGLE(CMainGame)->getPlayerBelonging()); // 매 스테이지 시작 때 플레이어 정보를 가지고 온다. 이렇게하면 매번 싱글톤을 이용 할 필요 없이 한번만 쓰면 된다.
-	m_PlayerControl->setAircraft((CAircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"Player_Harrier"));
+	m_PlayerControl->setPlayerAircraft((CPlayerAircraft*)GET_SINGLE(CObjMgr)->AddObject(getObjProto(), L"Player_Harrier"));
 }
 
 CPlayerControl * CStage::getPlayerControl()

@@ -1,4 +1,5 @@
-﻿#include "AttackPattern.h"
+﻿#include "stdafx.h"
+#include "AttackPattern.h"
 
 
 

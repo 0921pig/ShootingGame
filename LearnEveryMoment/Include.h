@@ -111,6 +111,16 @@
 	#include "Aircraft.h"
 #endif
 
+#ifndef HEADER_PlayerAircraft
+	#define HEADER_PlayerAircraft
+	#include "PlayerAircraft.h"
+#endif
+
+#ifndef HEADER_EnemyAircraft
+	#define HEADER_EnemyAircraft
+	#include "EnemyAircraft.h"
+#endif
+
 #ifndef HEADER_Harrier
 	#define HEADER_Harrier
 	#include "Harrier.h"

@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include "Aircraft.h"
 
-class CHarrier : public CAircraft
+class CHarrier : public CPlayerAircraft
 {
 
 public:
