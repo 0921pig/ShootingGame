@@ -20,6 +20,7 @@ enum SortID
 {
 	SortID_None = -1,
 	SortID_Back,
+	SortID_Enemy,
 	SortID_Player,
 	SortID_AirCraft,
 	SortID_End,

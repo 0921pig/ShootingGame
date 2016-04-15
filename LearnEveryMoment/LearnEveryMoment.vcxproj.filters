@@ -175,7 +175,7 @@
     <Filter Include="20. Obj\Objects\Stage_only\Aircraft\PlayerAircraft\SuperHornet">
       <UniqueIdentifier>{7e1405cc-cba3-4435-a4ef-c358b5071e3f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="20. Obj\Objects\Stage_only\Aircraft\EnemyAircraft\TestEnemy01">
+    <Filter Include="20. Obj\Objects\Stage_only\Aircraft\EnemyAircraft\Enemy01">
       <UniqueIdentifier>{ef2bb5d1-d535-4930-ab3d-848c54dc0ef4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -296,6 +296,9 @@
     </ClCompile>
     <ClCompile Include="PlayerAircraft.cpp">
       <Filter>20. Obj\Objects\Stage_only\Aircraft\PlayerAircraft</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy01.cpp">
+      <Filter>20. Obj\Objects\Stage_only\Aircraft\EnemyAircraft\Enemy01</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -442,6 +445,9 @@
     </ClInclude>
     <ClInclude Include="PlayerAircraft.h">
       <Filter>20. Obj\Objects\Stage_only\Aircraft\PlayerAircraft</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy01.h">
+      <Filter>20. Obj\Objects\Stage_only\Aircraft\EnemyAircraft\Enemy01</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

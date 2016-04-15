@@ -126,6 +126,12 @@
 	#include "Harrier.h"
 #endif
 
+#ifndef HEADER_Enemy01
+	#define HEADER_Enemy01
+	#include "Enemy01.h"
+#endif
+
+
 
 // 텍스쳐
 #ifndef HEADER_Texture

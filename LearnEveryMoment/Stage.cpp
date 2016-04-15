@@ -22,7 +22,7 @@ void CStage::Initialize()
 
 	CreateBaseObjects();
 	GET_SINGLE(CObjScheduleMgr)->Initialize(m_background->getTopPointPointer(), getObjProto());
-	GET_SINGLE(CObjScheduleMgr)->AddSchedule(1500, D3DXVECTOR3(WINSIZEX / 2.f, 200.f, 0.f), L"Player_Harrier");
+	GET_SINGLE(CObjScheduleMgr)->AddSchedule(1500, D3DXVECTOR3(WINSIZEX / 2.f, 200.f, 0.f), L"Enemy01");
 
 
 	GET_SINGLE(CAudioMgr)->playCue(STAGE1);
@@ -109,7 +109,6 @@ void CStage::LoadTexture()
 	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Aircraft/Harrier/Body/Normal/%02d.png", L"Aircraft", L"Harrier", L"Body", L"Normal", 7);
 	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Aircraft/Harrier/Body/Boost/%02d.png", L"Aircraft", L"Harrier", L"Body", L"Boost", 7);
 
-
 	// Stealth
 	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Aircraft/Stealth/Body/Normal/%02d.png", L"Aircraft", L"Stealth", L"Body", L"Normal", 7);
 	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Aircraft/Stealth/Body/Boost/%02d.png", L"Aircraft", L"Stealth", L"Body", L"Boost", 7);
@@ -125,6 +124,10 @@ void CStage::LoadTexture()
 	//SuperHornet
 	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Aircraft/SuperHornet/Body/Normal/%02d.png", L"Aircraft", L"SuperHornet", L"Body", L"Normal", 7);
 	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Aircraft/SuperHornet/Body/Boost/%02d.png", L"Aircraft", L"SuperHornet", L"Body", L"Boost", 7);
+
+	//Enemy01
+	GET_SINGLE(CTextureMgr)->InsertTexture(L"resource/image/Aircraft/Enemy01/Body/Normal/%02d.png", L"Aircraft", L"Enemy01", L"Body", L"Normal", 1);
+
 }
 
 void CStage::CreateBaseObjects()
