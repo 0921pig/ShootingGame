@@ -15,6 +15,7 @@
 	#define HEADER_Util
 	#include "Util.h"
 #endif
+
 /* 매니저 헤더 */
 #ifndef HEADER_DeviceMgr
 	#define HEADER_DeviceMgr
@@ -146,6 +147,18 @@
 #ifndef HEADER_Player_Belonging
 	#define HEADER_Player_Belonging
 	#include "Player_Belonging.h"
+#endif
+
+/* 컨트롤 패턴 */
+#ifndef HEADER_AttackPattern
+	#define HEADER_AttackPattern
+	#include "AttackPattern.h"
+#endif
+
+
+#ifndef HEADER_MovingCoursePattern
+	#define HEADER_MovingCoursePattern
+	#include "MovingCoursePattern.h"
 #endif
 
 

@@ -18,7 +18,7 @@ void CBack_Stage::Initialize()
 	setObjName(L"Stage01");
 
 	setTextrueKey(L"Main");
-	setStateKey(L"Small");
+	//setStateKey(L"");
 
 	m_TopPointOfTheMap = WINSIZEY - 2;
 }
@@ -43,7 +43,7 @@ void CBack_Stage::Render()
 {
 	for (int i = 0; i < 10; ++i)
 	{
-		drawTexture(&m_MapStrips[i], RefPos_LeftTop, m_NumOfMapStrip[i], getObjkey(), getObjName(), getTexturekey(), getStatekey(), 255);
+		drawTexture(&m_MapStrips[i], RefPos_LeftTop, m_NumOfMapStrip[i], getObjkey(), getObjName(), getTexturekey(), L"Small", 255);
 	}
 }
 
@@ -58,16 +58,14 @@ CObj* CBack_Stage::Clone()
 
 int CBack_Stage::getHeightOfTheMap()
 {
-	//const TEXINFO* pTexInfo = GET_SINGLE(CTextureMgr)->GetTexture(getObjkey(), getObjName(), getTexturekey(), getStatekey(), 0);
-	//if (pTexInfo == NULL)
-	//{
-	//	TRACE(L"TexInfo 로드 에러 발생 (CBack_Stage getMapHeight() - %s %s %s %s\n", getObjkey(), getObjName(), getTexturekey(), getStatekey());
-	//	return 0;
-	//}
+	const TEXINFO* pTexInfo = GET_SINGLE(CTextureMgr)->GetTexture(getObjkey(), getObjName(), getTexturekey(), L"Big", 0);
+	if (pTexInfo == NULL)
+	{
+		TRACE(L"TexInfo 로드 에러 발생 (CBack_Stage getMapHeight() - %s %s %s %s\n", getObjkey(), getObjName(), getTexturekey(), L"Big");
+		return 0;
+	}
 
-	//return (int)(pTexInfo->ImgInfo.Height);
-
-	return 18165;
+	return (int)(pTexInfo->ImgInfo.Height);
 }
 
 const int* CBack_Stage::getTopPointPointer()

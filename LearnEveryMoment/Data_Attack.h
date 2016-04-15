@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include "stdafx.h"
 
-class CData_Fire
+class CData_Attack
 {
 private:
 	// Fire에서 중요한 것은 무엇일까?
@@ -20,7 +20,7 @@ public:
 	void setTime(float inputTime);
 
 public:
-	CData_Fire();
-	~CData_Fire();
+	CData_Attack();
+	~CData_Attack();
 };
 

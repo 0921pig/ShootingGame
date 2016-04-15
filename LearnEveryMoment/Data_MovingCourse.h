@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include "stdafx.h"
 
-class CData_Move
+class CData_MovingCourse
 {
 private:
 	// Move에 있어 중요한 것은 데이터는
@@ -21,7 +21,7 @@ public:
 	void setPos_Arrive(D3DXVECTOR3 inputVec);
 
 public:
-	CData_Move();
-	~CData_Move();
+	CData_MovingCourse();
+	~CData_MovingCourse();
 };
 
