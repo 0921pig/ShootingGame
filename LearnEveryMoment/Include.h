@@ -57,6 +57,11 @@
 	#include "ObjScheduleMgr.h"
 #endif
 
+#ifndef HEADER_PatternMgr
+	#define HEADER_PatternMgr
+	#include "PatternMgr.h"
+#endif
+
 /* 구조 */
 #ifndef HEADER_MainGame
 	#define HEADER_MainGame
@@ -172,9 +177,19 @@
 #endif
 
 
-#ifndef HEADER_MovingCoursePattern
-	#define HEADER_MovingCoursePattern
-	#include "MovingCoursePattern.h"
+#ifndef HEADER_MovingPattern
+	#define HEADER_MovingPattern
+	#include "MovingPattern.h"
+#endif
+
+#ifndef HEADER_Data_Attack
+	#define HEADER_Data_Attack
+	#include "Data_Attack.h"
+#endif
+
+#ifndef HEADER_Data_Moving
+	#define HEADER_Data_Moving
+	#include "Data_Moving.h"
 #endif
 
 

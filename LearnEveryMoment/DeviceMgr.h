@@ -1,6 +1,12 @@
 ﻿#pragma once
 #include "Include.h"
 
+enum WINMODE
+{
+	WINMODE_FULL,
+	WINMODE_WIN
+};
+
 class CDeviceMgr
 {
 	DECLARE_SINGLETON(CDeviceMgr);

@@ -142,12 +142,6 @@
     <Filter Include="30. ControlPattern">
       <UniqueIdentifier>{4aafb530-3512-4a13-8e30-ff1f2d578c85}</UniqueIdentifier>
     </Filter>
-    <Filter Include="30. ControlPattern\MovingCoursePattern">
-      <UniqueIdentifier>{e1c0e334-2b62-4129-a4b8-9156cfbc3816}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="30. ControlPattern\MovingCoursePattern\Data_MovingCourse">
-      <UniqueIdentifier>{cfdd7710-3f76-4cb2-9b5e-d7585820f582}</UniqueIdentifier>
-    </Filter>
     <Filter Include="30. ControlPattern\AttackPattern">
       <UniqueIdentifier>{59ffdc91-6233-4f58-b096-ddd9feedfc77}</UniqueIdentifier>
     </Filter>
@@ -177,6 +171,15 @@
     </Filter>
     <Filter Include="20. Obj\Objects\Stage_only\Aircraft\EnemyAircraft\Enemy01">
       <UniqueIdentifier>{ef2bb5d1-d535-4930-ab3d-848c54dc0ef4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Manager\PatternMgr">
+      <UniqueIdentifier>{2905ad60-2082-4baa-a973-c7d4da3f107f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="30. ControlPattern\MovingPattern">
+      <UniqueIdentifier>{e1c0e334-2b62-4129-a4b8-9156cfbc3816}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="30. ControlPattern\MovingPattern\Data_Moving">
+      <UniqueIdentifier>{cfdd7710-3f76-4cb2-9b5e-d7585820f582}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -282,23 +285,26 @@
     <ClCompile Include="Data_Attack.cpp">
       <Filter>30. ControlPattern\AttackPattern\Data_Attack</Filter>
     </ClCompile>
-    <ClCompile Include="Data_MovingCourse.cpp">
-      <Filter>30. ControlPattern\MovingCoursePattern\Data_MovingCourse</Filter>
+    <ClCompile Include="EnemyAircraft.cpp">
+      <Filter>20. Obj\Objects\Stage_only\Aircraft\EnemyAircraft</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy01.cpp">
+      <Filter>20. Obj\Objects\Stage_only\Aircraft\EnemyAircraft\Enemy01</Filter>
+    </ClCompile>
+    <ClCompile Include="PatternMgr.cpp">
+      <Filter>01.Manager\PatternMgr</Filter>
     </ClCompile>
     <ClCompile Include="AttackPattern.cpp">
       <Filter>30. ControlPattern\AttackPattern</Filter>
     </ClCompile>
-    <ClCompile Include="MovingCoursePattern.cpp">
-      <Filter>30. ControlPattern\MovingCoursePattern</Filter>
+    <ClCompile Include="MovingPattern.cpp">
+      <Filter>30. ControlPattern\MovingPattern</Filter>
     </ClCompile>
-    <ClCompile Include="EnemyAircraft.cpp">
-      <Filter>20. Obj\Objects\Stage_only\Aircraft\EnemyAircraft</Filter>
+    <ClCompile Include="Data_Moving.cpp">
+      <Filter>30. ControlPattern\MovingPattern\Data_Moving</Filter>
     </ClCompile>
     <ClCompile Include="PlayerAircraft.cpp">
-      <Filter>20. Obj\Objects\Stage_only\Aircraft\PlayerAircraft</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy01.cpp">
-      <Filter>20. Obj\Objects\Stage_only\Aircraft\EnemyAircraft\Enemy01</Filter>
+      <Filter>20. Obj\Objects\Stage_only\Aircraft\PlayerAircraft\SuperHornet</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -431,15 +437,6 @@
     <ClInclude Include="Data_Attack.h">
       <Filter>30. ControlPattern\AttackPattern\Data_Attack</Filter>
     </ClInclude>
-    <ClInclude Include="Data_MovingCourse.h">
-      <Filter>30. ControlPattern\MovingCoursePattern\Data_MovingCourse</Filter>
-    </ClInclude>
-    <ClInclude Include="AttackPattern.h">
-      <Filter>30. ControlPattern\AttackPattern</Filter>
-    </ClInclude>
-    <ClInclude Include="MovingCoursePattern.h">
-      <Filter>30. ControlPattern\MovingCoursePattern</Filter>
-    </ClInclude>
     <ClInclude Include="EnemyAircraft.h">
       <Filter>20. Obj\Objects\Stage_only\Aircraft\EnemyAircraft</Filter>
     </ClInclude>
@@ -448,6 +445,18 @@
     </ClInclude>
     <ClInclude Include="Enemy01.h">
       <Filter>20. Obj\Objects\Stage_only\Aircraft\EnemyAircraft\Enemy01</Filter>
+    </ClInclude>
+    <ClInclude Include="PatternMgr.h">
+      <Filter>01.Manager\PatternMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="AttackPattern.h">
+      <Filter>30. ControlPattern\AttackPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="MovingPattern.h">
+      <Filter>30. ControlPattern\MovingPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="Data_Moving.h">
+      <Filter>30. ControlPattern\MovingPattern\Data_Moving</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

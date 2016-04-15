@@ -9,6 +9,12 @@
 	#include "Info_Obj.h"
 #endif
 
+enum RefPos
+{
+	RefPos_LeftTop,
+	RefPos_Center,
+};
+
 class CObj
 {
 private:

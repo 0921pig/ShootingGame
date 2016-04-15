@@ -2,6 +2,7 @@
 #include "stdafx.h"
 
 enum SceneReturn;
+
 class CObjProto;
 
 class CScene

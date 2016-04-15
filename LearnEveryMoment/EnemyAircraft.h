@@ -1,7 +1,12 @@
 ﻿#pragma once
 #include "Aircraft.h"
+
+class CMovingPattern;
+
 class CEnemyAircraft :	public CAircraft
 {
+private:
+	CMovingPattern* m_MovingList;
 
 public:
 	virtual void Initialize()PURE;
