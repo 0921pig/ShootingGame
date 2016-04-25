@@ -1,9 +1,6 @@
 ﻿#pragma once
 #include "Include.h"
 
-enum AttackPattern_Type;
-enum MovingPattern_Type;
-
 class CMovingPattern;
 class CAttackPattern;
 
@@ -16,8 +13,9 @@ private:
 	map<AttackPattern_Type, CAttackPattern*> m_AttackPatternList;
 
 public:
-	void Initialize();
+	void initialize();
 	void init_registerMovingPattern();
+	void init_registerAttackPattern();
 
 	CMovingPattern* GetMovingPattern(MovingPattern_Type MovingType);
 	CAttackPattern* GetAttackPattern(AttackPattern_Type AttackType);
@@ -25,14 +23,4 @@ public:
 public:
 	CPatternMgr();
 	~CPatternMgr();
-};
-
-enum AttackPattern_Type
-{
-	AttackType_Basic_01
-};
-
-enum MovingPattern_Type
-{
-	MovingType_Basic_01
 };

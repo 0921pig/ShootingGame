@@ -53,3 +53,16 @@ enum AircraftTypeOfPlayer
 	AT_Phantom,
 	AT_Random
 };
+
+
+enum AttackPattern_Type
+{
+	AttackType_None,
+	AttackType_Basic_01,
+};
+
+enum MovingPattern_Type
+{
+	MovingType_None,
+	MovingType_Basic_01,
+};

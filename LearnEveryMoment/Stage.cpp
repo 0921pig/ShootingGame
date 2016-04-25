@@ -22,8 +22,8 @@ void CStage::Initialize()
 
 	CreateBaseObjects();
 	GET_SINGLE(CObjScheduleMgr)->Initialize(m_background->getTopPointPointer(), getObjProto());
-	GET_SINGLE(CObjScheduleMgr)->AddSchedule(1500, D3DXVECTOR3(WINSIZEX / 2.f, 200.f, 0.f), L"Enemy01");
-	GET_SINGLE(CPatternMgr)->Initialize();
+	GET_SINGLE(CObjScheduleMgr)->AddSchedule(1500, D3DXVECTOR3(WINSIZEX / 2.f, 200.f, 0.f), L"Enemy01", MovingType_Basic_01, AttackType_Basic_01);
+	GET_SINGLE(CPatternMgr)->initialize();
 	
 	GET_SINGLE(CAudioMgr)->playCue(STAGE1);
 }

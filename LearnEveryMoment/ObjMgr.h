@@ -1,7 +1,6 @@
 ﻿#pragma once
 #include "Obj.h"
 #include "ProtoType.h"
-#include "PatternMgr.h"
 
 class CObjMgr
 {

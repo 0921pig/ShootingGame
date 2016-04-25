@@ -20,7 +20,7 @@ private:
 
 public:
 	void Initialize(const int* pTopPoint, CProtoType* pProto);
-	void AddSchedule(int topPoint, D3DXVECTOR3 startPosition, TCHAR* objectName);
+	void AddSchedule(int topPoint, D3DXVECTOR3 startPosition, TCHAR* objectName, MovingPattern_Type MovingType, AttackPattern_Type AttackType);
 	void schedulingProcess();
 
 public:
@@ -30,22 +30,23 @@ public:
 
 typedef struct Row_ObjectSchedule
 {
-	int topPoint;
-	D3DXVECTOR3 startPosition;
-	TCHAR* ObjectName;
+	int m_TopPoint;
+	D3DXVECTOR3 m_StartPosition;
+	TCHAR* m_ObjectName;
+	MovingPattern_Type m_MovingType;
+	AttackPattern_Type m_AttackType;
 
 	Row_ObjectSchedule()
-		:topPoint(0), startPosition(0.f, 0.f, 0.f), ObjectName(NULL)
+		:m_TopPoint(0), m_StartPosition(0.f, 0.f, 0.f), m_ObjectName(NULL), m_MovingType(MovingType_None), m_AttackType(AttackType_None)
 	{
 	}
 
-	Row_ObjectSchedule(int _topPoint, D3DXVECTOR3 _startPosition, TCHAR* _ObjectName)
-		:topPoint(_topPoint), startPosition(_startPosition), ObjectName(_ObjectName)
+	Row_ObjectSchedule(int _topPoint, D3DXVECTOR3 _startPosition, TCHAR* _ObjectName, MovingPattern_Type _MovingType, AttackPattern_Type _AttackType)
+		:m_TopPoint(_topPoint), m_StartPosition(_startPosition), m_ObjectName(_ObjectName), m_MovingType(_MovingType), m_AttackType(_AttackType)
 	{
 	}
 
 	~Row_ObjectSchedule()
 	{
 	}
-
 }Row_ObjectSchedule;
