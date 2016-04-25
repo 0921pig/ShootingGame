@@ -17,15 +17,14 @@ void CObjScheduleMgr::Initialize(const int* pTopPoint, CProtoType* pProto)
 	m_pTopPointOfTheMap = pTopPoint;
 }
 
-void CObjScheduleMgr::AddSchedule(int _topPoint, D3DXVECTOR3 _startPosition, TCHAR* _objectName)
+void CObjScheduleMgr::AddSchedule(int topPoint, D3DXVECTOR3 startPosition, TCHAR* objectName)
 {
-	m_SchedulingList.push_back(Row_ObjectSchedule(_topPoint, _startPosition, _objectName));
+	m_SchedulingList.push_back(Row_ObjectSchedule(topPoint, startPosition, objectName));
 }
 
-void CObjScheduleMgr::schedulingProcess(int _topPoint)
+void CObjScheduleMgr::schedulingProcess()
 {
 	/* 스케쥴 포인트에 도착했거나 지나친 것이 있으면 Object를 생성하는 함수 */
-
 	while (m_SchedulingList.size() > 0 && m_SchedulingList.front().topPoint <= *m_pTopPointOfTheMap)
 	{
 		Row_ObjectSchedule input = m_SchedulingList.front();

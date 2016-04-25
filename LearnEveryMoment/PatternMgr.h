@@ -17,6 +17,8 @@ private:
 
 public:
 	void Initialize();
+	void init_registerMovingPattern();
+
 	CMovingPattern* GetMovingPattern(MovingPattern_Type MovingType);
 	CAttackPattern* GetAttackPattern(AttackPattern_Type AttackType);
 	

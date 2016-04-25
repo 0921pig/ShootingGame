@@ -23,8 +23,8 @@ void CStage::Initialize()
 	CreateBaseObjects();
 	GET_SINGLE(CObjScheduleMgr)->Initialize(m_background->getTopPointPointer(), getObjProto());
 	GET_SINGLE(CObjScheduleMgr)->AddSchedule(1500, D3DXVECTOR3(WINSIZEX / 2.f, 200.f, 0.f), L"Enemy01");
-
-
+	GET_SINGLE(CPatternMgr)->Initialize();
+	
 	GET_SINGLE(CAudioMgr)->playCue(STAGE1);
 }
 
@@ -81,7 +81,7 @@ void CStage::KeyProcess()
 
 SceneReturn CStage::Progress()
 {
-	GET_SINGLE(CObjScheduleMgr)->schedulingProcess(m_background->getTopPointOfTheMap());
+	GET_SINGLE(CObjScheduleMgr)->schedulingProcess();
 	GET_SINGLE(CObjMgr)->Progress();
 
 	if (isClear_ThisStage == true)

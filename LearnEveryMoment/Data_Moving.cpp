@@ -5,21 +5,21 @@ CData_Moving::CData_Moving()
 {
 }
 
+CData_Moving::CData_Moving(D3DXVECTOR3 DestPos, float DurationTime)
+	:m_DestPos(DestPos), m_DurationTime(DurationTime)
+{
+}
+
 CData_Moving::~CData_Moving()
 {
 }
 
 void CData_Moving::setTime(float inputTime)
 {
-	m_fTime = inputTime;
+	m_DurationTime = inputTime;
 }
 
-void CData_Moving::setPos_Start(D3DXVECTOR3 inputVec)
+void CData_Moving::setPos_Dest(D3DXVECTOR3 inputVec)
 {
-	m_StartPos = inputVec;
-}
-
-void CData_Moving::setPos_Arrive(D3DXVECTOR3 inputVec)
-{
-	m_ArrivePos = inputVec;
+	m_DestPos = inputVec;
 }

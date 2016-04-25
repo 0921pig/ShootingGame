@@ -11,6 +11,19 @@ CPatternMgr::~CPatternMgr()
 
 void CPatternMgr::Initialize()
 {
+	init_registerMovingPattern();
+}
+
+void CPatternMgr::init_registerMovingPattern()
+{
+	CMovingPattern* pTargetPattern = NULL;
+
+	/* Vertical Basic 01 */
+	pTargetPattern = new CMovingPattern();
+	pTargetPattern->add_MovingSchedule(D3DXVECTOR3(0.f, +300.f, 0.f), 1000.f);
+	pTargetPattern->add_MovingSchedule(D3DXVECTOR3(0.f, -300.f, 0.f), 1000.f);
+
+
 }
 
 CMovingPattern* CPatternMgr::GetMovingPattern(MovingPattern_Type MovingType)

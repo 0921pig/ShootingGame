@@ -1,13 +1,7 @@
 ﻿#pragma once
 #include "Include.h"
 
-enum KeyState
-{
-	KS_None,
-	KS_KeyDown,
-	KS_KeyPressing,
-	KS_KeyUp,
-};
+enum KeyState;
 
 class CKeyMgr
 {
@@ -29,3 +23,10 @@ public:
 	~CKeyMgr();
 };
 
+enum KeyState
+{
+	KS_None,
+	KS_KeyDown,
+	KS_KeyPressing,
+	KS_KeyUp,
+};

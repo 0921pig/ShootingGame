@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "Obj.h"
 #include "ProtoType.h"
+#include "PatternMgr.h"
 
 class CObjMgr
 {
@@ -12,6 +13,8 @@ private:
 
 public:
 	CObj* AddObject(CProtoType* pProto, const TCHAR* pObjType, D3DXVECTOR3 vPos = D3DXVECTOR3(0.f, 0.f, 0.f));
+	CObj* AddEnemyObject(CProtoType* pProto, const TCHAR* pObjType, D3DXVECTOR3 vPos, MovingPattern_Type MovingType, AttackPattern_Type AttackType);
+
 	HRESULT DeleteObject(CObj* pObj);
 	
 	void Progress();

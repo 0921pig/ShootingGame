@@ -2,11 +2,16 @@
 #include "Aircraft.h"
 
 class CMovingPattern;
+class CAttackPattern;
 
 class CEnemyAircraft :	public CAircraft
 {
 private:
-	CMovingPattern* m_MovingList;
+	CMovingPattern* m_MovingPattern;
+	CAttackPattern* m_AttackPattern;
+
+public:
+	void applyPattern(CMovingPattern* MovePattern, CAttackPattern* AttackPattern);
 
 public:
 	virtual void Initialize()PURE;
@@ -19,4 +24,3 @@ public:
 	CEnemyAircraft();
 	virtual ~CEnemyAircraft();
 };
-

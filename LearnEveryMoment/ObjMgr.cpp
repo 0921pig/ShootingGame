@@ -47,6 +47,18 @@ CObj* CObjMgr::AddObject(CProtoType* pProto, const TCHAR* pObjType, D3DXVECTOR3 
 	return pObject;
 }
 
+CObj* CObjMgr::AddEnemyObject(CProtoType* pProto, const TCHAR* pObjType, D3DXVECTOR3 vPos, MovingPattern_Type MovingType, AttackPattern_Type AttackType)
+{
+	CEnemyAircraft* pEnemyObj = (CEnemyAircraft*)AddObject(pProto, pObjType, vPos);
+	
+	CMovingPattern* pMovingPattern = GET_SINGLE(CPatternMgr)->GetMovingPattern(MovingType);
+	CAttackPattern* pAttackPattern = GET_SINGLE(CPatternMgr)->GetAttackPattern(AttackType);
+
+	pEnemyObj->applyPattern(pMovingPattern, pAttackPattern);
+
+	return (CObj*)pEnemyObj;
+}
+
 void CObjMgr::Progress()
 {
 	for (map<const TCHAR*, list<CObj*>>::iterator iter = m_MapObject.begin();
