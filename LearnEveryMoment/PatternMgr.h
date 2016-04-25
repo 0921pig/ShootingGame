@@ -4,6 +4,9 @@
 enum AttackPattern_Type;
 enum MovingPattern_Type;
 
+class CMovingPattern;
+class CAttackPattern;
+
 class CPatternMgr
 {
 	DECLARE_SINGLETON(CPatternMgr);
@@ -24,10 +27,10 @@ public:
 
 enum AttackPattern_Type
 {
-	Basic_01
+	AttackType_Basic_01
 };
 
 enum MovingPattern_Type
 {
-	Basic_01
+	MovingType_Basic_01
 };

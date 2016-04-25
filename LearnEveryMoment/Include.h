@@ -171,17 +171,6 @@
 #endif
 
 /* 컨트롤 패턴 */
-#ifndef HEADER_AttackPattern
-	#define HEADER_AttackPattern
-	#include "AttackPattern.h"
-#endif
-
-
-#ifndef HEADER_MovingPattern
-	#define HEADER_MovingPattern
-	#include "MovingPattern.h"
-#endif
-
 #ifndef HEADER_Data_Attack
 	#define HEADER_Data_Attack
 	#include "Data_Attack.h"
@@ -191,6 +180,17 @@
 	#define HEADER_Data_Moving
 	#include "Data_Moving.h"
 #endif
+
+#ifndef HEADER_AttackPattern
+	#define HEADER_AttackPattern
+	#include "AttackPattern.h"
+#endif
+
+#ifndef HEADER_MovingPattern
+	#define HEADER_MovingPattern
+	#include "MovingPattern.h"
+#endif
+
 
 
 
